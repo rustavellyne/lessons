@@ -1,0 +1,45 @@
+@import url("reset.css");
+
+a {
+  color: blue;
+}
+
+.inner-links .link {
+  color: tomato;
+}
+
+.link ~ ul {
+  background: #000;
+}
+
+.title {
+  color: #322727;
+}
+
+.main > .title {
+  color: coral;
+}
+
+.section > .title {
+  color: gold;
+}
+
+img + p {
+  color: green;
+}
+
+p ~ p {
+  color: red;
+}
+
+mark {
+  color: blue;
+}
+
+a.link[title^="Кон"] {
+  color: darkgreen;
+}
+
+a.link[title$="ини"] {
+  color: darkgreen;
+}
