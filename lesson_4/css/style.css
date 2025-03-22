@@ -106,3 +106,9 @@ nav a {
   line-height: 1.5;
 }
 
+.footer {
+  text-transform: capitalize;
+  text-align: center;
+  color: #1A1A1A;
+  line-height: 2;
+}
