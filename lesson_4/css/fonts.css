@@ -1,0 +1,46 @@
+
+/*
+  font-family: "Barrio", system-ui;
+  font-family: "Poppins", sans-serif;
+*/
+@import url('https://fonts.googleapis.com/css2?family=Barrio&display=swap');
+
+@font-face {
+  font-family: 'Bounded';
+  src: url("../fonts/Bounded-Regular.woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bounded';
+  src: url("../fonts/Bounded-ExtraLight.woff2");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bounded';
+  src: url("../fonts/Bounded-Variable.woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bounded';
+  src: url("../fonts/Bounded-Black.woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'StarJedi';
+  src: url("../fonts/SFDistantGalaxyAltOutline.woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
