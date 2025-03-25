@@ -1,0 +1,106 @@
+@import url("fonts.css");
+@import url("reset.css");
+
+body {
+  min-width: 320px;
+  max-width: 1920px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 20px;
+  text-align: center;
+}
+
+.content > div {
+  /* видалимо пробіли*/
+  font-size: 0;
+}
+
+.overflow,
+.margin-negative,
+.margin,
+.padding {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  text-align: center;
+}
+
+.padding {
+  border: 1px solid red;
+  padding: 20px;
+  background-color: lightgreen;
+  vertical-align: top;
+}
+
+.inner {
+  font-size: 16px;
+}
+
+.padding > .inner {
+  border: 1px solid green;
+  height: 100%;
+  background-color: #fff;
+}
+
+.margin {
+  border: 1px solid orangered;
+  background-color: saddlebrown;
+}
+
+.margin > .inner {
+  margin: 20px;
+  background-color: #fff;
+  /* віднімаємо margin top - bottom аби висота була відповідна */
+  height: calc(100% - 40px);
+}
+
+.content > div + div {
+  margin-top: 20px;
+}
+
+.content > div + div > .padding {
+  vertical-align: baseline;
+}
+
+.margin-negative {
+  display: block;
+  background-color: lightgreen;
+  padding: 20px;
+  margin-inline: auto;
+}
+
+.margin-negative > .inner {
+  background-color: tomato;
+  height: 100%;
+  margin: 0 -20px;
+}
+
+.overflow {
+  background-color: lightblue;
+  padding: 20px;
+  vertical-align: top;
+}
+
+.overflow .inner {
+  height: 100%;
+  background-color: #fff;
+}
+
+.overflow p {
+  font-size: 20px;
+}
+
+.hidden .inner {
+  overflow: hidden;
+}
+.scroll .inner {
+  overflow-y: scroll;
+}
+
+

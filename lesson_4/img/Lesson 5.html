@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<!-- saved from url=(0108)http://localhost:63342/lessons/lesson_5/index.html?_ijt=l7p1tuld6npggeqmecqqfkra1u&_ij_reload=RELOAD_ON_SAVE -->
+<html lang="uk"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 5</title>
+
+
+  <link rel="stylesheet" href="./Lesson 5_files/style.css" type="text/css">
+</head>
+<body>
+<!--
+ 🤓 Домашнє завдання:
+    1) Відпрацьовуємо кожну пройдену на уроці властивість та їх значення
+    2) На тій самі сторінці верстаємо частини макетів (На скріні)
+    3) Експериментуємо!
+-->
+  <header class="header">
+    <nav>
+      <ul>
+        <li>
+          <a href="http://localhost:63342/lessons/lesson_5/index.html?_ijt=l7p1tuld6npggeqmecqqfkra1u&amp;_ij_reload=RELOAD_ON_SAVE#lesson-properties">Завдання №1 - Властивості з Уроку</a>
+        </li>
+        <li>
+          <a href="http://localhost:63342/lessons/lesson_5/index.html?_ijt=l7p1tuld6npggeqmecqqfkra1u&amp;_ij_reload=RELOAD_ON_SAVE#part-of-block">Завдання №2 - Блок з макету</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main class="main">
+    <h1>Домашня робота</h1>
+    <section id="lesson-properties">
+      <h2>
+        Завдання №1 - Властивості з Уроку
+      </h2>
+      <div class="content">
+        <div>
+          <div class="padding">
+            <div class="inner">
+              <h3>Padding - це внутрішній відступ у батьківського блоку. (Додамо vertical-align: top; - аби inline-block вирівнялися по одній лінії)</h3>
+            </div>
+          </div>
+          <div class="margin">
+            <div class="inner">
+              <h3>Margin - це зовнішній відступ у дочірнього блоку</h3>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h3>Без vertical - align</h3>
+          <div class="padding">
+            <div class="inner">
+              <h3>Padding - це внутрішній відступ у батьківського блоку. (Без vertical-align буде ось так кривенько)</h3>
+            </div>
+          </div>
+          <div class="margin">
+            <div class="inner">
+              <h3>Margin - це зовнішній відступ у дочірнього блоку</h3>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h3>Від'ємний margin</h3>
+          <div class="margin-negative">
+            <div class="inner">
+              <h3>Вийди за рамки за допомогою margin</h3>
+              <p> та стань по центру магія margin</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h3>Overflow</h3>
+          <div class="overflow">
+            <div class="inner">
+              <p> Багато багато контенту не поміститься в фіксований блок, його не розстягне,а вилізе за його межі, і буде виглядати не привабливо, тож треба використати
+                <mark>overflow</mark>
+              </p>
+            </div>
+          </div>
+          <div class="overflow">
+            <div class="inner" style="
+    height: 100%;
+">
+              <p> Багато багато контенту не поміститься в фіксований блок, його не розстягне,а вилізе за його межі, і буде виглядати не привабливо, тож треба використати
+                <mark>overflow</mark>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="part-of-block">
+      <h2>
+        Завдання №2 - Блок з макету
+      </h2>
+    </section>
+  </main>
+  <footer class="footer">
+    <p>
+      <span class="time">26.03.2025</span>
+      <a href="https://fls.guru/" target="_blank">fls.guru courses</a>
+    </p>
+  </footer>
+
+<script>
+(function() {
+  var ws = new WebSocket('ws://' + window.location.host + 
+             '/jb-server-page?reloadMode=RELOAD_ON_SAVE&'+
+             'referrer=' + encodeURIComponent(window.location.pathname));
+  ws.onmessage = function (msg) {
+      if (msg.data === 'reload') {
+          window.location.reload();
+      }
+      if (msg.data.startsWith('update-css ')) {
+          var messageId = msg.data.substring(11);
+          var links = document.getElementsByTagName('link');
+          for (var i = 0; i < links.length; i++) {
+              var link = links[i];
+              if (link.rel !== 'stylesheet') continue;
+              var clonedLink = link.cloneNode(true);
+              var newHref = link.href.replace(/(&|\?)jbUpdateLinksId=\d+/, "$1jbUpdateLinksId=" + messageId);
+              if (newHref !== link.href) {
+                clonedLink.href = newHref;
+              }
+              else {
+                var indexOfQuest = newHref.indexOf('?');
+                if (indexOfQuest >= 0) {
+                  // to support ?foo#hash 
+                  clonedLink.href = newHref.substring(0, indexOfQuest + 1) + 'jbUpdateLinksId=' + messageId + '&' + 
+                                    newHref.substring(indexOfQuest + 1);
+                }
+                else {
+                  clonedLink.href += '?' + 'jbUpdateLinksId=' + messageId;
+                }
+              }
+              link.replaceWith(clonedLink);
+          }
+      }
+  };
+})();
+</script></body></html>
