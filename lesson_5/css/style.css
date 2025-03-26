@@ -4,6 +4,37 @@
 body {
   min-width: 320px;
   max-width: 1920px;
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  font-size: 20px;
+  color: blue;
+  text-decoration: underline;
+}
+
+nav li + li {
+  margin-top: 10px;
+}
+
+header {
+  margin-bottom: 20px;
+}
+
+footer {
+  text-align: center;
+}
+
+section {
+  margin-bottom: 60px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 48px;
+  margin-bottom: 20px;
+  font-family: "CircularStd", sans-serif;
+  font-weight: bold;
 }
 
 h2 {
@@ -12,8 +43,13 @@ h2 {
 }
 
 h3 {
-  font-size: 20px;
+  font-size: 16px;
   text-align: center;
+}
+
+section h2.title {
+  font-size: 32px;
+  text-shadow: 5px 5px 10px lightcoral;
 }
 
 .content > div {
@@ -93,7 +129,7 @@ h3 {
 }
 
 .overflow p {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .hidden .inner {
@@ -103,4 +139,104 @@ h3 {
   overflow-y: scroll;
 }
 
+.advantages .wrapper {
+  background-color: #231F8B;
+}
 
+.advantages .top {
+  margin-bottom: 70px;
+}
+
+.advantages .content {
+  max-width: 1050px;
+  padding: 100px 0;
+  margin-inline: auto;
+  color: #ffffff;
+}
+
+.advantages .title.tag {
+  color: #5A54F2;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  margin-bottom: 10px;
+}
+
+.advantages .title {
+  font-family: "CircularStd", sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.advantages .description {
+  font-family: "CircularStd", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+}
+
+.advantages .list {
+  font-size: 0;
+}
+
+.advantages .list .item {
+  padding: 35px 40px;
+  background-color: #ffffff;
+  width: 230px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.advantages .list .item + .item {
+  margin-left: 40px;
+}
+
+.advantages .list .item.even {
+  margin-top: 48px;
+}
+
+.advantages .list .item.accented {
+  background-color: #5A54F2;
+  color: white;
+}
+
+.feature .feature-icon {
+  width: 72px;
+  height: 72px;
+  margin-bottom: 20px;
+}
+
+.feature .feature-title {
+  font-family: "CircularStd", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  color: #252B42;
+  line-height: 24px;
+  margin-bottom: 20px;
+}
+.accented .feature-title {
+  color: white;
+}
+
+.feature hr {
+  width: 50px;
+  height: 2px;
+  background-color: #E74040;
+  margin-bottom: 20px;
+}
+
+.accented .feature hr {
+  background-color: #ffffff;
+}
+
+.feature-description {
+  color: #737373;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.accented .feature-description {
+  color: #ffffff;
+}
