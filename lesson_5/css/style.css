@@ -13,8 +13,8 @@ a {
   text-decoration: underline;
 }
 
-nav li + li {
-  margin-top: 10px;
+nav li {
+  margin-bottom: 10px;
 }
 
 header {
@@ -96,8 +96,12 @@ section h2.title {
   height: calc(100% - 40px);
 }
 
-.content > div + div {
-  margin-top: 20px;
+.content > div {
+  margin-bottom: 20px;
+}
+
+.content > .last-item {
+  margin-bottom: 0;
 }
 
 .content > div + div > .padding {
@@ -184,20 +188,24 @@ section h2.title {
 .advantages .list .item {
   padding: 35px 40px;
   background-color: #ffffff;
-  width: 230px;
+  max-width: 230px;
   display: inline-block;
   vertical-align: top;
 }
 
-.advantages .list .item + .item {
-  margin-left: 40px;
+.advantages .list .item {
+  margin-right: 40px;
+}
+
+.advantages .list .item.last-item {
+  margin-right: 0;
 }
 
 .advantages .list .item.even {
   margin-top: 48px;
 }
 
-.advantages .list .item.accented {
+.advantages .list .item.hover {
   background-color: #5A54F2;
   color: white;
 }
@@ -216,7 +224,7 @@ section h2.title {
   line-height: 24px;
   margin-bottom: 20px;
 }
-.accented .feature-title {
+.hover .feature-title {
   color: white;
 }
 
@@ -227,7 +235,7 @@ section h2.title {
   margin-bottom: 20px;
 }
 
-.accented .feature hr {
+.hover .feature hr {
   background-color: #ffffff;
 }
 
@@ -237,6 +245,6 @@ section h2.title {
   line-height: 20px;
 }
 
-.accented .feature-description {
+.hover .feature-description {
   color: #ffffff;
 }
