@@ -193,12 +193,12 @@ section h2.title {
   vertical-align: top;
 }
 
-.advantages .list .item {
-  margin-right: 40px;
+.advantages .list {
+  margin-right: -30px;
 }
 
-.advantages .list .item.last-item {
-  margin-right: 0;
+.advantages .list .item {
+  margin-right: 40px;
 }
 
 .advantages .list .item.even {
