@@ -186,26 +186,26 @@ section h2.title {
 }
 
 .advantages .list .item {
-  padding: 35px 40px;
-  background-color: #ffffff;
-  max-width: 230px;
+  width: 25%;
+  padding: 0 20px;
   display: inline-block;
   vertical-align: top;
 }
 
-.advantages .list {
-  margin-right: -30px;
+.advantages .feature {
+  background-color: #ffffff;
+  padding: 35px 40px;
 }
 
-.advantages .list .item {
-  margin-right: 40px;
+.advantages .list {
+  margin: 0 -20px;
 }
 
 .advantages .list .item.even {
   margin-top: 48px;
 }
 
-.advantages .list .item.hover {
+.advantages .item.hover .feature {
   background-color: #5A54F2;
   color: white;
 }
