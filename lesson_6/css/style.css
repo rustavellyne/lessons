@@ -1,2 +1,139 @@
 @import url("fonts.css");
 @import url("reset.css");
+
+.wrapper {
+  min-height: 100%;
+  overflow: clip;
+}
+
+.footer {
+  font-size: 20px;
+  text-align: center;
+}
+
+nav {
+  font-size: 20px;
+  margin-bottom: 50px;
+}
+
+nav a {
+  color: blue;
+  text-decoration: underline;
+}
+nav li + li {
+  margin-top: 10px;
+}
+
+h1 {
+  font-size: 48px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.container {
+  max-width: 1320px;
+  margin-inline: auto;
+  padding-inline: 15px;
+}
+
+.background-examples,
+.border-examples {
+  max-width: 600px;
+  margin-inline: auto;
+  font-size: 0;
+}
+
+.square {
+  margin: 5px;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+}
+
+.border-dotted {
+  border-style: dotted;
+}
+
+.border-dashed {
+  border-style: dashed;
+}
+
+.border-double {
+  border-style: double;
+  border-width: 5px;
+}
+
+.outline {
+  outline: 2px solid lightgreen;
+  outline-offset: 3px;
+  box-shadow: -7px -1px 31px 1px lightgreen;
+}
+
+.border-2 {
+  border-width: 2px;
+}
+
+.border-5 {
+  border-width: 5px;
+}
+
+.border-red {
+  border-color: red;
+}
+
+.border-green {
+  border-color: green;
+}
+
+.border-blue {
+  border-color: blue;
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-top: 0;
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+  border-bottom: 100px solid red;
+}
+
+.pyramid {
+  width: 0;
+  height: 0;
+  border-top: 50px double red;
+  border-bottom: 50px double yellow;
+  border-left: 50px double green;
+  border-right: 50px double blue;
+}
+
+.bg-green {
+  background-color: green;
+}
+
+.bg-gradient {
+  background-image: repeating-conic-gradient(blue 10%, yellow 20%)
+}
+
+.bg-image-repeated {
+  background-image: url("../img/bg/bg-1.jpg");
+  background-repeat: repeat;
+  background-size: 20px;
+}
+
+.rectangle {
+  display: inline-block;
+  width: 200px;
+  height: 100px;
+  border: 1px solid black;
+  margin: 5px;
+  background: url("../img/bg/squidward.png") no-repeat right center / 50px 50px,
+    url("../img/bg/spongebob.webp") no-repeat -10px center / contain,
+    lightblue;
+}
+
