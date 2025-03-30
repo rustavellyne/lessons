@@ -258,8 +258,10 @@ h2 {
 }
 
 .about .media {
+  margin-right: 108px;
   max-width: 524px;
   width: 100%;
+  min-height: 550px;
   vertical-align: top;
   border-radius: 240px 100px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
@@ -270,7 +272,6 @@ h2 {
   max-width: 524px;
   width: 100%;
   font-size: 14px;
-  margin-left: 108px;
   padding: 50px 0 70px;
 }
 
@@ -302,6 +303,4 @@ h2 {
   color: #343045;
   text-transform: uppercase;
 }
-
-
 /* End of Block #3 */
