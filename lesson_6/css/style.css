@@ -35,6 +35,11 @@ h1 {
   margin-bottom: 40px;
 }
 
+h2 {
+  font-weight: 700;
+  line-height: normal;
+}
+
 .container {
   max-width: 1320px;
   margin-inline: auto;
@@ -175,19 +180,24 @@ h1 {
 /* End of block 1 */
 
 /* Block #2 */
+.hydra {
+  background-color: #302C42;
+  padding-bottom: 100px;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+}
+
+.hydra .container {
+  max-width: 1272px;
+}
+
 .contacts {
   margin-bottom: 90px;
   padding-top: 30px;
   padding-bottom: 30px;
-  color: white;
-  background-color: #302C42;
-  font-family: "Montserrat", sans-serif;
   font-size: 0;
 }
 
-.contacts .container {
-  max-width: 1272px;
-}
 
 .contacts .list {
   border-radius: 90px;
@@ -233,6 +243,63 @@ h1 {
 
 .contacts .link h2 {
   font-size: 24px;
-  font-weight: 700;
 }
 /* End of Block #2 */
+
+/* Block #3 */
+.about {
+  font-size: 0;
+  color: white;
+}
+.about .container > * {
+  display: inline-block;
+}
+
+.about .media {
+  max-width: 524px;
+  width: 100%;
+  vertical-align: top;
+  border-radius: 240px 100px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+
+.about .info {
+  max-width: 524px;
+  width: 100%;
+  font-size: 14px;
+  margin-left: 108px;
+  padding: 50px 0 70px;
+}
+
+.about .info h2 {
+  font-size: 36px;
+  text-transform: uppercase;
+}
+.about .info h3 {
+  font-size: 36px;
+  text-transform: uppercase;
+  font-weight: 300;
+  margin-bottom: 42px;
+}
+
+.about .info p {
+  line-height: 1.7;
+  font-size: 16px;
+  margin-bottom: 28px;
+}
+
+.about .info a {
+  display: inline-block;
+  padding: 17px 40px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: normal;
+  border-radius: 40px;
+  background: linear-gradient(90deg, #8176AF 0%, #C0B7E8 100%);
+  color: #343045;
+  text-transform: uppercase;
+}
+
+
+/* End of Block #3 */
