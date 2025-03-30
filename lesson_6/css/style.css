@@ -1,6 +1,11 @@
 @import url("fonts.css");
 @import url("reset.css");
 
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+}
+
 .wrapper {
   min-height: 100%;
   overflow: clip;
@@ -34,6 +39,10 @@ h1 {
   max-width: 1320px;
   margin-inline: auto;
   padding-inline: 15px;
+}
+
+.lesson-properties {
+  margin-bottom: 50px;
 }
 
 .background-examples,
@@ -137,3 +146,93 @@ h1 {
     lightblue;
 }
 
+/* Block 1 */
+.product {
+  color: #808080;
+  line-height: 1.5;
+  margin-bottom: 60px;
+}
+
+.description {
+  max-width: 648px;
+}
+
+.product .flow > * + * {
+  margin-top: 20px;
+}
+
+.product .description .list .item {
+  margin-bottom: 14px;
+  padding-left: 28px;
+  background: url("../img/icons/check-icon.svg") no-repeat 4px center,
+  radial-gradient(circle, #00B207 69%, #00B207 50%, transparent 75%) no-repeat left center / 20px 20px;
+}
+
+.product .description .list .item.last {
+  margin-bottom: 0;
+}
+
+/* End of block 1 */
+
+/* Block #2 */
+.contacts {
+  margin-bottom: 90px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  color: white;
+  background-color: #302C42;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0;
+}
+
+.contacts .container {
+  max-width: 1272px;
+}
+
+.contacts .list {
+  border-radius: 90px;
+  padding: 25px 40px;
+  background: radial-gradient(2900.76% 50.13% at 50% 53.89%, rgba(58, 52, 86, 0.95) 0%, #211E2E 100%);
+}
+
+.contacts .list .item {
+  display: inline-block;
+  max-width: 370px;
+  width: 33%;
+  font-size: 14px;
+  padding: 30px 45px 30px 120px;
+  line-height: normal;
+  background-repeat: no-repeat;
+  background-position: 40px center;
+}
+
+.contacts .list .item + .item {
+  border-left: 1px solid rgba(192, 183, 232, 0.33);
+}
+
+.contacts .item.map {
+  padding-left: 70px;
+  padding-right: 20px;
+  max-width: 400px;
+  background-position: left center;
+  background-image: url("../img/icons/location-icon.svg");
+  background-size: 70px 70px;
+}
+
+.contacts .item.phone {
+  background-image: url("../img/icons/phone-call.svg");
+  background-size: 60px 60px;
+}
+
+.contacts .item.email {
+  padding-right: 0;
+  max-width: 380px;
+  background-image: url("../img/icons/mail-icon.svg");
+  background-size: 65px 65px;
+}
+
+.contacts .link h2 {
+  font-size: 24px;
+  font-weight: 700;
+}
+/* End of Block #2 */
