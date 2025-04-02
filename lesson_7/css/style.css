@@ -139,3 +139,127 @@ h1 {
   content: '|';
   margin-left: 10px;
 }
+/* Game Start */
+
+.game h2 {
+  font-size: 40px;
+  text-align: center;
+}
+a[href="#new-game"] {
+  display: inline-block;
+  padding: 20px;
+  font-size: 18px;
+  border: 2px double blue;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+.game .field {
+  font-size: 0;
+}
+.game .path:target {
+  visibility: visible;
+}
+.game .path {
+  cursor: pointer;
+  font-size: 16px;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  vertical-align: top;
+}
+.ocean,
+.game .path {
+  visibility: hidden;
+}
+
+.game .ocean {
+  display: inline-block;
+  font-size: 16px;
+  width: 200px;
+  height: 600px;
+  background-image: linear-gradient(90deg, #1CB5E0 0%, #000851 100%);
+  text-orientation: upright;
+  writing-mode: vertical-lr;
+  text-align: center;
+}
+
+.game .path:nth-child(4) {
+  margin-top: 100px;
+  margin-left: -100px;
+}
+
+.game .path:nth-child(5) {
+  margin-top: 200px;
+  margin-left: -100px;
+}
+
+.game .path:nth-child(6) {
+  margin-top: 200px;
+  margin-left: -200px;
+}
+
+.game .path:nth-child(7) {
+  margin-top: 200px;
+  margin-left: -200px;
+}
+
+.game .path:nth-child(8) {
+  margin-top: 300px;
+  margin-left: -100px;
+}
+.game .path:nth-child(9),
+.game .path:nth-child(9) ~ .path {
+  margin-top: 300px;
+  margin-left: 0;
+}
+
+.game .field .path:nth-last-child(2) {
+  margin-top: 200px;
+  margin-left: -100px;
+}
+.game .field .path:last-child {
+  margin-top: 400px;
+  margin-left: -100px;
+}
+
+.game .path:hover:not(:nth-last-child(-n+3)) {
+  visibility: visible;
+  background-color: green;
+}
+
+.game .path:hover:not(:nth-last-child(-n+4)) + .path {
+  visibility: visible;
+  background-color: red;
+}
+
+.surprise {
+  visibility: hidden;
+  background-image: url("../img/bg/question.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/*.surprise:active {*/
+/*  background: green;*/
+/*}*/
+.field .path:last-child:active {
+  background-image: url("../img/bg/money.jpg");
+}
+
+.field .path:nth-last-child(2):active {
+  background-image: url("../img/bg/skull.jpeg");
+}
+.field .path:nth-last-child(3):active {
+  background-image: url("../img/bg/html-5.webp");
+}
+
+
+.path[href="#final"]:hover + .ocean,
+.path#final:target,
+.path#final:target ~ .surprise {
+  visibility: visible;
+}
+
+/* Game END */
