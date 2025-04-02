@@ -1,5 +1,9 @@
 @import url("reset.css");
 
+body {
+  font-family: "Inter", sans-serif;
+}
+
 .wrapper {
   min-height: 100%;
   overflow: clip;
@@ -9,6 +13,7 @@
   margin-inline: auto;
   padding-left: 15px;
   padding-right: 15px;
+  max-width: 1230px;
 }
 
 .header {
@@ -263,3 +268,74 @@ a[href="#new-game"] {
 }
 
 /* Game END */
+
+/* block from figma */
+.education {
+  background-color: #412672;
+  padding-top: 60px;
+  padding-bottom: 100px;
+}
+
+.education h2 {
+  font-size: 38px;
+  color: white;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.education h2 span {
+  display: block;
+  font-weight: 400;
+}
+
+.education .cards {
+  font-size: 0;
+  margin-inline: -10px;
+}
+
+.education .cards > * {
+  display: inline-block;
+  padding-inline: 10px;
+  width: 33.33%;
+  vertical-align: top;
+}
+
+.education .card .content > *:not(:last-child),
+.education .card > *:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.education .card {
+  padding: 20px;
+  background-color: #ffffff;
+  font-size: 15px;
+  line-height: 1.26;
+}
+
+.education .card:hover {
+  background-color: #FFBE48;
+}
+
+.education .card .media {
+  max-height: 266px;
+  width: auto;
+  overflow: clip;
+}
+
+.education .card .content h3 {
+  font-size: 22px;
+  color: #000000;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.education .card .content p {
+  color: #4F4F4F;
+  min-height: 76px;
+}
+
+.education .card .actions a {
+  color: #FE3F3F;
+}
+
+/* end of block from figma */
