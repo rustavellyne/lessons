@@ -376,8 +376,8 @@ a[href="#new-game"] {
   padding-left: 46px;
 }
 
-.institute .info ul li {
-  line-height: 2.55;
+.institute .info ul li + li{
+  margin-top: 20px;
 }
 .institute .info ul li:before {
   content: '';
