@@ -316,11 +316,11 @@ a[href="#new-game"] {
   background-color: #FFBE48;
 }
 
-.education .card .media {
-  max-height: 266px;
-  width: auto;
-  overflow: clip;
+.education .card .media img {
+  height: 266px;
+  width: 100%;
 }
+
 
 .education .card .content h3 {
   font-size: 22px;
@@ -386,6 +386,7 @@ a[href="#new-game"] {
   content: '';
   width: 29px;
   height: 29px;
+  margin-left: -50px;
   margin-right: 15px;
   vertical-align: middle;
   background: url("../img/icons/education-list-icon.svg") no-repeat 0 -2px;
