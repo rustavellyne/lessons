@@ -23,14 +23,95 @@
   <div class="wrapper">
     <header class="header">
       <a href="/">
-        <img src="" alt="Rebel Rover" class="main-logo">
+        <img src="./img/content/logo/main-logo.avif" alt="Rebel Rover" class="main-logo">
       </a>
+      <p>
+        Content, Raster graphics, png(for transparency) | Avif, WebP (SVG for vector logo)
+      </p>
     </header>
     <main class="main">
       <h1>Images</h1>
-      <section class="images">
+      <section class="images-content">
+        <h2>Content Images</h2>
         <div class="container">
-
+          <div class="main-banner">
+            <picture>
+              <source
+                type="image/avif"
+                srcset="./img/content/banner/main-banner.avif 1x, ./img/content/banner/main-banner-2x.avif 2x, ./img/content/banner/main-banner-3x.avif 3x"
+              >
+              <img
+                src="./img/content/banner/main-banner.jpg"
+                srcset="./img/content/banner/main-banner.jpg 1x, ./img/content/banner/main-banner-2x.jpg 2x, ./img/content/banner/main-banner-3x.jpg 3x"
+                alt="Guy in mountain"
+              >
+            </picture>
+            <p>Content Image, Raster graphics, Avif(3x,2x,1x), fallback JPEG</p>
+          </div>
+          <div>
+            <div class="rounded-guy">
+              <picture>
+                <source
+                  type="image/avif"
+                  srcset="./img/content/guy.avif"
+                >
+                <source
+                  type="image/webp"
+                  srcset="./img/content/guy.webp"
+                >
+                <img
+                  src="./img/content/guy.jpg"
+                  alt="Guy in mountain smile"
+                >
+              </picture>
+            </div>
+            <p>Content Image, Raster graphics, Avif, WebP, fallback JPEG</p>
+          </div>
+          <div>
+            <picture>
+              <source
+                type="image/avif"
+                srcset="./img/content/bg/mountain.avif 1x, ./img/content/bg/mountain-2x.avif 2x, ./img/content/bg/mountain-3x.avif 3x"
+              >
+              <img
+                src="./img/content/bg/mountain.jpg"
+                srcset="./img/content/bg/mountain.jpg 1x, ./img/content/bg/mountain-2x.jpg 2x, ./img/content/bg/mountain-3x.jpg 3x"
+                alt="Mountains"
+              >
+            </picture>
+            <p>Content Image, Raster graphics, Avif(3x,2x,1x), fallback JPEG</p>
+          </div>
+        </div>
+      </section>
+      <section class="vector-content-icons">
+        <h2>Content Vector Icons</h2>
+        <div class="container">
+          <ul>
+            <li><img src="./img/content/vector-icons/award.svg" alt="awards"></li>
+            <li><img src="./img/content/vector-icons/chart.svg" alt="chart"></li>
+            <li><img src="./img/content/vector-icons/group.svg" alt="group"></li>
+            <li><img src="./img/content/vector-icons/mountain.svg" alt="mountain"></li>
+            <li><img src="./img/content/vector-icons/person.svg" alt="person"></li>
+            <li><img src="./img/content/vector-icons/rocket.svg" alt="rocket"></li>
+            <li><img src="./img/content/vector-icons/team-work.svg" alt="team-work"></li>
+          </ul>
+          <p>
+            Content Icon, Vector graphics, SVG
+          </p>
+        </div>
+      </section>
+      <section class="decorations">
+        <h2>Decorations and Icons</h2>
+        <div class="container">
+          <ul>
+            <li><img src="./img/icons/arrow.svg" alt="arrow"></li>
+            <li><img src="./img/icons/search.svg" alt="search"></li>
+            <li><img src="./img/decoration/paragraph.svg" alt="paragraph"></li>
+            <li><img src="./img/decoration/plus.svg" alt="plus"></li>
+          </ul>
+          <p>
+            Icons (not content), Vector graphics, SVG
+          </p>
         </div>
       </section>
     </main>
