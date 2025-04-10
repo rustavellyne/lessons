@@ -48,6 +48,9 @@ h2 {
 .images-content .container > * + * {
   margin-top: 40px;
 }
+.images-content h2 {
+  color: black;
+}
 
 .rounded-guy {
   border-radius: 150px 0;
