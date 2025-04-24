@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 6</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+<!--
+  🤓 Домашнє завдання:
+
+- Вчимо теорію (Шпаргалка https://fls.guru/position.html)
+- Практикуємо те що побачили на уроці
+- Верстаємо елементи макета
+-->
+  <!-- main wrapper -->
+  <div class="wrapper">
+    <header class="header">
+      HEADER
+    </header>
+    <main class="page">
+      <h1 class="page__title main-title">Homework #10</h1>
+      <section class="page__section featured-products">
+        <div class="featured-products__container">
+          <div class="featured-products__header section-header ">
+            <h2 class="section-header__title">
+              Featured Products
+            </h2>
+            <a href="#" class="section-header__link">View All</a>
+          </div>
+          <ul class="featured-products__list">
+            <li class="featured-products__item">
+              <div class="product-card">
+                <div class="product-card__badges">
+                  <div class="product-card__badge badge badge--sale">Sale 50%</div>
+                </div>
+                <div class="product-card__actions actions">
+                  <button class="actions__item button button--wish">
+                    <img src="./img/content/vector-icons/heart.svg" alt="Add to wishlist icon">
+                  </button>
+                  <button class="actions__item button button--view">
+                    <img src="./img/content/vector-icons/eye.svg" alt="Quick view button">
+                  </button>
+                </div>
+                <a href="#" class="product-card__link-img">
+                  <img src="./img/content/products/apple.webp" alt="Green Apple" class="product-card__img">
+                </a>
+                <h3 class="product-card__title">
+                  <a href="#">Green Apple</a>
+                </h3>
+                <div class="product-card__info">
+                  <div class="product-card__price price">
+                    <span class="price__special">$14.99</span>
+                    <span class="price__old">$20.99</span>
+                  </div>
+                  <a href="#" class="product-card__buy button button-buy">
+                    <img src="./img/content/vector-icons/bag.svg" alt="add to basket">
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="featured-products__item">
+              <div class="product-card">
+                <div class="product-card__actions actions">
+                  <button class="actions__item button button--wish">
+                    <img src="./img/content/vector-icons/heart.svg" alt="Add to wishlist icon">
+                  </button>
+                  <button class="actions__item button button--view">
+                    <img src="./img/content/vector-icons/eye.svg" alt="Quick view button">
+                  </button>
+                </div>
+                <a href="#" class="product-card__link-img">
+                  <img src="./img/content/products/cabbage.webp" alt="Chanise Cabbage" class="product-card__img">
+                </a>
+                <h3 class="product-card__title">
+                  <a href="#">Chanise Cabbage</a>
+                </h3>
+                <div class="product-card__info">
+                  <div class="product-card__price price">
+                    <span class="price__regular">$14.99</span>
+                  </div>
+                  <a href="#" class="product-card__buy button button-buy">
+                    <img src="./img/content/vector-icons/bag.svg" alt="add to basket">
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="featured-products__item">
+              <div class="product-card">
+                <div class="product-card__actions actions">
+                  <button class="actions__item button button--wish">
+                    <img src="./img/content/vector-icons/heart.svg" alt="Add to wishlist icon">
+                  </button>
+                  <button class="actions__item button button--view">
+                    <img src="./img/content/vector-icons/eye.svg" alt="Quick view button">
+                  </button>
+                </div>
+                <a href="#" class="product-card__link-img">
+                  <img src="./img/content/products/capsicum.webp" alt="Green Capsicum" class="product-card__img">
+                </a>
+                <h3 class="product-card__title product-card__title--hover">
+                  <a href="#">Green Capsicum</a>
+                </h3>
+                <div class="product-card__info">
+                  <div class="product-card__price price">
+                    <span class="price__regular">$14.99</span>
+                  </div>
+                  <a href="#" class="product-card__buy button button-buy button-buy--hover">
+                    <img src="./img/content/vector-icons/bag.svg" alt="add to basket">
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="featured-products__item">
+              <div class="product-card">
+                <div class="product-card__actions actions">
+                  <button class="actions__item button button--wish">
+                    <img src="./img/content/vector-icons/heart.svg" alt="Add to wishlist icon">
+                  </button>
+                  <button class="actions__item button button--view">
+                    <img src="./img/content/vector-icons/eye.svg" alt="Quick view button">
+                  </button>
+                </div>
+                <a href="#" class="product-card__link-img">
+                  <img src="./img/content/products/laddies-fingers.webp" alt="Ladies Finger" class="product-card__img">
+                </a>
+                <h3 class="product-card__title">
+                  <a href="#">Ladies Finger</a>
+                </h3>
+                <div class="product-card__info">
+                  <div class="product-card__price price">
+                    <span class="price__special">$14.99</span>
+                  </div>
+                  <a href="#" class="product-card__buy button button-buy">
+                    <img src="./img/content/vector-icons/bag.svg" alt="add to basket">
+                  </a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <p>
+        <span class="time">24.04.2025</span>
+        <a href="https://fls.guru" target="_blank">fls.guru courses</a>
+      </p>
+    </footer>
+  </div><!-- /main wrapper -->
+</body>
+</html>
