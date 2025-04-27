@@ -274,12 +274,6 @@ h3 {
   max-width: 1260px;
 }
 
-.business-section__title {
-  visibility: hidden;
-  height: 0;
-  width: 0;
-}
-
 .business-section__item:not(:last-child) {
   margin-bottom: 55px;
 }
