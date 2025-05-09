@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 6</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+<!--
+  🤓 Домашнє завдання:
+      1) Пропрацьовуємо кожну властивість та її значення (шпаргалка https://fls.guru/transform.html)
+    2) Створюємо транспортний засіб!
+
+    Приклад:
+    Спортивний автомобіль - https://arkanit7.github.io/lessons/lesson_11/
+    Вантажівка (Truck) - https://dmpidlisnyi.github.io/lessons/lesson_11/
+    Вітрильна яхта - https://dmitriyaa.github.io/lessons/lesson11/
+
+    Автівка з хом'яком - https://vladd16.github.io/lessons/lesson_11/
+    Автівка Volkswagen New Beetle - https://kukuliaka.github.io/lessons/lesson_11/
+    Спортивне авто - https://gh0ti.github.io/lessons/lesson_11/
+    Автівка - https://yershovart.github.io/lessons/lesson_11/
+-->
+  <!-- main wrapper -->
+  <div class="wrapper">
+    <header class="header">
+      HEADER
+    </header>
+    <main class="page">
+      <h1 class="page__title">Homework 11</h1>
+      <section class="page__section transform">
+        <div class="transform__container">
+          <h2 class="transform__title">Transform properties</h2>
+          <div class="transform__items">
+            <div class="transform__item">
+              <div class="translate"></div>
+            </div>
+            <div class="transform__item">
+              <div class="rotate"></div>
+            </div>
+            <div class="transform__item">
+              <div class="skew"></div>
+            </div>
+            <div class="transform__item">
+              <div class="matrix"></div>
+            </div>
+            <div class="transform__item d3">
+              <div class="d3__item d3__item--rotate"></div>
+            </div>
+            <div class="transform__item d3">
+              <div class="d3__item d3__item--translate3d"></div>
+            </div>
+            <div class="transform__item d3">
+              <div class="d3__item d3__item--flip"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="page__section canvas">
+        <div class="sun">
+          <div class="sun__ray"></div>
+          <div class="sun__ray"></div>
+          <div class="sun__ray"></div>
+          <div class="sun__ray"></div>
+          <div class="sun__ray"></div>
+          <div class="sun__smile"></div>
+          <div class="sun__eye sun__eye--left"></div>
+          <div class="sun__eye sun__eye--right"></div>
+        </div>
+        <div class="cloud">
+          <div class="cloud__shape"></div>
+          <div class="cloud__shape"></div>
+          <div class="cloud__shape"></div>
+          <div class="cloud__shape"></div>
+          <div class="cloud__shape"></div>
+          <div class="cloud__shape"></div>
+          <div class="cloud__shape"></div>
+          <div class="cloud__shape"></div>
+          <div class="cloud__shape"></div>
+          <div class="cloud__shape"></div>
+        </div>
+        <div class="cloud cloud--big">
+          <div class="cloud__shape"></div>
+          <div class="cloud__shape"></div>
+          <div class="cloud__shape"></div>
+          <div class="cloud__shape"></div>
+          <div class="cloud__shape"></div>
+          <div class="cloud__shape"></div>
+          <div class="cloud__shape"></div>
+          <div class="cloud__shape"></div>
+          <div class="cloud__shape"></div>
+          <div class="cloud__shape"></div>
+        </div>
+        <div class="cloud cloud--small">
+          <div class="cloud__shape"></div>
+          <div class="cloud__shape"></div>
+          <div class="cloud__shape"></div>
+          <div class="cloud__shape"></div>
+          <div class="cloud__shape"></div>
+          <div class="cloud__shape"></div>
+          <div class="cloud__shape"></div>
+          <div class="cloud__shape"></div>
+          <div class="cloud__shape"></div>
+          <div class="cloud__shape"></div>
+        </div>
+        <div class="ship">
+          <div class="ship__ahead"></div>
+          <div class="ship__back"></div>
+          <div class="ship__illuminators">
+            <div class="ship__illuminator"></div>
+            <div class="ship__illuminator"></div>
+            <div class="ship__illuminator"></div>
+          </div>
+          <div class="ship__spar"></div>
+          <div class="ship__sail"></div>
+        </div>
+        <div class="island">
+          <div class="island__land land">
+            <div class="land__sand"></div>
+          </div>
+          <div class="island__tree tree">
+            <div class="tree__lists">
+              <div class="tree__list"></div>
+              <div class="tree__list"></div>
+              <div class="tree__list"></div>
+              <div class="tree__list"></div>
+              <div class="tree__list"></div>
+              <div class="tree__list"></div>
+            </div>
+          </div>
+          <div class="island__tree tree">
+            <div class="tree__lists">
+              <div class="tree__list"></div>
+              <div class="tree__list"></div>
+              <div class="tree__list"></div>
+              <div class="tree__list"></div>
+              <div class="tree__list"></div>
+              <div class="tree__list"></div>
+            </div>
+          </div>
+        </div>
+        <div class="ocean">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 520">
+            <path fill="#0099ff" fill-opacity="1"
+                  d="M0,96L48,117.3C96,139,192,181,288,192C384,203,480,181,576,186.7C672,192,768,224,864,218.7C960,213,1056,171,1152,149.3C1248,128,1344,128,1392,128L1440,128L1440,520L1392,520C1344,520,1248,520,1152,520C1056,520,960,520,864,520C768,520,672,520,576,520C480,520,384,520,288,520C192,520,96,520,48,520L0,520Z" />
+          </svg>
+
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <p>
+        <span class="time">05.05.2025</span>
+        <a href="https://fls.guru" target="_blank">fls.guru courses</a>
+      </p>
+    </footer>
+  </div><!-- /main wrapper -->
+</body>
+</html>

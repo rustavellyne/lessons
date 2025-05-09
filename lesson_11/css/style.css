@@ -1,0 +1,504 @@
+@import url("reset.css");
+
+
+.wrapper {
+  overflow: clip;
+  min-height: 100%;
+}
+
+h1,
+h2 {
+  text-align: center;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+
+header,
+footer {
+  padding: 20px;
+  text-align: center;
+  font-size: 24px;
+}
+
+header {
+  margin-bottom: 40px;
+}
+
+[class*="__container"] {
+  max-width: 1230px;
+  margin: 0 auto;
+  padding-inline: 15px;
+}
+
+.page > * {
+  margin-bottom: 40px;
+}
+
+.transform__title {
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.transform__items {
+  margin-top: 20px;
+  font-size: 0;
+  text-align: center;
+}
+
+.transform__items > * {
+  margin: 10px;
+}
+
+.transform__item {
+  cursor: pointer;
+  font-size: 14px;
+  display: inline-block;
+  width: 180px;
+  height: 180px;
+  border: 1px solid black;
+  padding: 20px;
+  vertical-align: top;
+}
+
+.transform__item > div {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+.translate {
+  border: 1px solid tomato;
+  transform: translate(0px, 0px);
+  transition: transform 0.3s;
+}
+
+.transform__item:hover .translate {
+  transform: translate(-21px, -21px);
+}
+
+.rotate {
+  border: 1px solid #4787ff;
+  transform: rotate(0deg) scale(1);
+  transition: transform 0.3s;
+}
+
+.transform__item:hover .rotate {
+  transform: rotate(45deg) scale(1.3);
+}
+
+.skew {
+  border: 1px solid #cbff47;
+  transform: skew(0, 0);
+  transition: transform 0.3s;
+  background: linear-gradient(90deg,rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+}
+
+.transform__item:hover .skew {
+  transform: skew(-20deg, 0);
+}
+
+.matrix {
+  background: #7B68EE;
+  transform: matrix(0, 1, 1, 0, 0, 0);
+  transition: transform 0.3s;
+}
+
+.transform__item:hover .matrix {
+  transform: matrix(0.2, -1.2, -0.6, 0.2, 20, 20);
+}
+
+.d3 {
+  perspective: 400px;
+  perspective-origin: center;
+  transform-style: preserve-3d;
+}
+
+.d3__item--rotate {
+  background: #68eee1;
+  transform: rotateX(0) translatey(0);
+  transition: transform 0.3s;
+}
+
+.transform__item:hover .d3__item--rotate {
+  transform: rotateX(50deg) translatey(40px);
+}
+
+.d3__item--translate3d {
+  background: #eeee68;
+  transform: translate3d(0, 0, 0) scale3d(1,1,1) rotate3d(1, 1, 1, 0);
+  transition: transform 0.3s;
+}
+
+.transform__item:hover .d3__item--translate3d {
+  transform: translate3d(-20px, 20px, 20px) scale3d(1,1,1) rotate3d(2, 2, 4, 73deg);
+}
+
+.d3__item--flip {
+  background-color: pink;
+  transform: rotateY(180deg);
+  transition: all 0.3s ease 0s;
+}
+
+.d3:hover .d3__item--flip {
+  background-color: green;
+  transform: rotateY(0deg);
+}
+
+/* HOME task cartoon */
+.canvas {
+  position: relative;
+  background: linear-gradient(to top, #2980B9,#6DD5FA,#FFFFFF);
+  min-height: 800px;
+  overflow: hidden;
+}
+
+.ocean {
+  position: absolute;
+  width: 100%;
+  top: 339px;
+  z-index: 1;
+}
+
+.sun {
+  position: absolute;
+  left: 100px;
+  top: 100px;
+  width: 100px;
+  height: 100px;
+  background-color: yellow;
+  border-radius: 50%;
+  border: 5px dashed #ededa0;
+}
+
+.sun__ray {
+  position: absolute;
+  width: 200px;
+  height: 5px;
+  background-color: yellow;
+  left: -50px;
+  top: 40px;
+}
+
+.sun__ray:first-child {
+  transform: rotate(36deg);
+}
+
+.sun__ray:nth-child(2) {
+  transform: rotate(72deg);
+}
+
+.sun__ray:nth-child(3) {
+  transform: rotate(108deg);
+}
+
+.sun__ray:nth-child(4) {
+  transform: rotate(144deg);
+}
+
+.sun__ray:nth-child(5) {
+  transform: rotate(180deg);
+}
+
+.sun__smile {
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  background-color: transparent;
+  top: 32px;
+  left: 23px;
+  border-radius: 44px;
+  border-bottom: 3px solid black;
+}
+
+.sun__eye {
+  position: absolute;
+  height: 7px;
+  width: 20px;
+  background-color: #555;
+  border-radius: 50%;
+  transform: rotate(90deg)
+}
+
+.sun__eye--left {
+  left: 16px;
+  top: 27px;
+}
+
+.sun__eye--right {
+  right: 16px;
+  top: 27px;
+}
+
+.cloud {
+  position: absolute;
+  top: 50px;
+  left: 300px;
+  width: 200px;
+  height: 100px;
+}
+
+.cloud__shape {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.cloud__shape:first-child {
+  left: 27px;
+  top: 48px;
+  box-shadow: 10px 5px 5px grey;
+}
+
+.cloud__shape:nth-child(2) {
+  left: 63px;
+  top: 48px;
+  box-shadow: 10px 5px 5px grey;
+}
+
+.cloud__shape:nth-child(3) {
+  left: 100px;
+  top: 42px;
+  box-shadow: 10px 5px 5px grey;
+}
+
+.cloud__shape:nth-child(4) {
+  left: 123px;
+  top: 24px;
+  box-shadow: 10px 2px 4px grey;
+}
+
+.cloud__shape:nth-child(5) {
+  left: 85px;
+  top: 21px;
+}
+
+.cloud__shape:nth-child(6) {
+  left: 49px;
+  top: 21px;
+}
+
+.cloud__shape:nth-child(7) {
+  left: 5px;
+  top: 21px;
+}
+
+.cloud__shape:nth-child(8) {
+  left: 92px;
+  top: 1px;
+}
+
+.cloud__shape:nth-child(9) {
+  left: 60px;
+  top: -16px;
+}
+
+.cloud__shape:nth-child(10) {
+  left: 27px;
+}
+
+.cloud--big {
+  left: 676px;
+  top: 100px;
+  transform: scale(1.5);
+}
+
+.cloud--small {
+  top: 14px;
+  transform: scale(0.8);
+  left: 1000px;
+}
+
+.ship {
+  background-color: #7f4343;
+  position: absolute;
+  bottom: 100px;
+  left: 200px;
+  border: 1px solid;
+  height: 145px;
+  width: 400px;
+  border-top: 0;
+  border-bottom-width: 5px;
+  border-radius: 0 0 100% 100%;
+  z-index: 2;
+}
+
+.ship__ahead {
+  position: absolute;
+  right: -144px;
+  top: -26px;
+  transform: rotate(-20deg);
+  width: 150px;
+  height: 10px;
+  background-color: #754848;
+  border-radius: 0 40% 40% 0;
+}
+
+.ship__back {
+  position: absolute;
+  transform: rotate(6deg);
+  left: -73px;
+  top: -4px;
+  width: 75px;
+  height: 40px;
+  background-color: #754848;
+}
+
+.ship__illuminators {
+  position: absolute;
+  left: 45px;
+  top: 35px;
+  width: 300px;
+  height: 60px;
+}
+
+.ship__illuminator {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border: 4px dashed #444343;
+  background-color: #7ceaf5;
+  border-radius: 50%;
+}
+
+.ship__illuminator:nth-child(1) {}
+.ship__illuminator:nth-child(2) {
+  left: 115px;
+}
+.ship__illuminator:nth-child(3) {
+  left: 230px;
+}
+
+.ship__spar {
+  position: absolute;
+  top: -249px;
+  left: 200px;
+  width: 15px;
+  height: 250px;
+  border: 1px solid;
+  background-color: #a9854c;
+}
+
+.ship__sail {
+  position: absolute;
+  top: -240px;
+  left: 168px;
+  width: 155px;
+  height: 204px;
+  background: #e0e0e0;
+  transform: perspective(5px) rotateX(-1deg);
+  border-radius: 0 114% 0 0;
+}
+
+.island {
+  position: absolute;
+  top: 400px;
+  right: 100px;
+}
+
+.island__land {
+
+}
+
+.land {
+  width: 240px;
+  height: 100px;
+  overflow: hidden;
+}
+
+.land__sand {
+  width: 240px;
+  height: 200px;
+  background-color: #ffe341;
+  border-radius: 50%;
+}
+
+.land__sand:before {
+  content: '';
+  background-image: radial-gradient(#f5fc41 4px, transparent 2px);
+  background-repeat: repeat;
+  display: inline-block;
+  background-size: 44px 44px;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.island__tree {
+  position: absolute;
+  top: -167px;
+  left: 27px;
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 180px solid black;
+  transform: rotate(-16deg);
+}
+
+.island__tree:before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 22px solid transparent;
+  border-right: 22px solid transparent;
+  border-bottom: 178px solid #f7dd4b;
+  position: absolute;
+  left: -22px;
+}
+.tree__lists {
+  position: absolute;
+  top: -15px;
+}
+.tree__list {
+  background-color: #80C5A0;
+  width: 100px;
+  height: 20px;
+  border-radius: 50% / 100%;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border: 1px solid black;
+  position: absolute;
+}
+
+.tree__list:nth-child(odd) {
+  left: -100px;
+}
+
+.tree__list:nth-child(3) {
+  transform-origin: top right;
+  transform: rotate(-45deg);
+  left: -110px;
+  top: 4px;
+}
+
+.tree__list:nth-child(4) {
+  transform-origin: top left;
+  transform: rotate(45deg);
+  top: 3px;
+  left: 10px;
+}
+
+.tree__list:nth-child(5) {
+  transform-origin: top right;
+  transform: rotate(45deg);
+  left: -87px;
+  top: 5px;
+}
+
+.tree__list:nth-child(6) {
+  transform-origin: top left;
+  transform: rotate(-57deg);
+  top: 12px;
+  left: -14px;
+}
+.island__tree:last-child {
+  left: 97px;
+  transform: rotate(3deg);
+  top: -174px;
+}
