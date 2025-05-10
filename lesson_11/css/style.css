@@ -156,6 +156,10 @@ header {
   overflow: hidden;
 }
 
+.canvas__title {
+  display: none;
+}
+
 .ocean {
   position: absolute;
   width: 100%;
