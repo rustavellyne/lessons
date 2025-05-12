@@ -38,6 +38,10 @@ header {
   margin-bottom: 40px;
 }
 
+.transform__container > * {
+  margin-bottom: 20px;
+}
+
 .transform__title {
   font-size: 24px;
   text-transform: uppercase;
@@ -46,6 +50,61 @@ header {
 /* Animation example */
 
 /* End of animation example */
+.cradle {
+  min-height: 400px;
+  position: relative;
+  width: 500px;
+  margin: 0 auto;
+}
+.cradle__holder {
+  margin: 0 auto;
+  width: 330px;
+  height: 20px;
+  background-color: brown;
+  border-radius: 25px;
+  z-index: 2;
+  position: relative;
+}
+
+.cradle__item {
+  position: absolute;
+  bottom: 90px;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: grey;
+
+  &:before {
+    top: -219px;
+    left: 38px;
+    position: absolute;
+    content: '';
+    width: 5px;
+    height: 220px;
+    background-color: #040404;
+  }
+}
+.cradle__item:first-child {
+  left: 50px;
+}
+
+.cradle__item:nth-child(2) {
+  left: 130px;
+}
+
+.cradle__item:nth-child(3) {
+  left: 210px;
+}
+
+.cradle__item:nth-child(4) {
+  left: 290px;
+}
+
+.cradle__item:nth-child(5) {
+  left: 370px;
+}
+
 
 /* HOME task cartoon */
 .canvas {
