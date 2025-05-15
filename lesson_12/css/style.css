@@ -151,6 +151,16 @@ header {
   width: 100%;
   top: 300px;
   z-index: 1;
+  animation: wave 5s infinite alternate ease-in-out;
+}
+
+@keyframes wave {
+  0% {
+    translate: 0 0;
+  }
+  100% {
+    translate: 0 40px;
+  }
 }
 
 .sun {
@@ -163,9 +173,10 @@ header {
   border-radius: 50%;
   border: 5px dashed #ededa0;
   animation:
-    sun-moving 60s infinite alternate,
-    sun-rotate 30s infinite alternate;
+    sun-moving 60s infinite alternate linear,
+    sun-rotate 30s infinite alternate linear;
 }
+
 @keyframes sun-rotate {
   0% {
     rotate: 0;
@@ -251,6 +262,16 @@ header {
   left: 300px;
   width: 200px;
   height: 100px;
+  animation: cloud-moving 20s infinite alternate linear;
+}
+
+@keyframes cloud-moving {
+  0% {
+    translate: 0;
+  }
+  100% {
+    translate: 250px;
+  }
 }
 
 .cloud__shape {
@@ -318,12 +339,14 @@ header {
   left: 676px;
   top: 100px;
   transform: scale(1.5);
+  animation-duration: 45s;
 }
 
 .cloud--small {
   top: 14px;
   transform: scale(0.8);
   left: 1000px;
+  animation-duration: 25s;
 }
 
 .ship {
@@ -338,6 +361,40 @@ header {
   border-bottom-width: 5px;
   border-radius: 0 0 100% 100%;
   z-index: 2;
+  animation: ship-animation 30s infinite ease-in-out,
+    ship-y 1s infinite alternate ease-in-out;
+}
+
+@keyframes ship-y {
+  0% {
+    translate: 0 0;
+  }
+  100% {
+    translate: 0 40px;
+  }
+}
+@keyframes ship-animation {
+  0% {
+    transform: translateX(0) scale(1, 1);
+  }
+  25% {
+    transform: translateX(90vw) scale(1, 1);
+  }
+  50% {
+    transform: translateX(90vw)  scale(-1, 1);
+  }
+  75% {
+    transform: translateX(-90vw) scale(-1, 1);
+  }
+  80% {
+    translateX(-90vw) scale(1, 1);
+  }
+  90% {
+    translateX(-20vw) scale(1, 1);
+  }
+  100% {
+    transform: translateX(0) scale(1, 1);
+  }
 }
 
 .ship__ahead {
@@ -409,7 +466,7 @@ header {
 
 .island {
   position: absolute;
-  top: 400px;
+  top: 450px;
   right: 100px;
 }
 
@@ -451,6 +508,17 @@ header {
   border-right: 25px solid transparent;
   border-bottom: 180px solid black;
   transform: rotate(-16deg);
+  animation: tree-moving 5s infinite alternate linear;
+  transform-origin: center;
+}
+
+@keyframes tree-moving {
+  0% {
+    rotate: 0;
+  }
+  100% {
+    rotate: 5deg;
+  }
 }
 
 .island__tree:before {
