@@ -5,3 +5,215 @@ body {
   font-size: 15px;
   color: #4f4f4f;
 }
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  overflow: clip;
+}
+
+[class*="__container"] {
+  padding: 0 15px;
+  max-width: 1230px;
+  margin: 0 auto;
+}
+
+.wrapper .page {
+  flex-grow: 1;
+}
+
+.footer,
+.header {
+  font-size: 24px;
+  text-align: center;
+  min-height: 50px;
+  padding: 13px 0;
+}
+
+.page__title {
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.education {
+  background-color: #412672;
+  padding: 61px 0 102px;
+}
+
+.education__container > :not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.education__title {
+  color: #ffffff;
+  font-size: 38px;
+}
+
+.education__title strong {
+  display: block;
+  font-weight: 700;
+}
+
+.education__items {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.education__item {
+  display: flex;
+  flex: 0 0 387px;
+}
+
+.teacher-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px;
+  background-color: #ffffff;
+  transition: background-color, box-shadow 0.3s;
+}
+
+.teacher-card:hover {
+  background: #FFBE48;
+  box-shadow: 0 384px 108px 0 rgba(0, 0, 0, 0.00),
+    0 246px 98px 0 rgba(0, 0, 0, 0.01),
+    0 138px 83px 0 rgba(0, 0, 0, 0.05),
+    0 62px 62px 0 rgba(0, 0, 0, 0.09),
+    0 15px 34px 0 rgba(0, 0, 0, 0.10);
+}
+
+.teacher-card__title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #000000;
+}
+
+.teacher-card__media {
+  max-width: 347px;
+  width: 100%;
+}
+
+.teacher-card__description {
+  font-size: 15px;
+  line-height: 1.26;
+  flex-grow: 1;
+}
+.teacher-card__link {
+  color: #FE3F3F;
+  font-size: 15px;
+  line-height: 1.26;
+}
+
+.faculty {
+  padding: 55px 70px;
+}
+
+.faculty__container {
+  display: flex;
+  column-gap: 90px;
+  flex-wrap: wrap;
+}
+
+.faculty__content {
+  align-self: center;
+  flex: 0 0 512px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: #412672;
+  line-height: normal;
+}
+
+.faculty__gallery {
+  max-width: 100%;
+  margin-right: -172px;
+}
+
+.faculty__title {
+  font-size: 34px;
+}
+
+.faculty__title strong {
+  display: block;
+  font-weight: 700;
+}
+
+.faculty__description {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.faculty__advantages {
+  font-size: 20px;
+  color: #4F4F4F;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.faculty__advantage {
+  display: inline-flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.faculty__advantage:before {
+  content: '';
+  width: 29px;
+  height: 29px;
+  background: url('../img/icons/education-list-icon.svg') 0 0 / 100% no-repeat;
+  flex-shrink: 0;
+  align-self: flex-start;
+}
+
+.achievements {
+  background-color: #412672;
+  padding: 70px 0;
+  color: #ffffff;
+}
+
+.achievements__container > :not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.achievements__title {
+  text-align: center;
+  font-size: 24px;
+  line-height: normal;
+}
+
+.achievements__title strong {
+  font-weight: 700;
+}
+
+.achievements__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.item-achievement {
+  display: flex;
+  column-gap: 10px;
+  color: #ffffff;
+}
+
+.item-achievement__text {
+  align-self: center;
+}
+
+.item-achievement__title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.item-achievement__description {
+  font-size: 15px;
+  line-height: 1.6;
+}
