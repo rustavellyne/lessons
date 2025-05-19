@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 13 Flex</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+<!--
+  🤓 Домашнє завдання:
+    1) Вивчаємо теорію уроку (
+        Шпаргалка https://fls.guru/flex.html,
+        Граємо в гру https://flexboxfroggy.com/ ,
+        https://codingfantasy.com/games/flexboxadventure/play
+    )
+    2) Верстаємо частини макету
+    3) Експериментуємо
+-->
+  <!-- main wrapper -->
+  <div class="wrapper">
+    <header class="header">
+      HEADER
+    </header>
+    <main class="page">
+      <h1 class="page__title">Homework 13</h1>
+      <section class="page__section education">
+        <div class="education__container">
+          <h2 class="education__title"></h2>
+          <ul class="education__items">
+            <li class="education__item">
+              <div class="teacher-card">
+                <div class="teacher-card__media">
+                  <img src="./img/content/education/albert.png" alt="Photo of Albert Flores">
+                </div>
+                <h3 class="teacher-card__title">Albert Flores</h3>
+                <p class="teacher-card__description">
+                  Founder of FeatherDev Academy
+                  Masters in Finance | University of New York
+                </p>
+                <div class="teacher-card__actions">
+                  <a class="teacher-card__link" href="#">Read more</a>
+                </div>
+              </div>
+            </li>
+            <li class="education__item">
+              <div class="teacher-card">
+                <div class="teacher-card__media">
+                  <img src="./img/content/education/arlene.png" alt="Photo of Arlene McCoy">
+                </div>
+                <h3 class="teacher-card__title">Arlene McCoy</h3>
+                <p class="teacher-card__description">
+                  15 Year + Experience in Teaching and Former RBI Grade B Employee.
+                  Have Qualified USMLE Mains twice and is just like a knowledge book of Economics.
+                </p>
+                <div class="teacher-card__actions">
+                  <a class="teacher-card__link" href="#">Read more</a>
+                </div>
+              </div>
+            </li>
+            <li class="education__item">
+              <div class="teacher-card">
+                <div class="teacher-card__media">
+                  <img src="./img/content/education/annete.png" alt="Photo of Annette Black">
+                </div>
+                <h3 class="teacher-card__title">Annette Black</h3>
+                <p class="teacher-card__description">
+                  10 Year + Experience in Teaching and Former Civil Servant.
+                  Specialized in teaching History and no student wants to miss their class.
+                </p>
+                <div class="teacher-card__actions">
+                  <a class="teacher-card__link" href="#">Read more</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="page__section faculty">
+        <div class="faculty__container">
+          <div class="faculty__content">
+            <h2 class="faculty__title">Best Faculty from New York is <strong>Now Available in California!</strong></h2>
+            <p class="faculty__description">
+              Our Faculty is common in all the branches which helps us to maintain the quality education across India. Now there is no need to go anywhere!
+            </p>
+            <ul class="faculty__advantages">
+              <li class="faculty__advantage">Learn from Top Educators in your city
+              </li>
+              <li class="faculty__advantage">Regular Classes & Doubt Solving 300+ Regular Classes & Doubt Solving 300+
+                Regular Classes & Doubt Solving 300+
+                Regular Classes & Doubt Solving 300+
+              </li>
+              <li class="faculty__advantage">Selections in 2022-2023 Batch
+              </li>
+            </ul>
+          </div>
+          <div class="faculty__gallery gallery">
+            <img class="gallery__item" src="./img/content/gallery.png" alt="Girl with macbook on sofa">
+          </div>
+        </div>
+      </section>
+      <section class="page__section achievements">
+        <div class="achievements__container">
+          <h2 class="achievements__title">FeatherDev Academy is the
+            <strong>
+              Best USMLE/Civil Services Coaching in California
+            </strong>
+          </h2>
+          <ul class="achievements__list">
+            <li class="achievements__item item-achievement">
+              <div class="item-achievement__icon">
+                <img src="./img/content/icons/dashboard.png" alt="dashboard">
+              </div>
+              <h3 class="item-achievement__title">2000+</h3>
+              <p class="item-achievement__description">Selection</p>
+            </li>
+            <li class="achievements__item item-achievement">
+              <div class="item-achievement__icon">
+                <img src="./img/content/icons/trophy.png" alt="trophy">
+              </div>
+              <h3 class="item-achievement__title">10 Years +</h3>
+              <p class="item-achievement__description">Experience faculty</p>
+            </li>
+            <li class="achievements__item item-achievement">
+              <div class="item-achievement__icon">
+                <img src="./img/content/icons/search.png" alt="search">
+              </div>
+              <h3 class="item-achievement__title">10+</h3>
+              <p class="item-achievement__description">Entrance Courses</p>
+            </li>
+            <li class="achievements__item item-achievement">
+              <div class="item-achievement__icon">
+                <img src="./img/content/icons/book.png" alt="book">
+              </div>
+              <h3 class="item-achievement__title">100+</h3>
+              <p class="item-achievement__description">Entrance Books</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <p>
+        <span class="time">19.05.2025</span>
+        <a href="https://fls.guru" target="_blank">fls.guru courses</a>
+      </p>
+    </footer>
+  </div><!-- /main wrapper -->
+</body>
+</html>
