@@ -55,18 +55,19 @@ body {
 
 .education__title strong {
   display: block;
-  font-weight: 700;
 }
 
 .education__items {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
   justify-content: space-between;
 }
 
 .education__item {
   display: flex;
-  flex: 0 0 387px;
+  flex: 1 1;
+  width: 33.3333%;
 }
 
 .teacher-card {
@@ -96,6 +97,7 @@ body {
 .teacher-card__media {
   max-width: 347px;
   width: 100%;
+  max-height: 266px;
 }
 
 .teacher-card__description {
@@ -103,10 +105,12 @@ body {
   line-height: 1.26;
   flex-grow: 1;
 }
+
 .teacher-card__link {
   color: #FE3F3F;
   font-size: 15px;
   line-height: 1.26;
+  align-self: flex-start
 }
 
 .faculty {
@@ -126,7 +130,7 @@ body {
   flex-direction: column;
   gap: 20px;
   color: #412672;
-  line-height: normal;
+  line-height: 1.26;
 }
 
 .faculty__gallery {
@@ -140,7 +144,6 @@ body {
 
 .faculty__title strong {
   display: block;
-  font-weight: 700;
 }
 
 .faculty__description {
@@ -184,36 +187,42 @@ body {
 .achievements__title {
   text-align: center;
   font-size: 24px;
-  line-height: normal;
-}
-
-.achievements__title strong {
-  font-weight: 700;
+  line-height: 1.26;
 }
 
 .achievements__list {
   display: flex;
   justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
 }
 
 .item-achievement {
   display: flex;
   column-gap: 10px;
   color: #ffffff;
+  max-width: 220px;
+}
+
+.item-achievement__icon {
+  width: 70px;
+  height: 70px;
+  flex: 0 0 70px;
 }
 
 .item-achievement__text {
   align-self: center;
 }
 
-.item-achievement__title {
-  text-align: center;
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 1;
-}
-
-.item-achievement__description {
+.item-achievement__text p {
   font-size: 15px;
   line-height: 1.6;
 }
+
+.item-achievement__text strong {
+  display: block;
+  text-align: center;
+  font-size: 24px;
+  line-height: 1;
+}
+
