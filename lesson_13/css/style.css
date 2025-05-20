@@ -106,11 +106,20 @@ body {
   flex-grow: 1;
 }
 
+.teacher-card__description p:not(:last-child) {
+  margin-bottom: 10px;
+}
+
 .teacher-card__link {
   color: #FE3F3F;
   font-size: 15px;
   line-height: 1.26;
-  align-self: flex-start
+  align-self: flex-start;
+  transition: color 0.4s;
+}
+
+.teacher-card__link:hover {
+  color: #b14e00;
 }
 
 .faculty {
@@ -163,6 +172,7 @@ body {
   display: inline-flex;
   gap: 15px;
   align-items: center;
+  line-height: 1.5;
 }
 
 .faculty__advantage:before {
