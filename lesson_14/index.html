@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 14 Form</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+<!--
+  🤓 Домашнє завдання:
+    1) Вивчаємо теорію уроку (
+        Шпаргалка https://fls.guru/flex.html,
+        Граємо в гру https://flexboxfroggy.com/ ,
+        https://codingfantasy.com/games/flexboxadventure/play
+    )
+    2) Верстаємо частини макету
+    3) Експериментуємо
+-->
+  <!-- main wrapper -->
+  <div class="wrapper">
+    <header class="header">
+      HEADER
+    </header>
+    <main class="page">
+      <h1 class="page__title">Homework 14 Form</h1>
+      <div class="checkout">
+        <div class="checkout__container">
+          <form action="#" method="POST" class="checkout__form form-checkout">
+            <div class="form-checkout__delivery">
+              <div class="form-checkout__section form-section">
+                <h2 class="form-section__title">Billing Information</h2>
+                <div class="form-section__group">
+                  <div class="form-section__item">
+                    <label for="billing-firstname">First name</label>
+                    <input type="text" name="billing-firstname" id="billing-firstname" autocomplete="billing given-name"  placeholder="Your first name" required/>
+                  </div>
+                  <div class="form-section__item">
+                    <label for="billing-lastname">First name</label>
+                    <input type="text" name="billing-lastname" id="billing-lastname" autocomplete="billing family-name"  placeholder="Your last name" required/>
+                  </div>
+                  <div class="form-section__item">
+                    <label for="billing-company">Company Name <span>(optional)</span></label>
+                    <input type="text" name="billing-firstname" id="billing-company" autocomplete="billing organization" placeholder="Company name" />
+                  </div>
+                </div>
+                <div class="form-section__group">
+                  <div class="form-section__item">
+                    <label for="billing-street-address">Street Address</label>
+                    <input type="text" name="billing-firstname" id="billing-street-address" autocomplete="billing street-address" placeholder="Street Address" required/>
+                  </div>
+                </div>
+                <div class="form-section__group">
+                  <div class="form-section__item">
+                    <label for="billing-country">Country / Region</label>
+                    <select name="billing-country" id="billing-country" autocomplete="billing country" required>
+                      <option value="" disabled>Select</option>
+                      <option value="ua">Ukraine</option>
+                      <option value="ca">Canada</option>
+                      <option value="gb">Great Britain</option>
+                    </select>
+                  </div>
+                  <div class="form-section__item">
+                    <label for="billing-states">States</label>
+                    <select name="billing-states" id="billing-states" autocomplete="billing address-level1" required multiple>
+                      <option value="" disabled>Selects</option>
+                      <option value="kyiv">Kyiv</option>
+                      <option value="sumy">Sumy</option>
+                      <option value="chernihiv">Chernihiv</option>
+                    </select>
+                  </div>
+                  <div class="form-section__item">
+                    <label for="billing-zip">Zip code</label>
+                    <input type="text" placeholder="Zip Code" id="billing-zip" name="billing-zip" autocomplete="billing postal-code" required>
+                  </div>
+                </div>
+                <div class="form-section__group">
+                  <div class="form-section__item">
+                    <label for="billing-email">Email</label>
+                    <input type="email" placeholder="Email" id="billing-email" name="billing-email" autocomplete="billing email" required>
+                  </div>
+                  <div class="form-section__item">
+                    <label for="billing-phone">Phone</label>
+                    <input type="tel" placeholder="Phone number" id="billing-phone" name="billing-phone" autocomplete="billing tel" required>
+                  </div>
+                </div>
+                <div class="form-section__group">
+                  <div class="form-section__item">
+                    <label for="include-shipping-address">Ship to a different address</label>
+                    <input type="checkbox" id="include-shipping-address" name="include-shipping-address">
+                  </div>
+                </div>
+              </div>
+              <div class="form-checkout__section form-section">
+                <h2 class="form-section__title">Additional Info</h2>
+                <div class="form-section__group">
+                  <div class="form-section__item">
+                    <label for="order-comment">Order Notes <span>(Optional)</span></label>
+                    <textarea id="order-comment" name="order-comment" placeholder="Notes about your order, e.g. special notes for delivery" rows="5"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-checkout__summary summary">
+              <h2 class="summary__title">Order Summery</h2>
+              <div class="summary__minicart">
+                <div class="minicart">
+                  <div class="minicart__items">
+                    <div class="minicart__item item-product">
+                      <div class="item-product__media">
+                        <img src="./img/content/product/green.png" alt="green pepper" />
+                      </div>
+                      <h3 class="item-product__title">Green Capsicum</h3>
+                      <span class="item-product__qty">x3</span>
+                      <div class="item-product__price">$70.00</div>
+                    </div>
+                    <div class="minicart__item item-product">
+                      <div class="item-product__media">
+                        <img src="./img/content/product/red.png" alt="green pepper" />
+                      </div>
+                      <h3 class="item-product__title">Red Capsicum</h3>
+                      <span class="item-product__qty">x1</span>
+                      <div class="item-product__price">$14.00</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="summary__totals totals">
+                <ul class="totals__list">
+                  <li class="totals__item">
+                    <h3>Subtotal:</h3>
+                    <p>$84.00</p>
+                  </li>
+                  <li class="totals__item">
+                    <h3>Shipping:</h3>
+                    <p>Free</p>
+                  </li>
+                  <li class="totals__item">
+                    <h3>Total:</h3>
+                    <p>$84.00</p>
+                  </li>
+                </ul>
+              </div>
+              <fieldset class="summary__payments payments">
+                <legend class="payments__title">Payment Method</legend>
+                <div class="payments__list">
+                  <div class="payments__item">
+                    <label for="delivery-cash">Cash on Delivery</label>
+                    <input type="radio" id="delivery-cash" name="payment-method" />
+                  </div>
+                  <div class="payments__item">
+                    <label for="paypal">Paypal</label>
+                    <input type="radio" id="paypal" name="payment-method" />
+                  </div>
+                  <div class="payments__item">
+                    <label for="amazon-pay">Amazon Pay</label>
+                    <input type="radio" id="amazon-pay" name="payment-method" />
+                  </div>
+                </div>
+              </fieldset>
+              <div class="summary__actions">
+                <input type="submit" class="button" />
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <p>
+        <span class="time">19.05.2025</span>
+        <a href="https://fls.guru" target="_blank">fls.guru courses</a>
+      </p>
+    </footer>
+  </div><!-- /main wrapper -->
+</body>
+</html>
