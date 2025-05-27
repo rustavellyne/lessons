@@ -66,6 +66,7 @@ input:focus {
 
 textarea {
   resize: vertical;
+  min-height: 100px;
 }
 
 select {
@@ -244,6 +245,12 @@ select {
   display: flex;
   align-items: center;
   width: 100%;
+  gap: 6px;
+}
+
+.item-product__link {
+  display: inline-flex;
+  align-items: center;
   gap: 6px;
 }
 
