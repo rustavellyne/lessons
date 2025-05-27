@@ -83,9 +83,11 @@
                   </div>
                 </div>
                 <div class="form-section__group">
-                  <div class="form-section__item checkbox">
-                    <label for="include-shipping-address">Ship to a different address</label>
-                    <input type="checkbox" id="include-shipping-address" name="include-shipping-address">
+                  <div class="form-section__item form-section__item--no-margin">
+                    <label class="checkbox">
+                      <input type="checkbox" name="include-shipping-address" class="checkbox__input">
+                      <span class="checkbox__label">Ship to a different address</span>
+                    </label>
                   </div>
                 </div>
               </fieldset>
@@ -144,16 +146,22 @@
                 <legend class="payments__title">Payment Method</legend>
                 <div class="payments__list">
                   <div class="payments__item">
-                    <label for="delivery-cash">Cash on Delivery</label>
-                    <input type="radio" id="delivery-cash" name="payment-method">
+                    <label class="radio">
+                      <input type="radio" class="radio__input" name="payment-method" checked>
+                      <span class="radio__label">Cash on Delivery</span>
+                    </label>
                   </div>
                   <div class="payments__item">
-                    <label for="paypal">Paypal</label>
-                    <input type="radio" id="paypal" name="payment-method">
+                    <label class="radio">
+                      <input type="radio" class="radio__input" name="payment-method">
+                      <span class="radio__label">Paypal</span>
+                    </label>
                   </div>
                   <div class="payments__item">
-                    <label for="amazon-pay">Amazon Pay</label>
-                    <input type="radio" id="amazon-pay" name="payment-method">
+                    <label class="radio">
+                      <input type="radio" class="radio__input" name="payment-method">
+                      <span class="radio__label">Amazon Pay</span>
+                    </label>
                   </div>
                 </div>
               </fieldset>
