@@ -23,6 +23,19 @@ body {
   padding: 0 15px;
 }
 
+[class$="--visually-hidden"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 h1 {
   text-align: center;
   font-size: 32px;
@@ -99,19 +112,6 @@ select option {
   background-color: #fff;
   border: 1px solid #CCCCCC;
   transition: background-color 0.3s;
-}
-.radio__input--visually-hidden,
-.checkbox__input--visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
 }
 
 .checkbox__input:focus-visible + .checkbox__label:before {
