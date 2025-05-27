@@ -184,6 +184,7 @@ select {
 }
 
 .form-checkout__summary {
+  align-self: flex-start;
   flex: 1 0 calc((424 / (1320 - 24)) * 100% - (24px / 2));
 }
 
