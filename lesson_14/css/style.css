@@ -72,6 +72,11 @@ textarea {
 select {
   font-size: 16px;
   line-height: 1.3;
+  color: #999999;
+}
+select:valid,
+select option {
+  color: #1A1A1A;
 }
 
 .checkbox {
