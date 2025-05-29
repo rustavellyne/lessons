@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 15 Adaptive</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+<!--
+  🤓 Домашнє завдання:
+    Вчимо теорію
+    Верстаємо те що на скріні адаптивно
+-->
+  <!-- main wrapper -->
+  <div class="wrapper">
+    <header class="header">HEADER</header>
+    <main class="page">
+      <h1 class="page__title">Homework 15 Adaptive</h1>
+      <section class="feature-products">
+        <div class="feature-products__container">
+          <div class="feature-products__header">
+            <h2 class="feature-products__title">Featured Products</h2>
+            <a href="#" class="link-more feature-products__link">View All</a>
+          </div>
+          <ul class="feature-products__list">
+            <li class="feature-products__item">
+              <div class="product">
+                <div class="product__badges">
+                  <div class="badge badge--sale">Sale 50%</div>
+                </div>
+                <div class="product__actions">
+                  <button class="button button--wishlist">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <path d="M9.9996 17.5453C-6.66672 8.33354 4.99993 -1.66646 9.9996 4.65692C14.9999 -1.66646 26.6666 8.33354 9.9996 17.5453Z" stroke="inherit" stroke-width="1.5"/>
+                    </svg>
+                  </button>
+                  <button class="button button--compare">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <path d="M10 3.54102C3.75 3.54102 1.25 10.0001 1.25 10.0001C1.25 10.0001 3.75 16.4577 10 16.4577C16.25 16.4577 18.75 10.0001 18.75 10.0001C18.75 10.0001 16.25 3.54102 10 3.54102V3.54102Z" stroke="inherit" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M10 13.125C10.8288 13.125 11.6237 12.7958 12.2097 12.2097C12.7958 11.6237 13.125 10.8288 13.125 10C13.125 9.1712 12.7958 8.37634 12.2097 7.79029C11.6237 7.20424 10.8288 6.875 10 6.875C9.1712 6.875 8.37634 7.20424 7.79029 7.79029C7.20424 8.37634 6.875 9.1712 6.875 10C6.875 10.8288 7.20424 11.6237 7.79029 12.2097C8.37634 12.7958 9.1712 13.125 10 13.125V13.125Z" stroke="inherit" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </button>
+                </div>
+                <div class="product__media">
+                  <a href="#">
+                    <img src="./img/content/product/apple.png" alt="green apples">
+                  </a>
+                </div>
+                <div class="product__footer">
+                  <div class="product__content">
+                    <h3 class="product__title">
+                      <a href="#">Green Apple</a>
+                    </h3>
+                    <div class="product__prices">
+                      <span class="price price--special">$14.99</span>
+                      <span class="price price--old">$20.99</span>
+                    </div>
+                    <div class="product__rating rating">
+                      <div class="rating__star rating__star--filled"></div>
+                      <div class="rating__star rating__star--filled"></div>
+                      <div class="rating__star rating__star--filled"></div>
+                      <div class="rating__star rating__star--filled"></div>
+                      <div class="rating__star"></div>
+                    </div>
+                  </div>
+                  <div class="product__buy">
+                    <a href="#/product/buy/sku/123" class="button button--icon-buy">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                        <path d="M6.66667 8.83333H4.16667L2.5 18H17.5L15.8333 8.83333H13.3333M6.66667 8.83333V6.33333C6.66667 4.49239 8.15905 3 10 3V3C11.8409 3 13.3333 4.49238 13.3333 6.33333V8.83333M6.66667 8.83333H13.3333M6.66667 8.83333V11.3333M13.3333 8.83333V11.3333" stroke="inherit" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="feature-products__item">
+              <div class="product">
+                <div class="product__badges">
+                  <div class="badge badge--new">New</div>
+                </div>
+                <div class="product__actions">
+                  <button class="button button--wishlist">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <path d="M9.9996 17.5453C-6.66672 8.33354 4.99993 -1.66646 9.9996 4.65692C14.9999 -1.66646 26.6666 8.33354 9.9996 17.5453Z" stroke="inherit" stroke-width="1.5"/>
+                    </svg>
+                  </button>
+                  <button class="button button--compare">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <path d="M10 3.54102C3.75 3.54102 1.25 10.0001 1.25 10.0001C1.25 10.0001 3.75 16.4577 10 16.4577C16.25 16.4577 18.75 10.0001 18.75 10.0001C18.75 10.0001 16.25 3.54102 10 3.54102V3.54102Z" stroke="inherit" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M10 13.125C10.8288 13.125 11.6237 12.7958 12.2097 12.2097C12.7958 11.6237 13.125 10.8288 13.125 10C13.125 9.1712 12.7958 8.37634 12.2097 7.79029C11.6237 7.20424 10.8288 6.875 10 6.875C9.1712 6.875 8.37634 7.20424 7.79029 7.79029C7.20424 8.37634 6.875 9.1712 6.875 10C6.875 10.8288 7.20424 11.6237 7.79029 12.2097C8.37634 12.7958 9.1712 13.125 10 13.125V13.125Z" stroke="inherit" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </button>
+                </div>
+                <div class="product__media">
+                  <a href="#">
+                    <img src="./img/content/product/orange.png" alt="Oranges">
+                  </a>
+                </div>
+                <div class="product__footer">
+                  <div class="product__content">
+                    <h3 class="product__title">
+                      <a href="#">Fresh Indian Malta</a>
+                    </h3>
+                    <div class="product__prices">
+                      <span class="price price">$20.00</span>
+                    </div>
+                    <div class="product__rating rating">
+                      <div class="rating__star rating__star--filled"></div>
+                      <div class="rating__star rating__star--filled"></div>
+                      <div class="rating__star rating__star--filled"></div>
+                      <div class="rating__star rating__star--filled"></div>
+                      <div class="rating__star"></div>
+                    </div>
+                  </div>
+                  <div class="product__buy">
+                    <a href="#/product/buy/sku/123" class="button button--icon-buy">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                        <path d="M6.66667 8.83333H4.16667L2.5 18H17.5L15.8333 8.83333H13.3333M6.66667 8.83333V6.33333C6.66667 4.49239 8.15905 3 10 3V3C11.8409 3 13.3333 4.49238 13.3333 6.33333V8.83333M6.66667 8.83333H13.3333M6.66667 8.83333V11.3333M13.3333 8.83333V11.3333" stroke="inherit" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="feature-products__item">
+              <div class="product">
+                <div class="product__actions">
+                  <button class="button button--wishlist">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <path d="M9.9996 17.5453C-6.66672 8.33354 4.99993 -1.66646 9.9996 4.65692C14.9999 -1.66646 26.6666 8.33354 9.9996 17.5453Z" stroke="inherit" stroke-width="1.5"/>
+                    </svg>
+                  </button>
+                  <button class="button button--compare">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <path d="M10 3.54102C3.75 3.54102 1.25 10.0001 1.25 10.0001C1.25 10.0001 3.75 16.4577 10 16.4577C16.25 16.4577 18.75 10.0001 18.75 10.0001C18.75 10.0001 16.25 3.54102 10 3.54102V3.54102Z" stroke="inherit" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M10 13.125C10.8288 13.125 11.6237 12.7958 12.2097 12.2097C12.7958 11.6237 13.125 10.8288 13.125 10C13.125 9.1712 12.7958 8.37634 12.2097 7.79029C11.6237 7.20424 10.8288 6.875 10 6.875C9.1712 6.875 8.37634 7.20424 7.79029 7.79029C7.20424 8.37634 6.875 9.1712 6.875 10C6.875 10.8288 7.20424 11.6237 7.79029 12.2097C8.37634 12.7958 9.1712 13.125 10 13.125V13.125Z" stroke="inherit" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </button>
+                </div>
+                <div class="product__media">
+                  <a href="#">
+                    <img src="./img/content/product/cabbage.png" alt="Chinese cabbage">
+                  </a>
+                </div>
+                <div class="product__footer">
+                  <div class="product__content">
+                    <h3 class="product__title">
+                      <a href="#">Chinese cabbage</a>
+                    </h3>
+                    <div class="product__prices">
+                      <span class="price">$12.00</span>
+                    </div>
+                    <div class="product__rating rating">
+                      <div class="rating__star rating__star--filled"></div>
+                      <div class="rating__star rating__star--filled"></div>
+                      <div class="rating__star rating__star--filled"></div>
+                      <div class="rating__star rating__star--filled"></div>
+                      <div class="rating__star"></div>
+                    </div>
+                  </div>
+                  <div class="product__buy">
+                    <a href="#/product/buy/sku/123" class="button button--icon-buy">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                        <path d="M6.66667 8.83333H4.16667L2.5 18H17.5L15.8333 8.83333H13.3333M6.66667 8.83333V6.33333C6.66667 4.49239 8.15905 3 10 3V3C11.8409 3 13.3333 4.49238 13.3333 6.33333V8.83333M6.66667 8.83333H13.3333M6.66667 8.83333V11.3333M13.3333 8.83333V11.3333" stroke="inherit" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="feature-products__item">
+              <div class="product">
+                <div class="product__badges">
+                  <div class="badge badge--best">Best sale</div>
+                </div>
+                <div class="product__actions">
+                  <button class="button button--wishlist">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <path d="M9.9996 17.5453C-6.66672 8.33354 4.99993 -1.66646 9.9996 4.65692C14.9999 -1.66646 26.6666 8.33354 9.9996 17.5453Z" stroke="inherit" stroke-width="1.5"/>
+                    </svg>
+                  </button>
+                  <button class="button button--compare">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <path d="M10 3.54102C3.75 3.54102 1.25 10.0001 1.25 10.0001C1.25 10.0001 3.75 16.4577 10 16.4577C16.25 16.4577 18.75 10.0001 18.75 10.0001C18.75 10.0001 16.25 3.54102 10 3.54102V3.54102Z" stroke="inherit" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M10 13.125C10.8288 13.125 11.6237 12.7958 12.2097 12.2097C12.7958 11.6237 13.125 10.8288 13.125 10C13.125 9.1712 12.7958 8.37634 12.2097 7.79029C11.6237 7.20424 10.8288 6.875 10 6.875C9.1712 6.875 8.37634 7.20424 7.79029 7.79029C7.20424 8.37634 6.875 9.1712 6.875 10C6.875 10.8288 7.20424 11.6237 7.79029 12.2097C8.37634 12.7958 9.1712 13.125 10 13.125V13.125Z" stroke="inherit" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </button>
+                </div>
+                <div class="product__media">
+                  <a href="#">
+                    <img src="./img/content/product/lettuce.png" alt="Green Lettuce">
+                  </a>
+                </div>
+                <div class="product__footer">
+                  <div class="product__content">
+                    <h3 class="product__title">
+                      <a href="#">Green Lettuce</a>
+                    </h3>
+                    <div class="product__prices">
+                      <span class="price">$9.00</span>
+                    </div>
+                    <div class="product__rating rating">
+                      <div class="rating__star rating__star--filled"></div>
+                      <div class="rating__star rating__star--filled"></div>
+                      <div class="rating__star rating__star--filled"></div>
+                      <div class="rating__star rating__star--filled"></div>
+                      <div class="rating__star"></div>
+                    </div>
+                  </div>
+                  <div class="product__buy">
+                    <a href="#/product/buy/sku/123" class="button button--icon-buy">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                        <path d="M6.66667 8.83333H4.16667L2.5 18H17.5L15.8333 8.83333H13.3333M6.66667 8.83333V6.33333C6.66667 4.49239 8.15905 3 10 3V3C11.8409 3 13.3333 4.49238 13.3333 6.33333V8.83333M6.66667 8.83333H13.3333M6.66667 8.83333V11.3333M13.3333 8.83333V11.3333" stroke="inherit" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="feature-products__item">
+              <div class="product">
+                <div class="product__badges">
+                  <div class="badge badge--out-stock">Out of Stock</div>
+                </div>
+                <div class="product__actions">
+                  <button class="button button--wishlist">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <path d="M9.9996 17.5453C-6.66672 8.33354 4.99993 -1.66646 9.9996 4.65692C14.9999 -1.66646 26.6666 8.33354 9.9996 17.5453Z" stroke="inherit" stroke-width="1.5"/>
+                    </svg>
+                  </button>
+                  <button class="button button--compare">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <path d="M10 3.54102C3.75 3.54102 1.25 10.0001 1.25 10.0001C1.25 10.0001 3.75 16.4577 10 16.4577C16.25 16.4577 18.75 10.0001 18.75 10.0001C18.75 10.0001 16.25 3.54102 10 3.54102V3.54102Z" stroke="inherit" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M10 13.125C10.8288 13.125 11.6237 12.7958 12.2097 12.2097C12.7958 11.6237 13.125 10.8288 13.125 10C13.125 9.1712 12.7958 8.37634 12.2097 7.79029C11.6237 7.20424 10.8288 6.875 10 6.875C9.1712 6.875 8.37634 7.20424 7.79029 7.79029C7.20424 8.37634 6.875 9.1712 6.875 10C6.875 10.8288 7.20424 11.6237 7.79029 12.2097C8.37634 12.7958 9.1712 13.125 10 13.125V13.125Z" stroke="inherit" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </button>
+                </div>
+                <div class="product__media">
+                  <a href="#">
+                    <img src="./img/content/product/eggplant.png" alt="Eggplant">
+                  </a>
+                </div>
+                <div class="product__footer">
+                  <div class="product__content">
+                    <h3 class="product__title">
+                      <a href="#">Eggplant</a>
+                    </h3>
+                    <div class="product__prices">
+                      <span class="price price--special">$34.00</span>
+                    </div>
+                    <div class="product__rating rating">
+                      <div class="rating__star rating__star--filled"></div>
+                      <div class="rating__star rating__star--filled"></div>
+                      <div class="rating__star rating__star--filled"></div>
+                      <div class="rating__star rating__star--filled"></div>
+                      <div class="rating__star"></div>
+                    </div>
+                  </div>
+                  <div class="product__buy">
+                    <a href="#/product/buy/sku/123" class="button button--icon-buy">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                        <path d="M6.66667 8.83333H4.16667L2.5 18H17.5L15.8333 8.83333H13.3333M6.66667 8.83333V6.33333C6.66667 4.49239 8.15905 3 10 3V3C11.8409 3 13.3333 4.49238 13.3333 6.33333V8.83333M6.66667 8.83333H13.3333M6.66667 8.83333V11.3333M13.3333 8.83333V11.3333" stroke="inherit" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="news">
+        <div class="news__container">
+          <h2 class="news__title">Latest News</h2>
+          <ul class="news__list">
+            <li class="news__item">
+              <div class="item-news">
+                <div class="item-news__media">
+                  <img src="./img/content/blog/orange.png" alt="oranges">
+                  <time class="item-news__datetime">
+                    <strong>18</strong>
+                    Nov
+                  </time>
+                </div>
+                <div class="item-news__content">
+                  <div class="item-news__links">
+                    <a href="#" class="item-news__link item-news__link--category">Food</a>
+                    <a href="#" class="item-news__link item-news__link--user">By Admin</a>
+                    <a href="#" class="item-news__link item-news__link--comments">65 Comments</a>
+                  </div>
+                  <h3 class="item-news__title">
+                    <a href="#">Curabitur porttitor orci eget neque accumsan venenatis. Nunc fermentum.</a>
+                  </h3>
+                  <a href="" class="link-more item-news__more">Read More</a>
+                </div>
+              </div>
+            </li>
+            <li class="news__item">
+              <div class="item-news">
+                <div class="item-news__media">
+                  <img src="./img/content/blog/eggs.png" alt="oranges">
+                  <time class="item-news__datetime">
+                    <strong>29</strong>
+                    jan
+                  </time>
+                </div>
+                <div class="item-news__content">
+                  <div class="item-news__links">
+                    <a href="#" class="item-news__link item-news__link--category">Food</a>
+                    <a href="#" class="item-news__link item-news__link--user">By Admin</a>
+                    <a href="#" class="item-news__link item-news__link--comments">65 Comments</a>
+                  </div>
+                  <h3 class="item-news__title">
+                    <a href="#">Curabitur porttitor orci eget neque accumsan venenatis. Nunc fermentum. Nunc fermentum. Nunc fermentum.</a>
+                  </h3>
+                  <a href="" class="link-more item-news__more">Read More</a>
+                </div>
+              </div>
+            </li>
+            <li class="news__item">
+              <div class="item-news">
+                <div class="item-news__media">
+                  <img src="./img/content/blog/salad.png" alt="oranges">
+                  <time class="item-news__datetime">
+                    <strong>21</strong>
+                    Feb
+                  </time>
+                </div>
+                <div class="item-news__content">
+                  <div class="item-news__links">
+                    <a href="#" class="item-news__link item-news__link--category">Food</a>
+                    <a href="#" class="item-news__link item-news__link--user">By Admin</a>
+                    <a href="#" class="item-news__link item-news__link--comments">65 Comments</a>
+                  </div>
+                  <h3 class="item-news__title">
+                    <a href="#">Curabitur porttitor orci eget neque accumsan venenatis. Nunc fermentum.</a>
+                  </h3>
+                  <a href="" class="link-more item-news__more">Read More</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <p>
+        <span class="time">27.05.2025</span>
+        <a href="https://fls.guru" target="_blank">fls.guru courses</a>
+      </p>
+    </footer>
+  </div><!-- /main wrapper -->
+</body>
+</html>
