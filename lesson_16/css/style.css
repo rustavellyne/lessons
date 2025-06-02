@@ -149,7 +149,7 @@ body.menu-opened {
 
 .nav__list {
   display: flex;
-  gap: 30px;
+  gap: 5px 30px;
 
   /*mobile*/
   flex-direction: column;
@@ -189,6 +189,7 @@ body.menu-opened {
     flex-direction: row;
     align-items: flex-start;
     height: auto;
+    flex-wrap: wrap;
   }
 }
 
