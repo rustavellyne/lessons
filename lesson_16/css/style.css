@@ -120,6 +120,7 @@ footer {
   gap: 6px;
   flex-wrap: nowrap;
   z-index: 3;
+  flex-shrink: 0;
 }
 
 .logo-header img {
