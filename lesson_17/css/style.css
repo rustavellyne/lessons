@@ -147,6 +147,10 @@ h1 {
     color: #8b5c7b;
     text-shadow: 1px 2px 22px rgba(0,0,0,0.3);
   }
+  .product-card__media:hover img {
+    transform: scale(1.1) rotate(2deg);
+    transition-duration: 10s;
+  }
 }
 
 .product-card__actions {
@@ -162,4 +166,32 @@ h1 {
   font-size: 18px;
   line-height: 1.1;
   flex: 1 1 100%;
+}
+
+.blossomia__grid {
+  display: grid;
+  gap: 37px 30px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.blossomia__product:nth-child(2) {
+  order: -2;
+}
+.blossomia__product {
+  grid-row: span 4;
+}
+
+.blossomia__product:nth-child(5) {
+  grid-row: 5 / 7;
+  grid-column: span 1;
+}
+
+.blossomia__title {
+  order: -1;
+  grid-column: 2 / 4;
+  padding: 52px 0 41px;
+}
+
+.blossomia__link {
+  justify-self: start;
 }
