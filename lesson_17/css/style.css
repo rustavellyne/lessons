@@ -98,14 +98,14 @@ h1 {
   margin-bottom: 40px;
 }
 
-.blossomia__title {
-  color: #000;
-  font-size: 60px;
-  font-weight: 300;
+.product-card {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .product-card__media {
-  margin-bottom: 14px;
+
 }
 
 .product-card__media a {
@@ -113,6 +113,9 @@ h1 {
   background-color: #eeeeee;
   aspect-ratio: 369 / 378;
   overflow: hidden;
+}
+.product-card__media--big a {
+  aspect-ratio: 369 / 378;
 }
 
 .product-card__add-to-cart img {
@@ -127,11 +130,13 @@ h1 {
   will-change: transform;
 }
 
-.product-card__body {
+.product-card__info {
   display: flex;
   flex-wrap: wrap;
   row-gap: 14px;
   align-items: center;
+  justify-content: space-between;
+  gap: 5px;
 }
 
 .product-card__title {
@@ -155,7 +160,6 @@ h1 {
 .product-card__actions {
   display: inline-flex;
   column-gap: 10px;
-  margin-left: auto;
   margin-right: 5px;
 }
 
@@ -165,37 +169,74 @@ h1 {
   font-size: 18px;
   line-height: 1.1;
   flex: 1 1 100%;
+  align-content: end;
 }
 
-.blossomia__grid {
+.grid-blossomia {
   display: grid;
-  gap: 37px 30px;
-  grid-template-columns: 33.33% 30.83% 30.83%;
+  gap: 15px 30px;
+  grid-template-columns: 1fr 1fr;
 }
 
-.blossomia__product:nth-child(2) {
-  order: -2;
-}
-.blossomia__product:nth-child(2) .product-card__media a,
-.blossomia__product:nth-child(5) .product-card__media a {
-  aspect-ratio: 401 / 427;
+.grid-blossomia__title {
+  color: #000;
+  font-size: 40px;
+  font-weight: 300;
 }
 
-.blossomia__product {
+.grid-blossomia__item {
   grid-row: span 4;
 }
 
-.blossomia__product:nth-child(5) {
-  grid-row: 5 / 7;
-  grid-column: span 1;
-}
-
-.blossomia__title {
+.grid-blossomia__item:nth-child(1) {
   order: -1;
   grid-column: 2 / 4;
-  padding: 52px 0 41px;
+  grid-row: span 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
-.blossomia__link {
+.grid-blossomia__item:nth-child(2) {
+  order: -2;
+}
+
+.grid-blossomia__item:nth-child(5) {
+  /*grid-column: span 1;*/
+}
+
+.grid-blossomia__item:last-child {
   justify-self: start;
+}
+@media (min-width: 600px) {
+  .grid-blossomia {
+    grid-template-columns: 1fr 1fr;
+  }
+  .grid-blossomia__item:nth-child(1) {
+    grid-column: span 2;
+    grid-row: 1 / 1;
+  }
+  .grid-blossomia__title {
+    font-size: 60px;
+  }
+}
+
+@media (min-width: 992px) {
+  .grid-blossomia {
+    grid-template-columns: 33.33% 30.83% 30.83%;
+  }
+  .grid-blossomia__item:nth-child(1) {
+    grid-column: 2 / 4;
+    aspect-ratio: 767 / 257;
+    text-align: left;
+  }
+  .grid-blossomia__item:nth-child(5) {
+    grid-row: 5 / 7;
+    grid-column: span 1;
+  }
+
+  .product-card__media--big a {
+    aspect-ratio: 401 / 427;
+  }
 }
