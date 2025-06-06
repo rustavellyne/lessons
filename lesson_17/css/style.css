@@ -175,31 +175,22 @@ h1 {
 .grid-blossomia {
   display: grid;
   gap: 15px 30px;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
 }
 
 .grid-blossomia__title {
   color: #000;
-  font-size: 40px;
+  font-size: 32px;
   font-weight: 300;
-}
-
-.grid-blossomia__item {
-  grid-row: span 4;
+  padding: 20px;
 }
 
 .grid-blossomia__item:nth-child(1) {
-  order: -1;
-  grid-column: 2 / 4;
   grid-row: span 1;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-}
-
-.grid-blossomia__item:nth-child(2) {
-  order: -2;
 }
 
 .grid-blossomia__item:nth-child(5) {
@@ -216,15 +207,22 @@ h1 {
   .grid-blossomia__item:nth-child(1) {
     grid-column: span 2;
     grid-row: 1 / 1;
+    order: -1;
+  }
+  .grid-blossomia__item:nth-child(2) {
+    order: -2;
   }
   .grid-blossomia__title {
-    font-size: 60px;
+    font-size: 40px;
   }
 }
 
 @media (min-width: 992px) {
   .grid-blossomia {
     grid-template-columns: 33.33% 30.83% 30.83%;
+  }
+  .grid-blossomia__item {
+    grid-row: span 4;
   }
   .grid-blossomia__item:nth-child(1) {
     grid-column: 2 / 4;
@@ -238,5 +236,9 @@ h1 {
 
   .product-card__media--big a {
     aspect-ratio: 401 / 427;
+  }
+
+  .grid-blossomia__title {
+    font-size: 60px;
   }
 }
