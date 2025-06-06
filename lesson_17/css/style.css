@@ -219,7 +219,7 @@ h1 {
 
 @media (min-width: 992px) {
   .grid-blossomia {
-    grid-template-columns: 33.33% 30.83% 30.83%;
+    grid-template-columns: 33.33% 30.53% 30.53%;
   }
   .grid-blossomia__item {
     grid-row: span 4;
@@ -240,5 +240,14 @@ h1 {
 
   .grid-blossomia__title {
     font-size: 60px;
+    padding: 0;
   }
+}
+
+/* Ecobazar */
+.ecobazar {
+  background-color: #ffffff;
+}
+.ecobazar__container {
+  max-width: 1350px;
 }
