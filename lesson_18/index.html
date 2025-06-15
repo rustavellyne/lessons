@@ -42,9 +42,9 @@
               <div class="author__info">
                 <img src="./img/content/author-avatar.png" alt="Cameron Williamson" class="author__avatar">
                 <div class="author__text">
-                  <p class="author__fullname">
+                  <strong class="author__fullname">
                     Cameron Williamson
-                  </p>
+                  </strong>
                   <time class="author__post-time" datetime="2021-04-04">4 April, 2021</time>
                   <span class="author__duration">6 min read</span>
                 </div>
@@ -97,10 +97,10 @@
               </ul>
             </div>
             <div class="article__text">
-              <strong>
+              <h2>
                 Maecenas lacinia felis nec placerat sollicitudin. Quisque placerat dolor at scelerisque imperdiet.
                 Phasellus tristique felis dolor.
-              </strong>
+              </h2>
               <p>
                 Maecenas elementum in risus sed condimentum.
                 Duis convallis ante ac tempus maximus. Fusce malesuada sed velit ut dictum.
@@ -140,38 +140,36 @@
           </section>
           <section class="article__comments comments">
             <form action="#" class="comments__form form">
-              <fieldset class="form__fieldset">
-                <legend>Leave a Comment</legend>
-                <div class="form__row form__row--two-col">
-                  <div class="form__item">
-                    <label for="fullname">First name</label>
-                    <input type="text" name="name" id="fullname" autocomplete="name"  placeholder="Zakir Hossen" required>
-                  </div>
-                  <div class="form__item">
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email" autocomplete="email"  placeholder="zakirsoft.20@gl" required>
-                  </div>
+              <h3 class="form__title">Leave a Comment</h3>
+              <div class="form__row form__row--two-col">
+                <div class="form__item">
+                  <label for="fullname">First name</label>
+                  <input type="text" name="name" id="fullname" autocomplete="name"  placeholder="Zakir Hossen" required>
                 </div>
-                <div class="form__row">
-                  <div class="form__item">
-                    <label for="comment">First name</label>
-                    <textarea id="comment" name="comment" placeholder="Write your comment here…" rows="4"></textarea>
-                  </div>
+                <div class="form__item">
+                  <label for="email">Email</label>
+                  <input type="email" name="email" id="email" autocomplete="email"  placeholder="zakirsoft.20@gl" required>
                 </div>
-                <div class="form__row">
-                  <div class="form__item">
-                    <label class="checkbox">
-                      <input type="checkbox" name="save-user" class="checkbox__input">
-                      <span class="checkbox__label">Save my name and email in this browser for the next time I comment.</span>
-                    </label>
-                  </div>
+              </div>
+              <div class="form__row">
+                <div class="form__item">
+                  <label for="comment">First name</label>
+                  <textarea id="comment" name="comment" placeholder="Write your comment here…" rows="4"></textarea>
                 </div>
-                <div class="form__row">
-                  <div class="form__item">
-                    <button type="submit" class="button button--success">Post Comments</button>
-                  </div>
+              </div>
+              <div class="form__row">
+                <div class="form__item">
+                  <label class="checkbox">
+                    <input type="checkbox" name="save-user" class="checkbox__input">
+                    <span class="checkbox__label">Save my name and email in this browser for the next time I comment.</span>
+                  </label>
                 </div>
-              </fieldset>
+              </div>
+              <div class="form__row">
+                <div class="form__item">
+                  <button type="submit" class="button button--success">Post Comments</button>
+                </div>
+              </div>
             </form>
             <h3 class="comments__title">Comments</h3>
             <ul class="comments__list">
@@ -262,7 +260,7 @@
               <input type="search" placeholder="Search...">
             </label>
           </form>
-          <div class="aside__categories categories">
+          <section class="aside__categories categories">
             <h3 class="categories__title">Top Categories</h3>
             <ul class="categories__list">
               <li class="categories__item">
@@ -294,101 +292,114 @@
                 <span> (15)</span>
               </li>
             </ul>
-          </div>
-          <div class="aside__tags tags">
+          </section>
+          <section class="aside__tags tags">
             <h3 class="tags__title">Popular Tag</h3>
             <ul class="tags__list">
               <li class="tags__item">
-                <span class="tag">Healthy</span>
+                <a href="#" class="tag">Healthy</a>
               </li>
               <li class="tags__item">
-                <span class="tag tag--active">Low fat</span>
+                <a href="#" class="tag tag--active">Low fat</a>
               </li>
               <li class="tags__item">
-                <span class="tag">Vegetarian</span>
+                <a href="#" class="tag">Vegetarian</a>
               </li>
               <li class="tags__item">
-                <span class="tag">Bread</span>
+                <a href="#" class="tag">Bread</a>
               </li>
               <li class="tags__item">
-                <span class="tag">Kid foods</span>
+                <a href="#" class="tag">Kid foods</a>
               </li>
               <li class="tags__item">
-                <span class="tag">Vitamins</span>
+                <a href="#" class="tag">Vitamins</a>
               </li>
               <li class="tags__item">
-                <span class="tag">Snacks</span>
+                <a href="#" class="tag">Snacks</a>
               </li>
               <li class="tags__item">
-                <span class="tag">Tiffin</span>
+                <a href="#" class="tag">Tiffin</a>
               </li>
               <li class="tags__item">
-                <span class="tag">Meat</span>
+                <a href="#" class="tag">Meat</a>
               </li>
               <li class="tags__item">
-                <span class="tag">Launch</span>
+                <a href="#" class="tag">Launch</a>
               </li>
               <li class="tags__item">
-                <span class="tag">Dinner</span>
+                <a href="#" class="tag">Dinner</a>
               </li>
             </ul>
-          </div>
-          <div class="aside__gallery gallery">
-            <div class="gallery__item">
-              <img src="./img/content/gallery/gallery_1.png" alt="vegetables">
-            </div>
-            <div class="gallery__item">
-              <img src="./img/content/gallery/gallery_2.png" alt="broccoli">
-            </div>
-            <div class="gallery__item">
-              <img src="./img/content/gallery/gallery_3.png" alt="salad">
-            </div>
-            <div class="gallery__item">
-              <img src="./img/content/gallery/gallery_4.png" alt="pepper">
-            </div>
-            <div class="gallery__item">
-              <img src="./img/content/gallery/gallery_5.png" alt="carrot">
-            </div>
-            <div class="gallery__item">
-              <img src="./img/content/gallery/gallery_6.png" alt="peas">
-            </div>
-            <div class="gallery__item">
-              <img src="./img/content/gallery/gallery_7.png" alt="orange">
-            </div>
-            <div class="gallery__item">
-              <img src="./img/content/gallery/gallery_8.png" alt="cucumber">
-            </div>
-          </div>
-          <div class="aside__articles recent">
+          </section>
+          <section class="aside__gallery gallery">
+            <h3 class="gallery__title">
+              Our Gallery
+            </h3>
+            <ul class="gallery__list">
+              <li class="gallery__item">
+                <img src="./img/content/gallery/gallery_1.png" alt="vegetables">
+              </li>
+              <li class="gallery__item">
+                <img src="./img/content/gallery/gallery_2.png" alt="broccoli">
+              </li>
+              <li class="gallery__item">
+                <img src="./img/content/gallery/gallery_3.png" alt="salad">
+              </li>
+              <li class="gallery__item">
+                <img src="./img/content/gallery/gallery_4.png" alt="pepper">
+              </li>
+              <li class="gallery__item">
+                <img src="./img/content/gallery/gallery_5.png" alt="carrot">
+              </li>
+              <li class="gallery__item">
+                <img src="./img/content/gallery/gallery_6.png" alt="peas">
+              </li>
+              <li class="gallery__item">
+                <img src="./img/content/gallery/gallery_7.png" alt="orange">
+              </li>
+              <li class="gallery__item">
+                <img src="./img/content/gallery/gallery_8.png" alt="cucumber">
+              </li>
+            </ul>
+          </section>
+          <section class="aside__articles recent">
             <h3 class="recent__title">Recently Added</h3>
-            <article class="article-recent">
-              <div class="article-recent__media">
-                <img src="./img/content/recent-articles/1.png" alt="Mango">
-              </div>
-              <div class="article-recent__content">
-                <h4 class="article-recent__title">Curabitur porttitor orci eget nequ accumsan.</h4>
-                <time class="article-recent__date" datetime="2021-04-25">Apr 25, 2021</time>
-              </div>
-            </article>
-            <article class="article-recent">
-              <div class="article-recent__media">
-                <img src="./img/content/recent-articles/2.png" alt="Orange">
-              </div>
-              <div class="article-recent__content">
-                <h4 class="article-recent__title">Donec mattis arcu faucibus suscipit viverra.</h4>
-                <time class="article-recent__date" datetime="2021-04-25">Apr 25, 2021</time>
-              </div>
-            </article>
-            <article class="article-recent">
-              <div class="article-recent__media">
-                <img src="./img/content/recent-articles/3.png" alt="bilberry">
-              </div>
-              <div class="article-recent__content">
-                <h4 class="article-recent__title">Quisque posuere tempus rutrum. Integer velit ex.</h4>
-                <time class="article-recent__date" datetime="2021-04-25">Apr 25, 2021</time>
-              </div>
-            </article>
-          </div>
+            <ul class="recent__list">
+              <li class="recent__item">
+                <article class="article-recent">
+                  <div class="article-recent__media">
+                    <img src="./img/content/recent-articles/1.png" alt="Mango">
+                  </div>
+                  <div class="article-recent__content">
+                    <h4 class="article-recent__title">Curabitur porttitor orci eget nequ accumsan.</h4>
+                    <time class="article-recent__date" datetime="2021-04-25">Apr 25, 2021</time>
+                  </div>
+                </article>
+              </li>
+              <li class="recent__item">
+                <article class="article-recent">
+                  <div class="article-recent__media">
+                    <img src="./img/content/recent-articles/2.png" alt="Orange">
+                  </div>
+                  <div class="article-recent__content">
+                    <h4 class="article-recent__title">Donec mattis arcu faucibus suscipit viverra.</h4>
+                    <time class="article-recent__date" datetime="2021-04-25">Apr 25, 2021</time>
+                  </div>
+                </article>
+              </li>
+              <li class="recent__item">
+                <article class="article-recent">
+                  <div class="article-recent__media">
+                    <img src="./img/content/recent-articles/3.png" alt="bilberry">
+                  </div>
+                  <div class="article-recent__content">
+                    <h4 class="article-recent__title">Quisque posuere tempus rutrum. Integer velit ex.</h4>
+                    <time class="article-recent__date" datetime="2021-04-25">Apr 25, 2021</time>
+                  </div>
+                </article>
+              </li>
+            </ul>
+          </section>
         </aside>
       </div>
     </main>
