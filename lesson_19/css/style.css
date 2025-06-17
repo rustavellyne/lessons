@@ -109,6 +109,12 @@ h1 {
   font-size: 2rem;
 }
 
+.units__title {
+  writing-mode: vertical-lr;
+  padding-inline: 1rem;
+  transform: scale(-1, -1);
+}
+
 .units ul {
   font-size: 0.9em;
 }
