@@ -113,12 +113,24 @@ h1 {
   font-size: 0.9em;
 }
 
+.container-rule {
+  container-type: inline-size;
+}
+
 .polygon {
   display: grid;
   gap: .5rem;
-  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-  grid-auto-rows: 10rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(12rem, 100%), 1fr));
+  grid-auto-rows: 12rem;
 }
+
+@container (max-width: 993px) {
+  .polygon {
+    grid-auto-rows: 9rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(9rem, 100%), 1fr));
+  }
+}
+
 .polygon__item {
   background: url("../img/content/ocean.jpg") no-repeat fixed 0 0;
 }
@@ -144,7 +156,8 @@ h1 {
 }
 
 .button {
-  background-color: #04AA6D;
+  --btnAccentColor: #04AA6D;
+  background-color: var(--btnAccentColor);
   border: none;
   color: white;
   padding: 1rem 2rem;
