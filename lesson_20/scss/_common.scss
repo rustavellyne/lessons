@@ -1,0 +1,47 @@
+:root {
+  --mainTextColor: #000000;
+  --btnAccentColor: #fca2a2;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  color: #2C2C2C;
+}
+
+header,
+footer {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 1.875rem 0;
+}
+
+h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: clip;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper > main {
+  flex-grow: 1;
+}
+
+[class*="__container"] {
+  max-width: 76.875rem;
+  padding-inline: 0.9375rem;
+  margin: 0 auto;
+}
+
+.page > *:not(:last-child) {
+  margin-bottom: 2.5rem;
+}
