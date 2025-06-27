@@ -48,11 +48,13 @@ for (const [index, el] of items.entries()) {
  * Треба прокрутити скрол сторінки до кнопки
 */
 const btn = document.querySelector('.button');
-btn.scrollIntoView({
-  block: 'center',
-  inline: 'center',
-  behavior: 'smooth'
-});
+if (btn) {
+  btn.scrollIntoView({
+    block: 'center',
+    inline: 'center',
+    behavior: 'smooth'
+  });
+}
 
 /*
  * Задача №6
@@ -62,7 +64,9 @@ btn.scrollIntoView({
  * пофарбувати колір тексту посилання в червоний
 */
 const link = document.querySelector('.link');
-let score = link.dataset.score ?? 0;
-if (score < 200) {
-  link.style.color = 'red';
+if (link) {
+  let score = parseFloat(link.dataset.score) || 0;
+  if (score < 200) {
+    link.style.color = 'red';
+  }
 }
