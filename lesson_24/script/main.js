@@ -97,10 +97,10 @@ function startApp () {
         }
       })
     }, {
+      root: $('.fourth-task'),
       threshold: 1.0,
     })
     counterObserver.observe(counterElement)
-    // runCounter()
   }
 }
 

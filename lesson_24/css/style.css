@@ -106,6 +106,10 @@ footer {
 .first-task {
   margin: 20px 0;
 }
+.fourth-task {
+  height: 400px;
+  overflow: auto;
+}
 .fourth-task__title,
 .first-task__title {
   font-size: 24px;
