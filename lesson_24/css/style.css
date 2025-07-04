@@ -10,11 +10,11 @@ body {
   overflow: clip;
   display: flex;
   flex-direction: column;
-  padding: 102px 0;
 }
 
 .wrapper > main {
   flex-grow: 1;
+  padding: 102px 0;
 }
 [class*="__container"] {
   max-width: 900px;
