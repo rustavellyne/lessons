@@ -1,6 +1,7 @@
 function $(selector) {
   return document.querySelector(selector);
 }
+
 function ref (value, handler) {
   return new Proxy({ value }, {
     set(target, prop, val) {
@@ -17,7 +18,6 @@ function ref (value, handler) {
 function stopLoader () {
   const preloader = $('.preloader');
   if (preloader) preloader.classList.add('loaded');
-
 }
 
 function startApp () {
@@ -66,30 +66,34 @@ function startApp () {
   *    Затримка між зміною числа, та до якого числа має працювати інтервал має задаватись в дата атрибутах елемента item.
   *    Функція має запустатить коли ми доскролюємо до елементу item (його видно), і не запускатись повторно.
   * */
-  function useCounter(elem) {
+  const useCounter = elem => {
+    const counterRender = value => elem.textContent = `Counter: ${value}`
+    return ref(0, counterRender);
+  }
+  const getCounterConfigurations = elem => {
     const counterLimit = Number(elem.dataset.counterMax) || 5;
     const interval = Number(elem.dataset.counterInterval) || 1;
-    const counter = ref(0, (value) => elem.textContent = `Counter: ${value}`);
-    const hasReachedLimit = () => counter.value >= counterLimit;
-    return { hasReachedLimit, interval, counter };
+    return { counterLimit, interval}
+  }
+  const runCounter = (elem, counterLimit, interval) => {
+    const counter = useCounter(elem);
+    const intervalId = setInterval(() => {
+      if (counter.value >= counterLimit) {
+        return clearInterval(intervalId);
+      }
+      counter.value++;
+    }, interval * 500)
+    return intervalId;
   }
   const counterElement = $('.fourth-task__item');
   if (counterElement) {
-    const { counter, interval, hasReachedLimit } = useCounter(counterElement);
-    const runCounter = () => {
-      const intervalId = setInterval(() => {
-        if (hasReachedLimit()) {
-          return clearInterval(intervalId);
-        }
-        counter.value++;
-      }, interval * 500)
-      return intervalId;
-    }
     let intervalId;
-    const counterObserver = new IntersectionObserver((entries) => {
+    const counterObserver = new IntersectionObserver(entries => {
       entries.forEach(entry => {
+        const elem = entry.target;
+        const { counterLimit, interval } = getCounterConfigurations(elem);
         if (entry.isIntersecting && !intervalId) {
-          intervalId = runCounter();
+          intervalId = runCounter(elem, counterLimit, interval);
         }
         if (intervalId && !entry.isIntersecting) {
           clearInterval(intervalId)
