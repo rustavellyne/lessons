@@ -13,7 +13,47 @@
   <!-- main wrapper -->
   <div class="wrapper">
     <header class="header">
-      HEADER
+      <div class="header__top topper">
+        <div class="topper__container">
+          <address class="topper__location location-topper">
+            <a href="#" class="location-topper__link">
+              <svg class="location-topper__icon">
+                <use xlink:href="./img/icons/decoration-icons-sprite.svg#map-pin"></use>
+              </svg>
+              Store Location: Lincoln- 344, Illinois, Chicago, USA
+            </a>
+          </address>
+          <div class="topper__actions actions-topper">
+            <div class="actions-topper__item lang-currency">
+              <label class="lang-currency__item">
+                <select name="form[lang]" class="lang-currency__select">
+                  <option value="en" class="lang-currency__option">Eng</option>
+                  <option value="ua" class="lang-currency__option">Ua</option>
+                  <option value="de" class="lang-currency__option">De</option>
+                </select>
+                <svg class="lang-currency__select-icon">
+                  <use xlink:href="./img/icons/decoration-icons-sprite.svg#chevron-down"></use>
+                </svg>
+              </label>
+              <label class="lang-currency__item">
+                <select name="form[currency]" class="lang-currency__select">
+                  <option value="usd" class="lang-currency__option">USD</option>
+                  <option value="uah" class="lang-currency__option">UAH</option>
+                  <option value="eur" class="lang-currency__option">EUR</option>
+                </select>
+                <svg class="lang-currency__select-icon">
+                  <use xlink:href="./img/icons/decoration-icons-sprite.svg#chevron-down"></use>
+                </svg>
+              </label>
+            </div>
+            <div class="actions-topper__item user-auth">
+              <a href="#" target="_blank" class="user-auth__link">Sign In</a>
+              /
+              <a href="#" target="_blank" class="user-auth__link">Sign Up</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
     <main class="page">
     </main>
