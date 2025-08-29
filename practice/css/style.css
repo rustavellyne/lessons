@@ -411,3 +411,75 @@ body {
   font-weight: var(--text-medium);
 }
 /* End of header body */
+
+/* Header bottom */
+.bottom-header {
+  background-color: var(--grey-800);
+}
+.bottom-header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.625rem;
+  font-weight: 500;
+  line-height: 1.5;
+  font-size: var(--text-s);
+}
+
+.menu__list {
+  display: flex;
+  color: var(--grey-400);
+  gap: 0 2rem;
+  flex-wrap: wrap;
+}
+
+.menu__item {
+  transition: color 0.3s;
+  &:hover {
+    color: var(--white-color);
+  }
+}
+
+.menu__link {
+  padding-block: 1rem;
+  line-height: 2;
+}
+
+.bottom-header__phone {
+  color: var(--white-color);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-block: 1rem;
+  transition: color 0.3s;
+
+  &:hover {
+    color: var(--branding-success);
+  }
+}
+
+.bottom-header__phone-icon {
+  color: inherit;
+  width: 28px;
+  height: 28px;
+}
+
+.submenu {
+  display: none;
+}
+
+.menu__btn {
+  cursor: pointer;
+  background-color: transparent;
+  color: inherit;
+  vertical-align: middle;
+  line-height: 1;
+  font-size: 0;
+  height: 100%;
+  margin-left: 4px;
+}
+.menu__btn-icon {
+  width: 16px;
+  height: 16px;
+}
+/* End of header bottom */
