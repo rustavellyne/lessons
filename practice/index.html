@@ -87,11 +87,23 @@
                 <p class="cart-header__total-price">$57.00</p>
               </div>
             </a>
+            <button class="header-actions__menu burger-btn">
+              <span></span>
+            </button>
           </div>
         </div>
       </div>
       <div class="header__bottom bottom-header">
         <div class="bottom-header__container">
+          <form action="#" class="bottom-header__search search-header">
+            <label class="search-header__label">
+              <svg class="search-header__search-icon">
+                <use xlink:href="./img/icons/decoration-icons-sprite.svg#search"></use>
+              </svg>
+              <input type="text" name="search-q" class="search-header__input" placeholder="Search">
+            </label>
+            <button type="submit" class="search-header__submit btn">Search</button>
+          </form>
           <nav class="bottom-header__menu menu">
             <div class="menu__body">
               <ul class="menu__list">
@@ -207,5 +219,6 @@
 
     </footer>
   </div><!-- /main wrapper -->
+  <script src="js/main.js"></script>
 </body>
 </html>
