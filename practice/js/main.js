@@ -1,4 +1,7 @@
 window.addEventListener('load', function() {
   const hamburger = document.querySelector('.burger-btn');
-  hamburger.addEventListener('click', e => e.target.classList.toggle('opened'))
+  hamburger.addEventListener('click', e => {
+    hamburger.classList.toggle('opened');
+    document.documentElement.classList.toggle('menu-open')
+  })
 });
