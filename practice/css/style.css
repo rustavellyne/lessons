@@ -593,12 +593,12 @@ body {
 
 .menu__item {
   position: relative;
-  transition: color 0.3s;
   display: inline-flex;
 
 
   @media (min-width: 768px) {
     &:hover {
+      transition: color 0.3s;
       color: var(--white-color);
     }
   }
@@ -615,6 +615,7 @@ body {
   @media (min-width: 768px) {
     transform: translateY(0);
     pointer-events: auto;
+    visibility: visible;
   }
 }
 
@@ -687,6 +688,7 @@ body {
   }
 
   @media (min-width: 768px) {
+    visibility: hidden;
     transform: translateY(-100%);
     pointer-events: none;
     position: absolute;
