@@ -915,8 +915,8 @@ body {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--branding-success);
-    aspect-ratio: 872 / 600;
+    background-color: transparent;
+    aspect-ratio: 423 / 288;
 
     img {
       width: 100%;
@@ -947,6 +947,12 @@ body {
 
   .banner__body--black {
     color: var(--gray-900);
+  }
+
+  .banner__body--center {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
   }
 
   .banner__title--labeled {
@@ -1033,6 +1039,18 @@ body {
 
   .banner__body {
     gap: 28px;
+  }
+
+  .banner__media {
+    aspect-ratio: 872 / 600;
+    background-color: var(--branding-success);
+  }
+}
+
+.banner--center {
+  justify-content: center;
+  .banner__link-btn {
+    align-self: center;
   }
 }
 /* End of Hero */
