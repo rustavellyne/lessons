@@ -70,7 +70,7 @@ body {
 
 .wrapper {
   overflow: clip;
-  height: 100%;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -157,6 +157,11 @@ body {
     background-color: var(--primary-hard-color);
   }
 }
+
+.btn--rounded {
+  border-radius: 53px;
+}
+
 .burger-btn {
   cursor: pointer;
   flex-shrink: 0;
@@ -872,13 +877,125 @@ body {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+
   .payments__icon {
     height: 32px;
     width: 45px;
   }
+
   .payments__icon--secure {
     width: 65px;
   }
 }
-
 /* End of Footer */
+
+/* Hero */
+.hero {
+  padding-block: 1.5rem;
+}
+
+.banner {
+  display: flex;
+  align-items: center;
+
+  padding: 3.75rem;
+  border-radius: .625rem;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  .banner__link {
+    display: block;
+  }
+
+  .banner__media {
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--branding-success);
+    aspect-ratio: 872 / 600;
+
+    &:before {
+      position: absolute;
+      left: 0;
+      top: 0;
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(99deg, rgba(0, 0, 0, 0.6) 10.4%, rgba(0, 0, 0, 0) 59.43%);
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .banner__body {
+    z-index: 1;
+    position: relative;
+    color: var(--white-color);
+    max-width: 570px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .banner__title {
+    font-size: var(--heading-size-3);
+    font-weight: var(--text-semibold);
+    line-height: 1.2;
+  }
+
+  .banner__details {
+    border-left: 2px solid var(--branding-success);
+    padding-left: 12px;
+  }
+
+  .banner__badge {
+    font-size: var(--text-xl);
+    font-weight: var(--text-medium);
+    line-height: 1.5;
+    display: inline-flex;
+    gap: 0.5rem;
+    align-items: center;
+    margin-bottom: 0.5rem;
+
+    strong {
+      padding: 4px 12px;
+      border-radius: 5px;
+      background: var(--warning-color);
+      font-weight: var(--text-semibold);
+    }
+  }
+
+  .banner__text {
+    opacity: 0.8;
+  }
+
+  .banner__cta {
+    flex-grow: 0;
+    align-self: flex-start;
+    background-color: var(--white-color);
+    color: var(--branding-success);
+    display: inline-flex;
+    gap: 1rem;
+    align-items: center;
+    transition: background-color 0.3s, color 0.3s;
+
+    &:hover {
+      background-color: var(--primary-hard-color);
+      color: var(--white-color);
+    }
+    .button__icon-arrow {
+      margin-top: 0;
+    }
+
+  }
+}
+/* End of Hero */
