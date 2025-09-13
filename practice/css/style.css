@@ -259,7 +259,10 @@ body {
 /* End of Components */
 /* Top Header */
 .header {
-  z-index: 2;
+  position: sticky;
+  background-color: var(--white-color);
+  top: 0;
+  z-index: 30;
 }
 .header__top {
   display: none;
@@ -1175,3 +1178,57 @@ body {
   }
 }
 /* End of advantages block */
+
+/* pop categories */
+.pop-categories {
+  .pop-categories__header {
+    margin-bottom: 2rem;
+  }
+
+  .pop-categories__list {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+.pop-category {
+
+  .pop-category__link  {
+    display: block;
+    padding: 1rem 0 1.5rem 0;
+    border-radius: 5px;
+    border: 1px solid var(--gray-100);
+    transition: border-color 0.3s, box-shadow 0.3s;
+
+    &:hover {
+      border-color: var(--primary-hard-color);
+      box-shadow: 0 0 12px 0 rgba(32, 181, 38, 0.32);
+
+      .pop-category__title {
+        color: var(--branding-success);
+      }
+    }
+  }
+  .pop-category__img {
+    aspect-ratio: 190 / 130;
+    overflow: hidden;
+    margin-bottom: 1rem;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .pop-category__title {
+    text-align: center;
+    color: var(--gray-900);
+    font-size: var(--text-l);
+    font-weight: var(--text-medium);
+    line-height: 1.5;
+    transition: color 0.3s;
+  }
+}
+/* end of pop categories */
