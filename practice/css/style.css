@@ -194,6 +194,10 @@ body {
   border-radius: 53px;
 }
 
+.btn-iconed {
+
+}
+
 .burger-btn {
   cursor: pointer;
   flex-shrink: 0;
@@ -240,13 +244,23 @@ body {
     }
   }
 }
+.button {
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+}
 
 .button--round {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: 45px;
   height: 45px;
   border-radius: 50%;
   border: 1px solid var(--gray-100);
   background-color: var(--white-color);
+  color: var(--gray-900);
   cursor: pointer;
   transition: color 0.3s, background-color 0.3s;
 
@@ -257,13 +271,24 @@ body {
 }
 
 .button__icon-arrow {
-  margin-top: 2px;
   width: 15px;
   height: 12.049px;
 }
 
 .button__icon-arrow-left {
   transform: rotate(180deg);
+}
+
+.rating {
+  .rating__item {
+    width: 12px;
+    height: 12px;
+    background: url('../img/icons/decor/star.svg') center no-repeat;
+  }
+
+  .rating__item--filled {
+    background: url('../img/icons/decor/filled-star.svg') center no-repeat;
+  }
 }
 /* End of Components */
 /* Top Header */
@@ -1262,3 +1287,63 @@ body {
   }
 }
 /* end of pop categories */
+
+/* mini product */
+.badge {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 4px;
+  color: var(--white-color);
+  line-height: 1.5;
+  transition: background-color 0.3s;
+
+  strong {
+    font-weight: var(--text-medium);
+  }
+}
+
+.badge--sale {
+  background-color: var(--danger-color);
+
+  &:hover {
+    background-color: #cb413e;
+  }
+}
+.badge--best {
+  background-color: #2388FF;
+  &:hover {
+    background-color: #0b66d7;
+  }
+}
+.badge--new {
+  background-color: var(--warning-color);
+  &:hover {
+    background-color: #c66901;
+  }
+}
+.badge--out-stock {
+  background-color: var(--gray-900);
+  &:hover {
+    background-color: #7d7d7d;
+  }
+}
+
+.mini-product {
+  position: relative;
+
+  .mini-product__badges {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    max-width: min(120px, 25%);
+  }
+
+  .mini-product__actions {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
