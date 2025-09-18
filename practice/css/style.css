@@ -1472,3 +1472,147 @@ body {
     margin: 0 -1px -1px 0;
   }
 }
+
+/* Promotion */
+
+.timer {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+
+  .timer__time {
+    display: block;
+    font-size: var(--text-xxl);
+    line-height: 1.5;
+    position: relative;
+
+    &:after {
+      position: absolute;
+      content: ':';
+      right: -20px;
+    }
+  }
+  .timer__label {
+    color: rgba(255, 255, 255, 0.80);
+    font-size: var(--text-xs);
+    line-height: 1;
+    letter-spacing: 0.36px;
+    text-transform: uppercase;
+  }
+  & div:last-child span:after {
+    display: none;
+  }
+}
+
+.promotion {
+  color: var(--white-color);
+
+  .promotion__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(20rem, 100%), 1fr));
+    gap: 1.5rem;
+  }
+
+  .promotion__link {
+    position: relative;
+    display: block;
+    aspect-ratio: 424 / 536;
+    padding: 2.1875rem;
+    text-align: center;
+  }
+
+  .promotion__body {
+    position: relative;
+    z-index: 2;
+  }
+  .promotion__label {
+    font-size: var(--text-s);
+    font-weight: var(--text-medium);
+    line-height: 1;
+    letter-spacing: 0.42px;
+    text-transform: uppercase;
+  }
+  .promotion__title {
+    margin-top: 1rem;
+    font-size: var(--heading-size-4);
+    font-weight: var(--text-semibold);
+    line-height: 1.2;
+  }
+  .promotion__media {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: bottom;
+    }
+  }
+
+  .promotion__cta {
+    margin-top: 1.5rem;
+    background-color: var(--white-color);
+    color: var(--branding-success);
+    transition: color 0.3s, background-color 0.3s;
+    &:hover {
+      color: var(--white-color);
+      background-color: var(--branding-success);
+    }
+  }
+  .promotion__badge {
+    margin-top: 0.5rem;
+  }
+
+  .promotion__badge--price {
+    margin-top: 0.75rem;
+    span {
+      font-size: var(--text-l);
+      line-height: 1.5;
+    }
+    strong {
+      color: var(--warning-color);
+      font-size: var(--text-xl);
+      font-weight: var(--text-semibold);
+      line-height: 1.5;
+    }
+  }
+
+  .promotion__badge--percent {
+    span {
+      font-size: var(--text-xl);
+      line-height: 1.5;
+    }
+    strong {
+      padding: 6px 12px;
+      gap: 10px;
+      border-radius: 5px;
+      background: var(--gray-900);
+      color: #FCC900;;
+      font-size: var(--text-xl);
+      font-weight: var(--text-semibold);
+      line-height: 1.5;
+    }
+  }
+  .promotion__cta {
+
+  }
+}
+
+.promotion--black {
+  color: black;
+}
+
+.promotion__badge--percent {
+  display: flex;
+  flex-direction: column;
+
+  .promotion__cta {
+    align-self: center;
+  }
+}
+
+/* End of Promotion */
