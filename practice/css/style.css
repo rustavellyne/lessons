@@ -1493,6 +1493,7 @@ body {
   }
 
   .mini-product__media {
+    padding: 0;
     a {
       aspect-ratio: 527 / 448;
     }
@@ -1548,11 +1549,14 @@ body {
     background-color: var(--gray-50);
     color: var(--gray-900);
     flex-grow: 1;
-    padding: 14px 2rem;
+    padding: 14px;
     font-weight: var(--text-semibold);
     line-height: 1.2;
     transition: background-color 0.3s, color 0.3s;
 
+    @media (min-width: 380px) {
+      padding: 14px 2rem;
+    }
     .icon {
       width: 17px;
       height: 17px;
@@ -1634,6 +1638,7 @@ body {
       font-size: var(--text-l);
       color: var(--gray-900);
       font-weight: var(--text-medium);
+      line-height: 1.3;
     }
 
     .timer__label {
@@ -1775,12 +1780,17 @@ body {
     margin: 0 -1px -1px 0;
 
     &:first-child {
-      grid-column: span 2;
-      grid-row: span 2;
-
-      .mini-product {
-        height: 100%;
+      grid-column: 1 / -1;
+    }
+    @media (min-width: 640px) {
+      &:first-child {
+        grid-column: span 2;
+        grid-row: span 2;
       }
+    }
+
+    .mini-product {
+      height: 100%;
     }
   }
 }
