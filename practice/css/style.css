@@ -1534,9 +1534,13 @@ body {
   }
   .promotion__title {
     margin-top: 1rem;
-    font-size: var(--heading-size-4);
+    font-size: var(--heading-size-6);
     font-weight: var(--text-semibold);
     line-height: 1.2;
+
+    @media (min-width: 800px) {
+      font-size: var(--heading-size-4);
+    }
   }
   .promotion__media {
     position: absolute;
