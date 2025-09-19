@@ -245,6 +245,11 @@ body {
   }
 }
 .button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+
   .icon {
     width: 20px;
     height: 20px;
@@ -280,6 +285,15 @@ body {
 }
 
 .rating {
+  display: flex;
+  align-items: center;
+
+  .rating__stars {
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+  }
+
   .rating__item {
     width: 12px;
     height: 12px;
@@ -288,6 +302,13 @@ body {
 
   .rating__item--filled {
     background: url('../img/icons/decor/filled-star.svg') center no-repeat;
+  }
+
+  .rating__feedback {
+    color: var(--gray-500);
+    font-size: 12px;
+    line-height: 1.3;
+    margin-top: 3px;
   }
 }
 /* End of Components */
@@ -1341,14 +1362,10 @@ body {
   text-decoration-line: line-through;
 }
 
-.rating {
-  display: flex;
-  align-items: center;
-}
-
 .mini-product {
   position: relative;
   border: 1px solid var(--gray-100);
+  background-color: var(--white-color);
 
   &:before {
     content: '';
@@ -1370,6 +1387,7 @@ body {
     gap: 6px;
     flex-wrap: wrap;
     max-width: min(180px, 75%);
+    z-index: 1;
   }
 
   .mini-product__actions {
@@ -1462,6 +1480,101 @@ body {
   }
 }
 
+.mini-product--extended {
+
+  &:hover {
+    .line-actions__buy {
+      background-color: var(--branding-success);
+      color: var(--white-color);
+    }
+  }
+  .mini-product__header {
+    position: relative;
+  }
+
+  .mini-product__media {
+    a {
+      aspect-ratio: 527 / 448;
+    }
+  }
+  .mini-product__line-actions {
+    position: absolute;
+    width: 100%;
+    bottom: 1.5rem;
+  }
+
+  .mini-product__footer {
+    padding: 6px 1.5rem 0;
+    justify-content: center;
+  }
+  .mini-product__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    text-align: center;
+  }
+  .mini-product__title {
+    font-size: var(--text-l);
+    line-height: 1.5;
+  }
+  .mini-product__prices {
+    gap: 0.25rem;
+
+    .price {
+      font-size: var(--text-xxl);
+    }
+  }
+
+  .mini-product__rating {
+    margin-top: 0;
+    gap: 2px;
+
+    .rating__item {
+      width: 18px;
+      height: 18px;
+      background-size: contain;
+    }
+  }
+}
+
+.line-actions {
+  padding-inline: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  .line-actions__buy {
+    background-color: var(--gray-50);
+    color: var(--gray-900);
+    flex-grow: 1;
+    padding: 14px 2rem;
+    font-weight: var(--text-semibold);
+    line-height: 1.2;
+    transition: background-color 0.3s, color 0.3s;
+
+    .icon {
+      width: 17px;
+      height: 17px;
+    }
+
+    &:hover {
+      color: var(--white-color);
+      background-color: var(--primary-hard-color);
+    }
+  }
+
+  .mini-product__action {
+    background-color: var(--gray-50);
+    width: 45px;
+    height: 45px;
+
+    &:hover {
+      background-color: var(--branding-success);
+    }
+  }
+}
+
 .pop-products {
   .pop-products__list {
     margin-top: 2rem;
@@ -1485,6 +1598,7 @@ body {
     font-size: var(--text-xxl);
     line-height: 1.5;
     position: relative;
+    text-align: center;
 
     &:after {
       position: absolute;
@@ -1503,7 +1617,33 @@ body {
     display: none;
   }
 }
+.hurry-up {
+  padding: 18px 0 24px 0;
 
+  .hurry-up__label {
+    text-align: center;
+    color: var(--gray-400);
+    font-size: 14px;
+    line-height: 1.28;
+  }
+
+  .timer {
+    margin-top: 6px;
+
+    .timer__time {
+      font-size: var(--text-l);
+      color: var(--gray-900);
+      font-weight: var(--text-medium);
+    }
+
+    .timer__label {
+      color: var(--gray-400);
+      text-align: center;
+      font-size: 10px;
+      font-weight: 500;
+    }
+  }
+}
 .promotion {
   color: var(--white-color);
 
@@ -1618,5 +1758,30 @@ body {
     align-self: center;
   }
 }
-
 /* End of Promotion */
+
+/* Hot deals */
+.hot-deals {
+  padding-block: 60px;
+  background-color: #F7F7F7;
+  
+  .hot-deals__list {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(264px, 1fr));
+  }
+
+  .hot-deals__item {
+    margin: 0 -1px -1px 0;
+
+    &:first-child {
+      grid-column: span 2;
+      grid-row: span 2;
+
+      .mini-product {
+        height: 100%;
+      }
+    }
+  }
+}
+/* End of hot deals */
