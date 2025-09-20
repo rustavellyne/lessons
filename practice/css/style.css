@@ -1799,9 +1799,13 @@ body {
 /* Discount banner */
 .discount-banner {
   position: relative;
-  padding: 60px 51px;
+  padding: 28px 19px;
   border-radius: 10px;
   overflow: hidden;
+
+  @media (min-width: 768px) {
+    padding: 60px 51px;
+  }
 
   .discount-banner__media {
     position: absolute;
@@ -1824,7 +1828,20 @@ body {
     margin-left: auto;
     position: relative;
     z-index: 2;
-    max-width: 36%;
+    max-width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    border-radius: 0.5rem;
+
+    @media (min-width: 768px) {
+      max-width: 50%;
+      background-color: transparent;
+      padding: 0;
+    }
+
+    @media (min-width: 992px) {
+      max-width: 36%;
+    }
   }
 
   .discount-banner__label {
