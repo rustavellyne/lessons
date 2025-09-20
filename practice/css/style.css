@@ -1795,3 +1795,66 @@ body {
   }
 }
 /* End of hot deals */
+
+/* Discount banner */
+.discount-banner {
+  position: relative;
+  padding: 60px 51px;
+  border-radius: 10px;
+  overflow: hidden;
+
+  .discount-banner__media {
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    aspect-ratio: 1320 / 358;
+    width: 100%;
+    height: 100%;
+    background-color: var(--gray-50);
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .discount-banner__body {
+    margin-left: auto;
+    position: relative;
+    z-index: 2;
+    max-width: 36%;
+  }
+
+  .discount-banner__label {
+    color: var(--white-color);
+    font-size: var(--text-m);
+    font-weight: var(--text-medium);
+    line-height: 1;
+    letter-spacing: 0.32px;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+  }
+
+  .discount-banner__title {
+    color: var(--white-color);
+    font-size: var(--heading-size-2);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+
+    strong {
+      color: var(--warning-color);
+      font-weight: var(--text-semibold);
+    }
+  }
+  .discount-banner__description {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: var(--text-m);
+    line-height: 1.5;
+
+    margin-bottom: 1.75rem;
+  }
+
+}
+/* End of Discount banner */
