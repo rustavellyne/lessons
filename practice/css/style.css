@@ -2125,9 +2125,21 @@ body {
     &:first-child {
       padding-left: 0;
     }
+
     &:last-child {
       padding-right: 0;
       border-right: none;
+    }
+  }
+
+  .partners__link {
+    filter: grayscale(1);
+    transition: all 0.3s;
+    opacity: 0.3;
+
+    &:hover {
+      filter: grayscale(0);
+      opacity: 1;
     }
   }
 }
