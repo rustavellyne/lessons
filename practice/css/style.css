@@ -2105,3 +2105,30 @@ body {
 
 }
 /* end of testimonials */
+
+/* partners */
+.partners {
+  .partners__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    row-gap: 1.5rem;
+  }
+
+  .partners__item {
+    text-align: center;
+    flex-grow: 1;
+    padding-inline: 5%;
+    border-right: 1px solid #E6E6E6;
+
+    &:first-child {
+      padding-left: 0;
+    }
+    &:last-child {
+      padding-right: 0;
+      border-right: none;
+    }
+  }
+}
+/* end of partners */
