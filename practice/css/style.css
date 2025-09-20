@@ -1589,6 +1589,18 @@ body {
     margin: 0 -1px -1px 0;
   }
 }
+/* Todo: DRY issue */
+.feature-products {
+  .feature-products__list {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(264px, 1fr));
+  }
+
+  .feature-products__item {
+    margin: 0 -1px -1px 0;
+  }
+}
 
 /* Promotion */
 
