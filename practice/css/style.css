@@ -246,6 +246,7 @@ body {
   }
 }
 .button {
+  cursor: pointer;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -2214,3 +2215,179 @@ body {
 
 }
 /* End of Instagram */
+
+/* Subscribe */
+
+.form-subscribe {
+  border-radius: 46px;
+  border: 1px solid var(--gray-100);
+  background: var(--white-color);
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: 400.99px) {
+    &:focus-within,
+    &:hover {
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+    }
+  }
+
+  label {
+    flex: 1;
+  }
+
+  .form-subscribe__input {
+    width: 100%;
+    color: var(--gray-900);
+    font-size: var(--text-m);
+    line-height: 1.5;
+    height: 3.25rem;
+    padding-inline: 1.5rem;
+    border-radius: 2.875rem 0 0 2.875rem;
+    outline-offset: 1px;
+
+    &::placeholder {
+      color: var(--gray-400);
+      transition: opacity 0.3s ease;
+    }
+
+    &:focus::placeholder {
+      opacity: 0.4;
+    }
+
+    &:focus {
+      color: var(--gray-900);
+    }
+
+    @media (max-width: 400px) {
+      border-radius: 2.875rem;
+    }
+  }
+
+  .form-subscribe__submit {
+    padding: 16px 40px;
+    border-radius: 43px;
+    background: var(--branding-success);
+    color: var(--white-color);
+    font-size: var(--text-m);
+    font-weight: var(--text-semibold);
+    line-height: 1.25;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: var(--primary-hard-color);
+    }
+  }
+
+  @media (max-width: 400px) {
+    flex-direction: column;
+    border: 0;
+    background-color: transparent;
+    gap: 0.5rem;
+  }
+}
+
+.subscribe {
+  background-color: #F7F7F7;
+  padding-block: 2.5rem;
+
+  .subscribe__container {
+    display: flex;
+    gap: 1.5rem;
+    flex-direction: column;
+
+    @media (min-width: 480px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    @media (min-width: 992px) {
+      flex-wrap: nowrap;
+      gap: 2.5rem;
+    }
+  }
+
+  .subscribe__text {
+    line-height: 1.5;
+
+    @media (min-width: 480px) {
+      flex: 1 1 100%;
+    }
+
+    @media (min-width: 768px) {
+      flex: 1 1 15rem;
+      max-width: 28rem;
+    }
+
+    @media (min-width: 992px) {
+      max-width: 28rem;
+    }
+  }
+
+  .subscribe__title {
+    color: var(--gray-900);
+    font-size: var(--text-xxl);
+    font-weight: var(--text-semibold);
+    margin-bottom: 0.25rem;
+  }
+
+  .subscribe__description {
+    color: var(--gray-400);
+  }
+
+  .subscribe__form {
+    @media (min-width: 480px) {
+      flex: 1 1 auto;
+    }
+
+    @media (min-width: 768px) {
+      flex: 1 1 auto;
+    }
+
+    @media (min-width: 992px) {
+      margin-left: auto;
+      flex: 0 1 33.5rem;
+    }
+  }
+
+  .subscribe__socials {
+    align-self: center;
+    @media (min-width: 768px) {
+      flex: 1 1 100%;
+    }
+
+    @media (min-width: 992px) {
+      flex: 0 0 auto;
+    }
+  }
+}
+
+.socials {
+  display: flex;
+  gap: 0.5rem;
+
+  .socials__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    color: var(--gray-700);
+    background-color: transparent;
+    border-radius: 50%;
+
+    transition: background-color 0.3s, color 0.3s;
+
+    .icon {
+      width: 18px;
+      height: 18px;
+    }
+
+    &:hover {
+      background-color: var(--branding-success);
+      color: var(--white-color);
+    }
+  }
+}
+/* End of Subscribe */
