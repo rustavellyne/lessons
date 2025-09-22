@@ -103,6 +103,15 @@
   }
 
   .catalog__body {
+    .products-grid {
+      gap: 1.5rem;
+    }
+    .mini-product {
+      border-radius: 0.5rem;
+      &:before {
+        border-radius: 0.5rem;
+      }
+    }
   }
 }
 
