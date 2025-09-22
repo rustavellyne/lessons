@@ -1581,26 +1581,24 @@ body {
   }
 }
 
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(264px, 1fr));
+
+  .products-grid__item {
+    margin: 0 -1px -1px 0;
+  }
+}
+
 .pop-products {
   .pop-products__list {
     margin-top: 2rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(264px, 1fr));
-  }
-  .pop-products__item {
-    margin: 0 -1px -1px 0;
   }
 }
 /* Todo: DRY issue */
 .feature-products {
   .feature-products__list {
     margin-top: 2rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(264px, 1fr));
-  }
-
-  .feature-products__item {
-    margin: 0 -1px -1px 0;
   }
 }
 
@@ -1786,13 +1784,9 @@ body {
   
   .hot-deals__list {
     margin-top: 2rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(264px, 1fr));
   }
 
   .hot-deals__item {
-    margin: 0 -1px -1px 0;
-
     &:first-child {
       grid-column: 1 / -1;
     }
@@ -2484,154 +2478,3 @@ body {
   }
 }
 /* End of Breadcrumbs */
-
-/* catalog page */
-.filters-btn {
-  cursor: pointer;
-  padding: 14px 2rem;
-  border-radius: 43px;
-  background: var(--branding-success);
-  transition: background-color 0.3s;
-  align-items: center;
-  justify-content: center;
-  gap: 0.75rem;
-  display: inline-flex;
-  color: var(--white-color);
-  font-size: var(--text-s);
-  font-weight: var(--text-semibold);
-  line-height: 1.2;
-  
-  &:hover {
-    background-color: var(--primary-hard-color);
-  }
-
-  .icon {
-    width: 20px;
-    height: 17px;
-  }
-}
-.sorter {
-  font-size: var(--text-s);
-  line-height: 1.5;
-
-  label {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-  .sorter__label {
-    color: var(--gray-500);
-    flex-shrink: 0;
-  }
-  .select {
-    position: relative;
-    display: inline-block;
-    color: inherit;
-
-    &::after {
-      content: "";
-      position: absolute;
-      pointer-events: none;
-      right: 0.75rem;
-      top: 50%;
-      width: 13px;
-      height: 13px;
-      transform: translateY(-50%);
-      /*mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'><path d='M1 1l5 5 5-5' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>") center/contain no-repeat;*/
-      background: url('../img/icons/decor/chevron-down.svg') center/contain no-repeat;
-    }
-  }
-
-  select {
-    cursor: pointer;
-    width: 100%;
-    padding: 10px 32px 10px 16px;
-    border-radius: 4px;
-    border: 1px solid var(--gray-100);
-    color: var(--gray-700);
-    line-height: inherit;
-    font: inherit;
-    appearance: none;
-    background-color: transparent;
-    outline: none;
-
-    &:focus {
-      border-color: var(--primary-hard-color);
-      box-shadow: 0 0 0 3px rgba(0, 178, 7, 0.25);
-    }
-
-    &:disabled {
-      opacity: .6;
-      cursor: not-allowed;
-    }
-  }
-}
-
-.catalog {
-  .catalog__grid {
-    display: grid;
-    grid-template-columns: 312px 1fr;
-    column-gap: 1.5rem;
-    transition: grid-template-columns 0.5s, column-gap 0.3s;
-
-    &.filter-opened {
-      grid-template-columns: 0 1fr;
-      column-gap: 0;
-    }
-  }
-
-  .catalog__header {
-    grid-column: 1 / -1;
-  }
-
-  .catalog__filters {
-    grid-column: 1 / 1;
-  }
-
-  .catalog__body {
-  }
-}
-
-.header-catalog {
-  padding-block: 26px 32px;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-
-  @media (min-width: 768px) {
-    flex-wrap: nowrap;
-  }
-
-  .header-catalog__filters-toggle {
-    flex-basis: 100%;
-
-    .filters-btn {
-      width: 100%;
-    }
-    @media (min-width: 768px) {
-      flex-basis: 312px;
-      .filters-btn {
-        width: auto;
-      }
-    }
-  }
-
-  .header-catalog__sorter {
-
-  }
-
-  .header-catalog__results {
-    margin-left: auto;
-    color: var(--gray-600);
-    font-size: var(--text-m);
-    line-height: 1.5;
-
-    span {
-      color: var(--gray-900);
-      font-weight: var(--text-semibold);
-      line-height: 1.2;
-    }
-  }
-}
-/* end of catalog page */
