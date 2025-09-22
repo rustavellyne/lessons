@@ -286,7 +286,41 @@
       </div>
     </div>
     <main class="page">
-
+      <div class="catalog">
+        <form action="#" class="catalog__form">
+          <div class="catalog__container catalog__grid">
+            <div class="catalog__header header-catalog">
+              <div class="header-catalog__filters-toggle">
+                <button class="filters-btn">
+                  Filter
+                  <svg class="icon">
+                    <use xlink:href="./img/icons/decoration-icons-sprite.svg#filter"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="header-catalog__sorter sorter">
+                <label>
+                  <span class="sorter__label">Sort by:</span>
+                  <span class="select">
+                    <select name="sorting">
+                      <option value="latest">Latest</option>
+                      <option value="new">New</option>
+                      <option value="cheap">Cheapest</option>
+                      <option value="expensive">Expensive</option>
+                    </select>
+                  </span>
+                </label>
+              </div>
+              <p class="header-catalog__results">
+                <span>52</span>
+                Results Found
+              </p>
+            </div>
+            <aside class="catalog__filters"></aside>
+            <div class="catalog__body"></div>
+          </div>
+        </form>
+      </div>
     </main>
     <section class="subscribe">
       <div class="subscribe__container">

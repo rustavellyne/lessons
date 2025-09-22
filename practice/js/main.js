@@ -1,4 +1,5 @@
 window.addEventListener('load', function() {
+  filtersFeature()
   initSlider();
   const hamburger = document.querySelector('.burger-btn');
   hamburger.addEventListener('click', e => {
@@ -41,5 +42,15 @@ function initSlider() {
         }
       },
     });
+  }
+}
+
+function filtersFeature () {
+  const btn = document.querySelector('.filters-btn');
+  const catalogGrid = document.querySelector('.catalog__grid');
+  if (btn) {
+    btn.addEventListener('click', () => {
+      catalogGrid.classList.toggle('filter-opened')
+    })
   }
 }
