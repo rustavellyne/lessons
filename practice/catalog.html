@@ -289,7 +289,7 @@
     <main class="page">
       <div class="catalog">
         <form action="#" class="catalog__form">
-          <div class="catalog__container catalog__grid filter-opened">
+          <div class="catalog__container catalog__grid">
             <div class="catalog__header header-catalog">
               <div class="header-catalog__filters-toggle">
                 <button class="filters-btn">
@@ -318,59 +318,60 @@
               </p>
             </div>
             <aside class="catalog__filters filters">
-              <div class="filter__body">
-                <details class="filters__item item-filter" open>
-                  <summary class="item-filter__title">All Categories</summary>
-                  <div class="item-filter__body category-filter">
-                    <label class="category-filter__item radio">
-                      <input name="form[category]" type="radio" class="radio__input radio__input--visually-hidden">
-                      <span class="radio__label category-filter__label">Fresh Fruit <span>(25)</span></span>
-                    </label>
-                    <label class="category-filter__item radio">
-                      <input name="form[category]" checked type="radio" class="radio__input radio__input--visually-hidden">
-                      <span class="radio__label category-filter__label">Vegetables <span>(150)</span></span>
-                    </label>
-                    <label class="category-filter__item radio">
-                      <input name="form[category]" type="radio" class="radio__input radio__input--visually-hidden">
-                      <span class="radio__label category-filter__label">Cooking <span>(54)</span></span>
-                    </label>
-                    <label class="category-filter__item radio">
-                      <input name="form[category]" type="radio" class="radio__input radio__input--visually-hidden">
-                      <span class="radio__label category-filter__label">Snacks <span>(47)</span></span>
-                    </label>
-                    <label class="category-filter__item radio">
-                      <input name="form[category]" type="radio" class="radio__input radio__input--visually-hidden">
-                      <span class="radio__label category-filter__label">Beverages <span>(43)</span></span>
-                    </label>
-                    <label class="category-filter__item radio">
-                      <input name="form[category]" type="radio" class="radio__input radio__input--visually-hidden">
-                      <span class="radio__label category-filter__label">Beauty & Health <span>(38)</span></span>
-                    </label>
-                    <label class="category-filter__item radio">
-                      <input name="form[category]" type="radio" class="radio__input radio__input--visually-hidden">
-                      <span class="radio__label category-filter__label">Bread & Bakery <span>(15)</span></span>
-                    </label>
-                  </div>
-                </details>
-                <details class="filters__item item-filter" open>
-                  <summary class="item-filter__title">Price</summary>
-                  <div class="item-filter__body price-filter">
-                    <div class="price-filter__range">
-                      <div class="range-input"></div>
-                      <input type="hidden" name="form[price-from]" class="price-filter__from">
-                      <input type="hidden" name="form[price-to]" class="price-filter__to">
+              <div class="aside-wrapper">
+                <div class="filter__body">
+                  <details class="filters__item item-filter" open>
+                    <summary class="item-filter__title">All Categories</summary>
+                    <div class="item-filter__body category-filter">
+                      <label class="category-filter__item radio">
+                        <input name="form[category]" type="radio" class="radio__input radio__input--visually-hidden">
+                        <span class="radio__label category-filter__label">Fresh Fruit <span>(25)</span></span>
+                      </label>
+                      <label class="category-filter__item radio">
+                        <input name="form[category]" checked type="radio" class="radio__input radio__input--visually-hidden">
+                        <span class="radio__label category-filter__label">Vegetables <span>(150)</span></span>
+                      </label>
+                      <label class="category-filter__item radio">
+                        <input name="form[category]" type="radio" class="radio__input radio__input--visually-hidden">
+                        <span class="radio__label category-filter__label">Cooking <span>(54)</span></span>
+                      </label>
+                      <label class="category-filter__item radio">
+                        <input name="form[category]" type="radio" class="radio__input radio__input--visually-hidden">
+                        <span class="radio__label category-filter__label">Snacks <span>(47)</span></span>
+                      </label>
+                      <label class="category-filter__item radio">
+                        <input name="form[category]" type="radio" class="radio__input radio__input--visually-hidden">
+                        <span class="radio__label category-filter__label">Beverages <span>(43)</span></span>
+                      </label>
+                      <label class="category-filter__item radio">
+                        <input name="form[category]" type="radio" class="radio__input radio__input--visually-hidden">
+                        <span class="radio__label category-filter__label">Beauty & Health <span>(38)</span></span>
+                      </label>
+                      <label class="category-filter__item radio">
+                        <input name="form[category]" type="radio" class="radio__input radio__input--visually-hidden">
+                        <span class="radio__label category-filter__label">Bread & Bakery <span>(15)</span></span>
+                      </label>
                     </div>
-                    <div class="price-filter__label">
-                      Price: <span>50 — 1,500</span>
+                  </details>
+                  <details class="filters__item item-filter" open>
+                    <summary class="item-filter__title">Price</summary>
+                    <div class="item-filter__body price-filter">
+                      <div class="price-filter__range">
+                        <div class="range-input"></div>
+                        <input type="hidden" name="form[price-from]" class="price-filter__from">
+                        <input type="hidden" name="form[price-to]" class="price-filter__to">
+                      </div>
+                      <div class="price-filter__label">
+                        Price: <span>50 — 1,500</span>
+                      </div>
                     </div>
-                  </div>
-                </details>
-                <details class="filters__item item-filter" open>
-                  <summary class="item-filter__title">Rating</summary>
-                  <div class="item-filter__body rating-filter">
-                    <label class="rating-filter__item checkbox">
-                      <input name="form[rating]" type="checkbox" class="checkbox__input checkbox__input--visually-hidden">
-                      <span class="checkbox__label">
+                  </details>
+                  <details class="filters__item item-filter" open>
+                    <summary class="item-filter__title">Rating</summary>
+                    <div class="item-filter__body rating-filter">
+                      <label class="rating-filter__item checkbox">
+                        <input name="form[rating]" type="checkbox" class="checkbox__input checkbox__input--visually-hidden">
+                        <span class="checkbox__label">
                         <span class="rating">
                           <span class="rating__item rating__item--filled"></span>
                           <span class="rating__item rating__item--filled"></span>
@@ -380,10 +381,10 @@
                           <span class="rating-filter__value">5.0</span>
                         </span>
                       </span>
-                    </label>
-                    <label class="rating-filter__item checkbox">
-                      <input name="form[rating]" type="checkbox" class="checkbox__input checkbox__input--visually-hidden">
-                      <span class="checkbox__label">
+                      </label>
+                      <label class="rating-filter__item checkbox">
+                        <input name="form[rating]" type="checkbox" class="checkbox__input checkbox__input--visually-hidden">
+                        <span class="checkbox__label">
                         <span class="rating">
                           <span class="rating__item rating__item--filled"></span>
                           <span class="rating__item rating__item--filled"></span>
@@ -393,10 +394,10 @@
                           <span class="rating-filter__value"> 4.0 & up</span>
                         </span>
                       </span>
-                    </label>
-                    <label class="rating-filter__item checkbox">
-                      <input name="form[rating]" type="checkbox" class="checkbox__input checkbox__input--visually-hidden">
-                      <span class="checkbox__label">
+                      </label>
+                      <label class="rating-filter__item checkbox">
+                        <input name="form[rating]" type="checkbox" class="checkbox__input checkbox__input--visually-hidden">
+                        <span class="checkbox__label">
                         <span class="rating">
                           <span class="rating__item rating__item--filled"></span>
                           <span class="rating__item rating__item--filled"></span>
@@ -406,10 +407,10 @@
                           <span class="rating-filter__value"> 3.0 & up</span>
                         </span>
                       </span>
-                    </label>
-                    <label class="rating-filter__item checkbox">
-                      <input name="form[rating]" type="checkbox" class="checkbox__input checkbox__input--visually-hidden">
-                      <span class="checkbox__label">
+                      </label>
+                      <label class="rating-filter__item checkbox">
+                        <input name="form[rating]" type="checkbox" class="checkbox__input checkbox__input--visually-hidden">
+                        <span class="checkbox__label">
                         <span class="rating">
                           <span class="rating__item rating__item--filled"></span>
                           <span class="rating__item rating__item--filled"></span>
@@ -419,10 +420,10 @@
                           <span class="rating-filter__value"> 2.0 & up</span>
                         </span>
                       </span>
-                    </label>
-                    <label class="rating-filter__item checkbox">
-                      <input name="form[rating]" type="checkbox" class="checkbox__input checkbox__input--visually-hidden">
-                      <span class="checkbox__label">
+                      </label>
+                      <label class="rating-filter__item checkbox">
+                        <input name="form[rating]" type="checkbox" class="checkbox__input checkbox__input--visually-hidden">
+                        <span class="checkbox__label">
                         <span class="rating">
                           <span class="rating__item rating__item--filled"></span>
                           <span class="rating__item"></span>
@@ -432,231 +433,232 @@
                           <span class="rating-filter__value"> 1.0 & up</span>
                         </span>
                       </span>
-                    </label>
-                  </div>
-                </details>
-                <details class="filters__item item-filter" open>
-                  <summary class="item-filter__title">Popular Tag</summary>
-                  <div class="item-filter__body tags-filter">
-                    <label class="tag">
-                      <input type="checkbox" name="form[tag]" class="tag__input tag__input--visually-hidden">
-                      <span class="tag__label">Healthy</span>
-                    </label>
-                    <label class="tag">
-                      <input type="checkbox" checked name="form[tag]" class="tag__input tag__input--visually-hidden">
-                      <span class="tag__label">Low fat</span>
-                    </label>
-                    <label class="tag">
-                      <input type="checkbox" name="form[tag]" class="tag__input tag__input--visually-hidden">
-                      <span class="tag__label">Vegetarian</span>
-                    </label>
-                    <label class="tag">
-                      <input type="checkbox" name="form[tag]" class="tag__input tag__input--visually-hidden">
-                      <span class="tag__label">Kid foods</span>
-                    </label>
-                    <label class="tag">
-                      <input type="checkbox" name="form[tag]" class="tag__input tag__input--visually-hidden">
-                      <span class="tag__label">Vitamins</span>
-                    </label>
-                    <label class="tag">
-                      <input type="checkbox" name="form[tag]" class="tag__input tag__input--visually-hidden">
-                      <span class="tag__label">Bread</span>
-                    </label>
-                    <label class="tag">
-                      <input type="checkbox" name="form[tag]" class="tag__input tag__input--visually-hidden">
-                      <span class="tag__label">Meat</span>
-                    </label>
-                    <label class="tag">
-                      <input type="checkbox" name="form[tag]" class="tag__input tag__input--visually-hidden">
-                      <span class="tag__label">Snacks</span>
-                    </label>
-                    <label class="tag">
-                      <input type="checkbox" name="form[tag]" class="tag__input tag__input--visually-hidden">
-                      <span class="tag__label">Tiffin</span>
-                    </label>
-                    <label class="tag">
-                      <input type="checkbox" name="form[tag]" class="tag__input tag__input--visually-hidden">
-                      <span class="tag__label">Launch</span>
-                    </label>
-                    <label class="tag">
-                      <input type="checkbox" name="form[tag]" class="tag__input tag__input--visually-hidden">
-                      <span class="tag__label">Dinner</span>
-                    </label>
-                    <label class="tag">
-                      <input type="checkbox" name="form[tag]" class="tag__input tag__input--visually-hidden">
-                      <span class="tag__label">Breakfast</span>
-                    </label>
-                    <label class="tag">
-                      <input type="checkbox" name="form[tag]" class="tag__input tag__input--visually-hidden">
-                      <span class="tag__label">Fruit</span>
-                    </label>
-                  </div>
-                </details>
-              </div>
-              <article class="filters__sale-banner sale-banner sale-banner--filter">
-                <a href="#" class="sale-banner__link">
-                  <div class="sale-banner__body">
-                    <h3 class="sale-banner__title">
-                      <strong>79%</strong> Discount
-                    </h3>
-                    <p class="sale-banner__description">on your first order</p>
-                    <button class="sale-banner__link-btn link-arrow">
-                      Shop now
-                      <svg class="link-arrow__icon">
-                        <use xlink:href="./img/icons/decoration-icons-sprite.svg#arrow-right"></use>
-                      </svg>
-                    </button>
-                  </div>
-                  <div class="sale-banner__media">
-                    <img src="./img/content/banners/sale-banner-filters.jpg" alt="Image with vegetables">
-                  </div>
-                </a>
-              </article>
-              <div class="sale-products">
-                <h3 class="sale-products__title">Sale Products</h3>
-                <div class="sale-products__list">
-                  <div class="mini-product mini-product--xs">
-                    <div class="mini-product__badges">
-                      <a href="#" class="badge badge--sale">Sale <strong>50%</strong></a>
-                      <a href="#" class="badge badge--best">Best Sale</a>
-                      <a href="#" class="badge badge--new">New</a>
-                      <a href="#" class="badge badge--out-stock">Out of Stock</a>
+                      </label>
                     </div>
-                    <div class="mini-product__actions">
-                      <a href="#" class="mini-product__action button button--round">
-                        <svg class="icon">
-                          <use xlink:href="./img/icons/decoration-icons-sprite.svg#heart"></use>
+                  </details>
+                  <details class="filters__item item-filter" open>
+                    <summary class="item-filter__title">Popular Tag</summary>
+                    <div class="item-filter__body tags-filter">
+                      <label class="tag">
+                        <input type="checkbox" name="form[tag]" class="tag__input tag__input--visually-hidden">
+                        <span class="tag__label">Healthy</span>
+                      </label>
+                      <label class="tag">
+                        <input type="checkbox" checked name="form[tag]" class="tag__input tag__input--visually-hidden">
+                        <span class="tag__label">Low fat</span>
+                      </label>
+                      <label class="tag">
+                        <input type="checkbox" name="form[tag]" class="tag__input tag__input--visually-hidden">
+                        <span class="tag__label">Vegetarian</span>
+                      </label>
+                      <label class="tag">
+                        <input type="checkbox" name="form[tag]" class="tag__input tag__input--visually-hidden">
+                        <span class="tag__label">Kid foods</span>
+                      </label>
+                      <label class="tag">
+                        <input type="checkbox" name="form[tag]" class="tag__input tag__input--visually-hidden">
+                        <span class="tag__label">Vitamins</span>
+                      </label>
+                      <label class="tag">
+                        <input type="checkbox" name="form[tag]" class="tag__input tag__input--visually-hidden">
+                        <span class="tag__label">Bread</span>
+                      </label>
+                      <label class="tag">
+                        <input type="checkbox" name="form[tag]" class="tag__input tag__input--visually-hidden">
+                        <span class="tag__label">Meat</span>
+                      </label>
+                      <label class="tag">
+                        <input type="checkbox" name="form[tag]" class="tag__input tag__input--visually-hidden">
+                        <span class="tag__label">Snacks</span>
+                      </label>
+                      <label class="tag">
+                        <input type="checkbox" name="form[tag]" class="tag__input tag__input--visually-hidden">
+                        <span class="tag__label">Tiffin</span>
+                      </label>
+                      <label class="tag">
+                        <input type="checkbox" name="form[tag]" class="tag__input tag__input--visually-hidden">
+                        <span class="tag__label">Launch</span>
+                      </label>
+                      <label class="tag">
+                        <input type="checkbox" name="form[tag]" class="tag__input tag__input--visually-hidden">
+                        <span class="tag__label">Dinner</span>
+                      </label>
+                      <label class="tag">
+                        <input type="checkbox" name="form[tag]" class="tag__input tag__input--visually-hidden">
+                        <span class="tag__label">Breakfast</span>
+                      </label>
+                      <label class="tag">
+                        <input type="checkbox" name="form[tag]" class="tag__input tag__input--visually-hidden">
+                        <span class="tag__label">Fruit</span>
+                      </label>
+                    </div>
+                  </details>
+                </div>
+                <article class="filters__sale-banner sale-banner sale-banner--filter">
+                  <a href="#" class="sale-banner__link">
+                    <div class="sale-banner__body">
+                      <h3 class="sale-banner__title">
+                        <strong>79%</strong> Discount
+                      </h3>
+                      <p class="sale-banner__description">on your first order</p>
+                      <button class="sale-banner__link-btn link-arrow">
+                        Shop now
+                        <svg class="link-arrow__icon">
+                          <use xlink:href="./img/icons/decoration-icons-sprite.svg#arrow-right"></use>
                         </svg>
-                      </a>
-                      <a href="#" class="mini-product__action button button--round">
-                        <svg class="icon">
-                          <use xlink:href="./img/icons/decoration-icons-sprite.svg#eye"></use>
-                        </svg>
-                      </a>
+                      </button>
                     </div>
-                    <div class="mini-product__media">
-                      <a href="#">
-                        <img src="./img/content/sale-products/red-capsicum.jpg" alt="Red Capsicum">
-                      </a>
+                    <div class="sale-banner__media">
+                      <img src="./img/content/banners/sale-banner-filters.jpg" alt="Image with vegetables">
                     </div>
-                    <div class="mini-product__footer">
-                      <div class="mini-product__content">
-                        <h3 class="mini-product__title">
-                          <a href="#">Red Capsicum</a>
-                        </h3>
-                        <div class="mini-product__prices">
-                          <span class="price price--special">$14.99</span>
-                          <span class="price price--old">$20.99</span>
-                        </div>
-                        <div class="mini-product__rating rating">
-                          <div class="rating__item rating__item--filled"></div>
-                          <div class="rating__item rating__item--filled"></div>
-                          <div class="rating__item rating__item--filled"></div>
-                          <div class="rating__item rating__item--filled"></div>
-                          <div class="rating__item"></div>
-                        </div>
+                  </a>
+                </article>
+                <div class="sale-products">
+                  <h3 class="sale-products__title">Sale Products</h3>
+                  <div class="sale-products__list">
+                    <div class="mini-product mini-product--xs">
+                      <div class="mini-product__badges">
+                        <a href="#" class="badge badge--sale">Sale <strong>50%</strong></a>
+                        <a href="#" class="badge badge--best">Best Sale</a>
+                        <a href="#" class="badge badge--new">New</a>
+                        <a href="#" class="badge badge--out-stock">Out of Stock</a>
                       </div>
-                      <a href="#" class="mini-product__buy button button--round">
-                        <svg class="icon">
-                          <use xlink:href="./img/icons/decoration-icons-sprite.svg#basket"></use>
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="mini-product mini-product--xs">
-                    <div class="mini-product__badges">
-                      <a href="#" class="badge badge--sale">Sale <strong>50%</strong></a>
-                      <a href="#" class="badge badge--best">Best Sale</a>
-                      <a href="#" class="badge badge--new">New</a>
-                      <a href="#" class="badge badge--out-stock">Out of Stock</a>
-                    </div>
-                    <div class="mini-product__actions">
-                      <a href="#" class="mini-product__action button button--round">
-                        <svg class="icon">
-                          <use xlink:href="./img/icons/decoration-icons-sprite.svg#heart"></use>
-                        </svg>
-                      </a>
-                      <a href="#" class="mini-product__action button button--round">
-                        <svg class="icon">
-                          <use xlink:href="./img/icons/decoration-icons-sprite.svg#eye"></use>
-                        </svg>
-                      </a>
-                    </div>
-                    <div class="mini-product__media">
-                      <a href="#">
-                        <img src="./img/content/sale-products/mango.jpg" alt="Mango">
-                      </a>
-                    </div>
-                    <div class="mini-product__footer">
-                      <div class="mini-product__content">
-                        <h3 class="mini-product__title">
-                          <a href="#">Mango</a>
-                        </h3>
-                        <div class="mini-product__prices">
-                          <span class="price price--special">$14.99</span>
-                          <span class="price price--old">$20.99</span>
-                        </div>
-                        <div class="mini-product__rating rating">
-                          <div class="rating__item rating__item--filled"></div>
-                          <div class="rating__item rating__item--filled"></div>
-                          <div class="rating__item rating__item--filled"></div>
-                          <div class="rating__item rating__item--filled"></div>
-                          <div class="rating__item"></div>
-                        </div>
+                      <div class="mini-product__actions">
+                        <a href="#" class="mini-product__action button button--round">
+                          <svg class="icon">
+                            <use xlink:href="./img/icons/decoration-icons-sprite.svg#heart"></use>
+                          </svg>
+                        </a>
+                        <a href="#" class="mini-product__action button button--round">
+                          <svg class="icon">
+                            <use xlink:href="./img/icons/decoration-icons-sprite.svg#eye"></use>
+                          </svg>
+                        </a>
                       </div>
-                      <a href="#" class="mini-product__buy button button--round">
-                        <svg class="icon">
-                          <use xlink:href="./img/icons/decoration-icons-sprite.svg#basket"></use>
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="mini-product mini-product--xs">
-                    <div class="mini-product__badges">
-                      <a href="#" class="badge badge--sale">Sale <strong>50%</strong></a>
-                      <a href="#" class="badge badge--best">Best Sale</a>
-                      <a href="#" class="badge badge--new">New</a>
-                      <a href="#" class="badge badge--out-stock">Out of Stock</a>
-                    </div>
-                    <div class="mini-product__actions">
-                      <a href="#" class="mini-product__action button button--round">
-                        <svg class="icon">
-                          <use xlink:href="./img/icons/decoration-icons-sprite.svg#heart"></use>
-                        </svg>
-                      </a>
-                      <a href="#" class="mini-product__action button button--round">
-                        <svg class="icon">
-                          <use xlink:href="./img/icons/decoration-icons-sprite.svg#eye"></use>
-                        </svg>
-                      </a>
-                    </div>
-                    <div class="mini-product__media">
-                      <a href="#">
-                        <img src="./img/content/sale-products/green-capsicum.jpg" alt="Green Capsicum">
-                      </a>
-                    </div>
-                    <div class="mini-product__footer">
-                      <div class="mini-product__content">
-                        <h3 class="mini-product__title">
-                          <a href="#">Green Apple</a>
-                        </h3>
-                        <div class="mini-product__prices">
-                          <span class="price price--special">$14.99</span>
-                          <span class="price price--old">$20.99</span>
-                        </div>
-                        <div class="mini-product__rating rating">
-                          <div class="rating__item rating__item--filled"></div>
-                          <div class="rating__item rating__item--filled"></div>
-                          <div class="rating__item rating__item--filled"></div>
-                          <div class="rating__item rating__item--filled"></div>
-                          <div class="rating__item"></div>
-                        </div>
+                      <div class="mini-product__media">
+                        <a href="#">
+                          <img src="./img/content/sale-products/red-capsicum.jpg" alt="Red Capsicum">
+                        </a>
                       </div>
-                      <a href="#" class="mini-product__buy button button--round">
-                        <svg class="icon">
-                          <use xlink:href="./img/icons/decoration-icons-sprite.svg#basket"></use>
-                        </svg>
-                      </a>
+                      <div class="mini-product__footer">
+                        <div class="mini-product__content">
+                          <h3 class="mini-product__title">
+                            <a href="#">Red Capsicum</a>
+                          </h3>
+                          <div class="mini-product__prices">
+                            <span class="price price--special">$14.99</span>
+                            <span class="price price--old">$20.99</span>
+                          </div>
+                          <div class="mini-product__rating rating">
+                            <div class="rating__item rating__item--filled"></div>
+                            <div class="rating__item rating__item--filled"></div>
+                            <div class="rating__item rating__item--filled"></div>
+                            <div class="rating__item rating__item--filled"></div>
+                            <div class="rating__item"></div>
+                          </div>
+                        </div>
+                        <a href="#" class="mini-product__buy button button--round">
+                          <svg class="icon">
+                            <use xlink:href="./img/icons/decoration-icons-sprite.svg#basket"></use>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="mini-product mini-product--xs">
+                      <div class="mini-product__badges">
+                        <a href="#" class="badge badge--sale">Sale <strong>50%</strong></a>
+                        <a href="#" class="badge badge--best">Best Sale</a>
+                        <a href="#" class="badge badge--new">New</a>
+                        <a href="#" class="badge badge--out-stock">Out of Stock</a>
+                      </div>
+                      <div class="mini-product__actions">
+                        <a href="#" class="mini-product__action button button--round">
+                          <svg class="icon">
+                            <use xlink:href="./img/icons/decoration-icons-sprite.svg#heart"></use>
+                          </svg>
+                        </a>
+                        <a href="#" class="mini-product__action button button--round">
+                          <svg class="icon">
+                            <use xlink:href="./img/icons/decoration-icons-sprite.svg#eye"></use>
+                          </svg>
+                        </a>
+                      </div>
+                      <div class="mini-product__media">
+                        <a href="#">
+                          <img src="./img/content/sale-products/mango.jpg" alt="Mango">
+                        </a>
+                      </div>
+                      <div class="mini-product__footer">
+                        <div class="mini-product__content">
+                          <h3 class="mini-product__title">
+                            <a href="#">Mango</a>
+                          </h3>
+                          <div class="mini-product__prices">
+                            <span class="price price--special">$14.99</span>
+                            <span class="price price--old">$20.99</span>
+                          </div>
+                          <div class="mini-product__rating rating">
+                            <div class="rating__item rating__item--filled"></div>
+                            <div class="rating__item rating__item--filled"></div>
+                            <div class="rating__item rating__item--filled"></div>
+                            <div class="rating__item rating__item--filled"></div>
+                            <div class="rating__item"></div>
+                          </div>
+                        </div>
+                        <a href="#" class="mini-product__buy button button--round">
+                          <svg class="icon">
+                            <use xlink:href="./img/icons/decoration-icons-sprite.svg#basket"></use>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="mini-product mini-product--xs">
+                      <div class="mini-product__badges">
+                        <a href="#" class="badge badge--sale">Sale <strong>50%</strong></a>
+                        <a href="#" class="badge badge--best">Best Sale</a>
+                        <a href="#" class="badge badge--new">New</a>
+                        <a href="#" class="badge badge--out-stock">Out of Stock</a>
+                      </div>
+                      <div class="mini-product__actions">
+                        <a href="#" class="mini-product__action button button--round">
+                          <svg class="icon">
+                            <use xlink:href="./img/icons/decoration-icons-sprite.svg#heart"></use>
+                          </svg>
+                        </a>
+                        <a href="#" class="mini-product__action button button--round">
+                          <svg class="icon">
+                            <use xlink:href="./img/icons/decoration-icons-sprite.svg#eye"></use>
+                          </svg>
+                        </a>
+                      </div>
+                      <div class="mini-product__media">
+                        <a href="#">
+                          <img src="./img/content/sale-products/green-capsicum.jpg" alt="Green Capsicum">
+                        </a>
+                      </div>
+                      <div class="mini-product__footer">
+                        <div class="mini-product__content">
+                          <h3 class="mini-product__title">
+                            <a href="#">Green Apple</a>
+                          </h3>
+                          <div class="mini-product__prices">
+                            <span class="price price--special">$14.99</span>
+                            <span class="price price--old">$20.99</span>
+                          </div>
+                          <div class="mini-product__rating rating">
+                            <div class="rating__item rating__item--filled"></div>
+                            <div class="rating__item rating__item--filled"></div>
+                            <div class="rating__item rating__item--filled"></div>
+                            <div class="rating__item rating__item--filled"></div>
+                            <div class="rating__item"></div>
+                          </div>
+                        </div>
+                        <a href="#" class="mini-product__buy button button--round">
+                          <svg class="icon">
+                            <use xlink:href="./img/icons/decoration-icons-sprite.svg#basket"></use>
+                          </svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
