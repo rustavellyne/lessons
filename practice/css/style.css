@@ -216,6 +216,27 @@ body {
   }
 }
 
+.tag {
+  display: inline-block;
+  cursor: pointer;
+  padding: 6px 1rem;
+  border-radius: 30px;
+  background: var(--gray-50);
+  color: var(--gray-900);
+  line-height: 1.5;
+  transition: color 0.3s, background-color 0.3s;
+
+  &:has(.tag__input:checked),
+  &:hover {
+    background: var(--branding-success);
+    color: var(--white-color);
+  }
+  &:has(.tag__input:focus-visible) {
+    outline: 1px solid var(--branding-success);
+    outline-offset: -1px;
+  }
+}
+
 .radio {
   cursor: pointer;
   position: relative;

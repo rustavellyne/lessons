@@ -359,5 +359,11 @@
   }
 }
 
+.tags-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
 
 /* End Of Filters */
