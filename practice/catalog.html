@@ -289,7 +289,7 @@
     <main class="page">
       <div class="catalog">
         <form action="#" class="catalog__form">
-          <div class="catalog__container catalog__grid">
+          <div class="catalog__container catalog__grid filter-opened">
             <div class="catalog__header header-catalog">
               <div class="header-catalog__filters-toggle">
                 <button class="filters-btn">
@@ -319,8 +319,47 @@
             </div>
             <aside class="catalog__filters filters">
               <div class="filter__body">
-                <details>
-                  <summary>All Categories</summary>
+                <details class="filters__item item-filter" open>
+                  <summary class="item-filter__title">All Categories</summary>
+                  <div class="item-filter__body category-filter">
+                    <label class="category-filter__item radio">
+                      <input name="form[category]" type="radio" class="radio__input radio__input--visually-hidden">
+                      <span class="radio__label category-filter__label">Fresh Fruit <span>(25)</span></span>
+                    </label>
+                    <label class="category-filter__item radio">
+                      <input name="form[category]" checked type="radio" class="radio__input radio__input--visually-hidden">
+                      <span class="radio__label category-filter__label">Vegetables <span>(150)</span></span>
+                    </label>
+                    <label class="category-filter__item radio">
+                      <input name="form[category]" type="radio" class="radio__input radio__input--visually-hidden">
+                      <span class="radio__label category-filter__label">Cooking <span>(54)</span></span>
+                    </label>
+                    <label class="category-filter__item radio">
+                      <input name="form[category]" type="radio" class="radio__input radio__input--visually-hidden">
+                      <span class="radio__label category-filter__label">Snacks <span>(47)</span></span>
+                    </label>
+                    <label class="category-filter__item radio">
+                      <input name="form[category]" type="radio" class="radio__input radio__input--visually-hidden">
+                      <span class="radio__label category-filter__label">Beverages <span>(43)</span></span>
+                    </label>
+                    <label class="category-filter__item radio">
+                      <input name="form[category]" type="radio" class="radio__input radio__input--visually-hidden">
+                      <span class="radio__label category-filter__label">Beauty & Health <span>(38)</span></span>
+                    </label>
+                    <label class="category-filter__item radio">
+                      <input name="form[category]" type="radio" class="radio__input radio__input--visually-hidden">
+                      <span class="radio__label category-filter__label">Bread & Bakery <span>(15)</span></span>
+                    </label>
+                  </div>
+                </details>
+                <details class="filters__item item-filter" open>
+                  <summary class="item-filter__title">Price</summary>
+                  <div class="item-filter__body price-filter">
+                    <div class="price-filter__range range-input"></div>
+                    <div class="price-filter__label">
+                      Price: <span>50 — 1,500</span>
+                    </div>
+                  </div>
                 </details>
               </div>
             </aside>
