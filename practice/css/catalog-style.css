@@ -365,5 +365,66 @@
   gap: 0.5rem;
 }
 
+.sale-banner {
+  position: relative;
+  display: block;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 0.625rem;
+  background-color: var(--gray-50);
+
+  .sale-banner__link {
+    display: block;
+    text-align: center;
+
+    .sale-banner__body {
+      position: relative;
+      z-index: 2;
+      padding-top: 1.25rem;
+      line-height: 1.5;
+      color: var(--gray-700);
+      font-size: var(--text-m);
+    }
+
+    .sale-banner__title {
+      color: var(--gray-900);
+      font-size: var(--text-xxl);
+
+      strong {
+        color: var(--warning-color);
+        font-size: var(--text-2xl);
+        font-weight: var(--text-semibold);
+        line-height: 1.2;
+      }
+    }
+
+    .sale-banner__link-btn {
+      cursor: pointer;
+      background-color: transparent;
+      margin-top: 0.75rem;
+      font-weight: 600;
+
+      .link-arrow__icon {
+        margin: 0;
+      }
+    }
+
+
+
+    .sale-banner__media {
+      position: absolute;
+      left: 0;
+      top: 0;
+      aspect-ratio: 1;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
 
 /* End Of Filters */
