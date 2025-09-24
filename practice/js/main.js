@@ -1,6 +1,7 @@
 window.addEventListener('load', function() {
   filtersFeature()
   initSlider();
+  initRangeSliders();
   const hamburger = document.querySelector('.burger-btn');
   hamburger.addEventListener('click', e => {
     hamburger.classList.toggle('opened');
@@ -52,5 +53,23 @@ function filtersFeature () {
     btn.addEventListener('click', () => {
       catalogGrid.classList.toggle('filter-opened')
     })
+  }
+}
+
+function initRangeSliders() {
+  const priceSlider = document.querySelector('.range-input');
+  const priceFilterLabel = document.querySelector('.price-filter__label span');
+
+  if (priceSlider) {
+    const slider = rangeSlider(priceSlider, {
+      value: [150, 500],
+      min: 0,
+      max: 1000,
+      onInput (values) {
+        const [min, max] = values
+        console.log(min, max)
+        priceFilterLabel.innerText = `${min} - ${max}`
+      },
+    });
   }
 }
