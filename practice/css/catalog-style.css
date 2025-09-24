@@ -264,9 +264,10 @@
 }
 
 .item-filter {
-  padding-bottom: 1.625rem;
+  padding-bottom: 1.5rem;
   border-bottom: 1px solid var(--gray-100);
   margin-bottom: 1.25rem;
+
   summary::marker {
     content: '';
   }
@@ -305,7 +306,6 @@
 }
 
 .price-filter {
-
   .price-filter__range {
     padding-block: 0.25rem 1.25rem;
 
@@ -336,8 +336,27 @@
   }
 }
 
-.filters {
+.rating-filter {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  align-items: flex-start;
+  padding-top: 1.875rem;
 
+  .rating-filter__value {
+    color: var(--gray-900);
+    font-size: var(--text-s);
+    margin-top: 3px;
+    margin-left: 2px;
+  }
+
+  .rating {
+    .rating__item {
+      width: 15px;
+      height: 15px;
+      background-size: cover;
+    }
+  }
 }
 
 

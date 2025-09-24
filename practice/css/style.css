@@ -184,6 +184,38 @@ body {
   display: inline-flex;
 }
 
+.checkbox {
+  cursor: pointer;
+
+  .checkbox__label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    &:before {
+      font-size: var(--text-m);
+      content: '';
+      width: 20px;
+      height: 20px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      aspect-ratio: 1;
+      border-radius: 3px;
+      border: 1px solid var(--gray-200);
+      background: var(--white-color);
+    }
+  }
+  .checkbox__input:checked ~ .checkbox__label:before {
+    background: url('../img/icons/decor/check.svg') center/contain no-repeat var(--branding-success);
+    border-color: var(--branding-success);
+  }
+  &:has(.checkbox__input:focus-visible) {
+    outline: 1px solid var(--branding-success);
+    outline-offset: -1px;
+  }
+}
+
 .radio {
   cursor: pointer;
   position: relative;
