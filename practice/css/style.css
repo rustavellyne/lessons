@@ -1640,6 +1640,30 @@ body {
   }
 }
 
+.mini-product--xs {
+  display: flex;
+  border-radius: 6px;
+
+  &:before {
+    border-radius: 6px;
+  }
+
+  .mini-product__buy,
+  .mini-product__actions,
+  .mini-product__badges {
+    display: none;
+  }
+
+  .mini-product__media {
+    width: 102px;
+    height: 102px;
+
+    a {
+      aspect-ratio: 1;
+    }
+  }
+}
+
 .line-actions {
   padding-inline: 1.5rem;
   display: flex;
