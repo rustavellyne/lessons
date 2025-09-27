@@ -2,6 +2,7 @@ window.addEventListener('load', function() {
   filtersFeature()
   initSlider();
   initRangeSliders();
+  initProductSlider();
   const hamburger = document.querySelector('.burger-btn');
   hamburger.addEventListener('click', e => {
     hamburger.classList.toggle('opened');
@@ -69,6 +70,41 @@ function initRangeSliders() {
         const [min, max] = values
         console.log(min, max)
         priceFilterLabel.innerText = `${min} - ${max}`
+      },
+    });
+  }
+}
+
+function initProductSlider() {
+  const navThumbsEl = document.querySelector('.nav-gallery__swiper');
+  const mainGalleryEl = document.querySelector('.main-gallery');
+  if (navThumbsEl && mainGalleryEl) {
+    const nav = new Swiper('.nav-gallery__swiper', {
+      direction: "vertical",
+      loop: true,
+      spaceBetween: 12,
+      slidesPerView: 4,
+      freeMode: true,
+      watchSlidesProgress: true, // важливо для синхронізації
+      watchSlidesVisibility: true,
+      navigation: {
+        nextEl: '.nav-gallery__btn--next',
+        prevEl: '.nav-gallery__btn--prev',
+      }
+    });
+    const main = new Swiper('.main-gallery', {
+      loop: true,
+      zoom: {
+        enable: true,
+        panOnMouseMove: true,
+      },
+      spaceBetween: 0,
+      speed: 300,
+      centeredSlides: true,
+      slidesPerView: 1,
+      effect: "fade",
+      thumbs: {
+        swiper: nav,
       },
     });
   }
