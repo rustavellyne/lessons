@@ -333,4 +333,35 @@
     }
   }
 }
+
+.product-navs {
+  padding-top: 1.5rem;
+  line-height: 1.5;
+
+  & > *:not(:last-child) {
+    margin-bottom: .75rem;
+  }
+
+  .product-navs__item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .product-navs__name {
+    color: var(--gray-900);
+    font-weight: var(--text-medium);
+  }
+
+  .product-navs__link {
+    color: var(--gray-500);
+
+    transition: color 0.3s;
+
+    &:hover {
+      color: var(--gray-900);
+      text-decoration-line: underline;
+    }
+  }
+}
 /* End of Info about product */
