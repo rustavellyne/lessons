@@ -408,7 +408,7 @@
               <p class="product-price__special">$17.28</p>
               <p class="product-price__discount">64% Off</p>
             </div>
-            <div class="info-products__description description-product">
+            <div class="info-product__description description-product">
               <div class="description-product__header">
                 <div class="description-product__brand product-brand">
                   <p class="product-brand__title">Brand: </p>
@@ -454,6 +454,26 @@
                 Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla nibh diam, blandit vel consequat nec, ultrices et ipsum. Nulla varius magna a consequat pulvinar.
               </p>
             </div>
+            <form action="#" class="info-product__actions product-actions">
+              <div class="product-actions__qty qty-input">
+                  <button class="qty-input__btn">-</button>
+                  <label class="qty-input__label">
+                    <input class="qty-input__input" type="number" step="1" min="1" max="999" name="product-qty" value="1" autocomplete="off" inputmode="numeric">
+                  </label>
+                  <button class="qty-input__btn">+</button>
+              </div>
+              <button type="submit" class="button product-actions__add-to-cart button--add-to-cart">
+                <span>Add to Cart</span>
+                <svg class="icon">
+                  <use xlink:href="./img/icons/decoration-icons-sprite.svg#basket"></use>
+                </svg>
+              </button>
+              <a href="#" class="button button--round product-actions__wishlist">
+                <svg class="icon">
+                  <use xlink:href="./img/icons/decoration-icons-sprite.svg#heart"></use>
+                </svg>
+              </a>
+            </form>
           </div>
         </div>
       </section>

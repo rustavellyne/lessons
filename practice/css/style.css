@@ -350,10 +350,26 @@ body {
   align-items: center;
   justify-content: center;
   gap: 0.75rem;
+  font-family: var(--primary-font), sans-serif;
 
   .icon {
     width: 20px;
     height: 20px;
+  }
+}
+
+.button--add-to-cart {
+  border-radius: 43px;
+  background: var(--branding-success);
+  transition: background-color 0.3s;
+  color: var(--white-color);
+  padding: 1rem 2.5rem;
+  font-size: var(--text-m);
+  font-weight: 600;
+  line-height: 1.2;
+
+  &:hover {
+    background-color: var(--primary-hard-color);
   }
 }
 
