@@ -3,6 +3,7 @@ window.addEventListener('load', function() {
   initSlider();
   initRangeSliders();
   initProductSlider();
+  initQtyInput();
   const hamburger = document.querySelector('.burger-btn');
   hamburger.addEventListener('click', e => {
     hamburger.classList.toggle('opened');
@@ -113,4 +114,36 @@ function initProductSlider() {
       },
     });
   }
+}
+
+function initQtyInput () {
+  document.addEventListener('click', (e) => {
+    const btn = e.target;
+    if (!btn.matches('.qty-input__btn')) return;
+    const qtyBlock = btn.closest('.qty-input');
+    const qtyInput = qtyBlock.querySelector('.qty-input__input');
+    if (!qtyInput) return;
+    const currentValue = parseInt(qtyInput.value);
+    const max = parseInt(qtyInput.max) || 999;
+    const min = parseInt(qtyInput.min) || 1;
+
+    if (btn.matches('.qty-input__btn--decrement')) {
+      qtyInput.value = Math.max(min, currentValue - 1);
+    }
+
+    if (btn.matches('.qty-input__btn--increment')) {
+      qtyInput.value = Math.min(max, currentValue + 1);
+    }
+  });
+  document.addEventListener('input', (e) => {
+    const input = e.target;
+    if (!input.matches('.qty-input__input')) return;
+    const min = parseInt(input.min) || 1;
+    const max = parseInt(input.max) || 999;
+    let currentValue = parseInt(input.value) || min;
+    if (currentValue < min) currentValue = min;
+    if (currentValue > max) currentValue = max;
+
+    input.value = currentValue;
+  });
 }
