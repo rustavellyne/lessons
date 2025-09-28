@@ -80,16 +80,21 @@ function initProductSlider() {
   const mainGalleryEl = document.querySelector('.main-gallery');
   if (navThumbsEl && mainGalleryEl) {
     const nav = new Swiper('.nav-gallery__swiper', {
-      direction: "vertical",
       loop: true,
       spaceBetween: 12,
-      slidesPerView: 4,
+      slidesPerView: 3,
       freeMode: true,
       watchSlidesProgress: true, // важливо для синхронізації
       watchSlidesVisibility: true,
       navigation: {
         nextEl: '.nav-gallery__btn--next',
         prevEl: '.nav-gallery__btn--prev',
+      },
+      breakpoints: {
+        480: {
+          direction: "vertical",
+          slidesPerView: 4,
+        },
       }
     });
     const main = new Swiper('.main-gallery', {
