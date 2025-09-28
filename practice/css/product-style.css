@@ -391,7 +391,7 @@
     background: var(--gray-50);
     transition: background-color 0.3s, color 0.3s;
 
-    &:hover {
+    &:hover:enabled {
       background-color: var(--primary-hard-color);
       color: var(--white-color);
     }

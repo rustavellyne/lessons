@@ -122,6 +122,8 @@ function initQtyInput () {
     if (!btn.matches('.qty-input__btn')) return;
     const qtyBlock = btn.closest('.qty-input');
     const qtyInput = qtyBlock.querySelector('.qty-input__input');
+    const decr = qtyBlock.querySelector('.qty-input__btn--decrement');
+    const incr = qtyBlock.querySelector('.qty-input__btn--increment');
     if (!qtyInput) return;
     const currentValue = parseInt(qtyInput.value);
     const max = parseInt(qtyInput.max) || 999;
@@ -134,6 +136,8 @@ function initQtyInput () {
     if (btn.matches('.qty-input__btn--increment')) {
       qtyInput.value = Math.min(max, currentValue + 1);
     }
+    decr.disabled = qtyInput.value <= min;
+    incr.disabled = qtyInput.value >= max;
   });
   document.addEventListener('input', (e) => {
     const input = e.target;
