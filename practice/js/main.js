@@ -4,6 +4,7 @@ window.addEventListener('load', function() {
   initRangeSliders();
   initProductSlider();
   initQtyInput();
+  initTabs();
   const hamburger = document.querySelector('.burger-btn');
   hamburger.addEventListener('click', e => {
     hamburger.classList.toggle('opened');
@@ -150,4 +151,33 @@ function initQtyInput () {
 
     input.value = currentValue;
   });
+}
+
+function initTabs () {
+
+  function showTab(btn) {
+    const btnActiveClass = 'tabs-nav__button--active';
+    const contentActiveClass = 'content-tabs__item--active';
+    const tabContainer = btn.closest('.tabs');
+    if (!tabContainer) return;
+    const target = btn.dataset.tabTarget;
+    // 1. hide active buttons - remove tabs-nav__button--active
+    tabContainer.querySelectorAll(`.${btnActiveClass}`)
+      .forEach(el => el.classList.remove(btnActiveClass));
+    // 2. hide active tabs - remove content-tabs__item--active
+    tabContainer.querySelectorAll(`.${contentActiveClass}`)
+      .forEach(el => el.classList.remove(contentActiveClass));
+    // 3. show active buttons - tabs-nav__button--active
+    btn.classList.add(btnActiveClass);
+    // 4. show active tabs - by target  add class content-tabs__item--active
+    const targetContent = tabContainer.querySelector(`[data-tab-content="${target}"]`);
+    targetContent.classList.add(contentActiveClass);
+  };
+
+  document.addEventListener('click', (e) => {
+    const tabBtn = e.target;
+    if (tabBtn.hasAttribute('data-tab-target')) {
+      showTab(tabBtn)
+    }
+  })
 }

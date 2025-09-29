@@ -475,6 +475,12 @@
       box-shadow: 0 -2px 0 0 var(--branding-success) inset;
       color: var(--gray-900);
     }
+    .content-tabs__item {
+      display: none;
+    }
+    .content-tabs__item--active {
+      display: block;
+    }
   }
 
   .description__body {
