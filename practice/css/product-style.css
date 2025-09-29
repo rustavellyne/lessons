@@ -494,6 +494,10 @@
     }
   }
 
+  .description__body--feedback {
+    grid-template-columns: min(760px, 100%);
+  }
+
   .description__text {
     & > *:not(:last-child) {
       margin-bottom: 1.25rem;
@@ -520,6 +524,27 @@
 
     li:not(:last-child) {
       margin-bottom: 14px;
+    }
+
+    table {
+      text-align: left;
+      border-spacing: 0.75rem;
+      line-height: 1.5;
+
+      tr {}
+      th {
+        font-weight: var(--text-normal);
+        color: var(--gray-900);
+      }
+      td {
+        color: var(--gray-600);
+      }
+    }
+    a {
+      &:hover {
+        color: var(--gray-900);
+        text-decoration: underline;
+      }
     }
   }
 
@@ -610,6 +635,84 @@
       &:before {
         border-radius: .5rem;
       }
+    }
+  }
+}
+
+.feedback {
+  .item-feedback {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    line-height: 1.5;
+    padding-block: 1.25rem;
+    color: var(--gray-500);
+
+    &:first-child {
+      padding-top: 0;
+    }
+
+    &:not(:last-of-type) {
+      border-bottom: 1px solid var(--gray-100);
+    }
+
+    .item-feedback__comment {
+      flex-basis: 100%;
+    }
+  }
+
+  .item-feedback__time {
+    color: var(--gray-400);
+  }
+
+  .author-feedback {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+
+    .author-feedback__avatar {
+      width: 41px;
+      height: 41px;
+      aspect-ratio: 1;
+      overflow: hidden;
+      border-radius: 50%;
+      background-color: var(--gray-100);
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    .author-feedback__name {
+      color: var(--gray-900);
+      font-weight: var(--text-medium);
+    }
+
+    .author-feedback__rating {
+      .rating__item {
+        width: 14px;
+        height: 14px;
+        background-size: cover;
+      }
+    }
+  }
+
+  .feedback__load-more {
+    padding: 0.875rem 2rem;
+    border-radius: 2.6875rem;
+    background: rgba(86, 172, 89, 0.10);
+    color: var(--branding-success);
+    font-weight: var(--text-semibold);
+    line-height: 1.2;
+    font-size: var(--text-s);
+    transition: background-color 0.3s, color 0.3s;
+
+    &:hover {
+      background-color: var(--branding-success);
+      color: var(--white-color);
     }
   }
 }
