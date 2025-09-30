@@ -5,6 +5,7 @@ window.addEventListener('load', function() {
   initProductSlider();
   initQtyInput();
   initTabs();
+  initParallax();
   const hamburger = document.querySelector('.burger-btn');
   hamburger.addEventListener('click', e => {
     hamburger.classList.toggle('opened');
@@ -154,7 +155,6 @@ function initQtyInput () {
 }
 
 function initTabs () {
-
   function showTab(btn) {
     const btnActiveClass = 'tabs-nav__button--active';
     const contentActiveClass = 'content-tabs__item--active';
@@ -180,4 +180,45 @@ function initTabs () {
       showTab(tabBtn)
     }
   })
+}
+
+function initParallax () {
+  document.addEventListener('scroll', () => {
+    const activeParallaxItems = document.querySelectorAll('[data-paralax="active"]');
+    if (activeParallaxItems.length) {
+      activeParallaxItems.forEach(block => {
+        const bgItem = block.querySelector('[data-paralax-item]');
+        if (!bgItem) return;
+        const viewPortHeight = window.innerHeight;
+        const blockHeight = block.offsetHeight;
+        const bgItemHeight = bgItem.offsetHeight;
+        const scrollHeight = viewPortHeight + blockHeight;
+        const { bottom: blockBottom} = block.getBoundingClientRect();
+        const percentage = blockBottom / scrollHeight * 100;
+        const maxShift = (blockHeight - bgItemHeight) / bgItemHeight * 100;
+        const scale = (percentage - 50) / 50;
+        const diff = maxShift * scale;
+        bgItem.style.cssText = `translate: 0 ${diff}%`;
+      })
+    }
+  });
+
+
+
+  const parallaxItems = document.querySelectorAll('[data-paralax]');
+  const options = {
+    rootMargin: '0px',
+    scrollMargin: '0px',
+    threshold: 0,
+  };
+  const callback = (entries) => {
+    entries.forEach(entry => {
+      const el = entry.target;
+      if (el){
+        el.dataset.paralax = entry.isIntersecting ? 'active' : '';
+      }
+    });
+  };
+  const observer = new IntersectionObserver(callback, options);
+  parallaxItems.forEach(elem => observer.observe(elem));
 }

@@ -328,6 +328,8 @@ function parallaxInit(parallaxItems) {
 					const topPosition = currentItem.getBoundingClientRect().top + currentItemHeight
 					const way = (topPosition / (windowHeight / 2) * 100) - 100
 					const diff = (currentItemHeight - parallaxItem.offsetHeight) / parallaxItem.offsetHeight * way
+
+					console.log({ way, diff })
 					parallaxItem.style.cssText = `translate: 0 ${diff}%`
 				}
 			})

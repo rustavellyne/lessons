@@ -2023,7 +2023,16 @@ button {
 
     margin-bottom: 1.75rem;
   }
-
+  &[data-paralax] {
+    .discount-banner__media img {
+      object-fit: cover;
+      width: 100%;
+      height: 140%;
+      top: -20%;
+      position: absolute;
+      object-position: left;
+    }
+  }
 }
 /* End of Discount banner */
 
