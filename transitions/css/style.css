@@ -1,0 +1,121 @@
+@import url("reset.css");
+
+.wrapper {
+  min-height: 100%;
+  overflow: clip;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper > main {
+  flex-grow: 1;
+}
+
+[class*="__container"] {
+  max-width: 1350px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.transition-func__container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.button-blade {
+  text-decoration: none;
+  color: #272727;
+  font-size: 45px;
+  border: 5px solid #272727;
+  padding: 40px 80px;
+  position: relative;
+  text-transform: uppercase;
+  overflow: hidden;
+
+  &:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.button-blade--rotate {
+  &:before {
+    background-color: #fff200;
+    transform-origin: bottom left;
+    transform: rotate(-90deg);
+    transition: transform 1s;
+  }
+
+  &:hover:before {
+    transform: rotate(0);
+  }
+}
+
+.button-blade--swipe {
+  transition: color .6s;
+  &:before {
+    background-color: #351435;
+    transform: translateX(-100%);
+    transition: transform 1s;
+  }
+
+  &:hover {
+    color: white;
+  }
+
+  &:hover:before {
+    transform: translateX(0);
+  }
+}
+
+.button-blade--rotate-x {
+  transition: color 0.4s;
+  &:before {
+    transform: rotateX(90deg);
+    background-color: #262626;
+    transition: transform 1s, color .6s;
+  }
+
+  &:hover {
+    color: white;
+  }
+  &:hover:before {
+    transform: rotateX(0);
+  }
+}
+
+.button-blade--rotate-xy {
+  transition: color 0.4s;
+  &:before {
+    transform: rotateX(90deg);
+    background-color: #262626;
+    transition: transform 1s, color .6s;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #262626;
+    transition: transform 1s, color .6s;
+    transform: rotateY(90deg);
+  }
+  &:hover {
+    color: white;
+  }
+  &:hover:before {
+    transform: rotateX(0);
+  }
+  &:hover:after {
+    transform: rotateY(0);
+  }
+}
+
