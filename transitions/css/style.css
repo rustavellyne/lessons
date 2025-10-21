@@ -904,5 +904,9 @@
       right: -8px;
       top: -8px;
     }
+    &:hover {
+      background-color: #e91e63;
+      color: white;
+    }
   }
 }
