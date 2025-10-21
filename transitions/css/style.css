@@ -969,3 +969,51 @@
     top: -10%;
   }
 }
+
+.animation {
+  background-color: green;
+  padding-block: 40px;
+
+  .animation__title {
+    text-align: center;
+    font-size: 90px;
+    text-transform: uppercase;
+    line-height: 1;
+    letter-spacing: 15px;
+    color: white;
+    animation: float 3s linear infinite alternate;
+    text-shadow:
+      0 1px 0 #efefef,
+      0 2px 0 #efefef,
+      0 3px 0 #efefef,
+      0 4px 0 #efefef,
+      0 30px 5px rgba(0,0,0,0.1);
+  }
+}
+
+@keyframes float {
+  from {
+    transform: rotate(5deg);
+  }
+  to {
+    transform: rotate(-5deg);
+  }
+}
+
+.loader-container {
+  perspective: 200px;
+}
+.loader {
+  margin: 0 auto;
+  height: 100px;
+  width: 100px;
+  background-color: orange;
+  border-radius: 12px;
+  animation: loader 5s linear infinite;
+}
+
+@keyframes loader {
+  0% { transform: rotateX(0) rotateY(0); }
+  50% { transform: rotateX(0) rotateY(180deg); }
+  100% { transform: rotateX(180deg) rotateY(180deg); }
+}
