@@ -733,6 +733,14 @@
       transform: translateX(0) scale(1);
     }
   }
+
+  .image--zoom-scale {
+    border: 8px solid black;
+
+    &:hover img {
+      transform: scale(1.2) rotate(9deg);
+    }
+  }
 }
 
 .smoky {
@@ -741,6 +749,9 @@
   .smoky__container {
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
   }
   
   .smoky__list {
@@ -774,6 +785,30 @@
     }
     &:nth-child(5) {
       transition-delay: 1.6s;
+    }
+  }
+
+  .smoky__title {
+    font-size: 120px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 900;
+    position: relative;
+    color: #cccccc;
+
+    &:before {
+      content:  'text';
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #262626;
+      width: 0;
+      overflow: hidden;
+      transition: all 0.5s;
+    }
+
+    &:hover:before {
+      width: 100%;
     }
   }
 }
