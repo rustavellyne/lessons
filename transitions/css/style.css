@@ -1331,3 +1331,53 @@
     opacity: 0;
   }
 }
+
+.call-me {
+  margin: 40px auto;
+  .call-me__link {
+    width: 100px;
+    height: 100px;
+    background-color: #58ae00;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    .icon {
+      width: 48px;
+      height: 48px;
+    }
+    &:after,
+    &:before {
+      content: '';
+      position: absolute;
+      inset: -20px;
+      border: 1px solid #58ae00;
+      border-radius: 50%;
+      animation: pulsing 1.5s linear infinite;
+    }
+
+    &:after {
+      animation-delay: 0.4s;
+    }
+  }
+}
+
+@keyframes pulsing {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+
+  50% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}
