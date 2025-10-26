@@ -1381,3 +1381,297 @@
     opacity: 0;
   }
 }
+
+.cradle {
+  margin: 20px 0 160px;
+
+  .cradle__container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .cradle__item {
+    display: flex;
+    padding: 0 20px;
+    gap: 60px;
+    border-top: 10px solid black;
+    
+    span {
+      background-color: #000000;
+      width: 3px;
+      height: 300px;
+      position: relative;
+      transform-origin: top;
+
+      &:before {
+        content: '';
+        position: absolute;
+        width: 63px;
+        height: 63px;
+        background-color: #000000;
+        left: 0;
+        bottom: 0;
+        border-radius: 50%;
+        transform: translateX(calc(-50% + 1.5px));
+      }
+
+      &:first-child {
+        animation: tick2 2s linear infinite;
+      }
+
+      &:last-child {
+        animation: tack2 2s linear infinite 1s;
+      }
+    }
+  }
+}
+@keyframes tick2 {
+  0% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(45deg);
+  }
+  50% {
+    transform: rotate(0);
+  }
+}
+
+@keyframes tack2 {
+  0% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(-45deg);
+  }
+  50% {
+    transform: rotate(0);
+  }
+}
+
+@keyframes tick {
+  0% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(45deg);
+  }
+  50% {
+    transform: rotate(0);
+  }
+  75% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+@keyframes tack {
+  0% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(0);
+  }
+  75% {
+    transform: rotate(-45deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+.loader3 {
+  margin: 50px auto;
+
+  .loader3__item {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    animation: increase 1s linear infinite;
+    transform: rotate(45deg);
+
+    span {
+      position: absolute;
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      animation: rotate-cube 1s linear infinite;
+
+      &:nth-child(1) {
+        left: 0;
+        background-color: #fceba7;
+      }
+      &:nth-child(2) {
+        right: 0;
+        background-color: #55ddb9;
+      }
+
+      &:nth-child(3) {
+        bottom: 0;
+        background-color: #fd6c64;
+      }
+
+      &:nth-child(4) {
+        bottom: 0;
+        right: 0;
+        background-color: #1f78b0;
+      }
+    }
+  }
+}
+
+@keyframes increase {
+  0% {
+    width: 100px;
+    height: 100px;
+  }
+  10% {
+    width: 100px;
+    height: 100px;
+  }
+  50% {
+    width: 150px;
+    height: 150px;
+  }
+  90% {
+    width: 100px;
+    height: 100px;
+  }
+  100% {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@keyframes rotate-cube {
+  0% {
+    transform: rotate(0);
+  }
+  10% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(90deg);
+  }
+  90% {
+    transform: rotate(90deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+
+.loader4 {
+  margin: 50px auto;
+
+  .loader4__item {
+    width: 150px;
+    height: 150px;
+    position: relative;
+
+
+    span {
+      position: absolute;
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      border-radius: 4px;
+      animation: chase 2s linear infinite;
+      background-color: #fd6c64;
+
+      &:nth-child(2) {
+        animation-delay: 0.7s;
+      }
+      &:nth-child(3) {
+        animation-delay: 1.4s;
+      }
+    }
+  }
+}
+
+@keyframes chase {
+  0% {
+    top: 0;
+    left: 0;
+  }
+
+  12.5% {
+    top: 0;
+    left: 50%;
+  }
+
+  25% {
+    top: 0;
+    left: 50%;
+  }
+
+  37.5% {
+    top: 50%;
+    left: 50%;
+  }
+
+  50% {
+    top: 50%;
+    left: 50%;
+  }
+
+  62.5% {
+    top: 50%;
+    left: 0;
+  }
+
+  75% {
+    top: 50%;
+    left: 0;
+  }
+
+  87.5% {
+    top: 0;
+    left: 0;
+  }
+  100% {
+    top: 0;
+    left: 0;
+  }
+}
+
+
+.loader5 {
+  margin: 50px auto;
+
+  .loader5__container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .loader5__item h3 {
+    font-size: 40px;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    color: #f44336;
+    position: relative;
+
+    &::before {
+      content: 'loading...';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      color: yellow;
+      overflow: hidden;
+      border-right: 4px solid yellow;
+      animation: type-loading 5s linear infinite;
+    }
+  }
+}
+
+@keyframes type-loading {
+  0% { width: 0; }
+  50% { width: 100%; }
+  100% { width: 0%; }
+}
